@@ -1,0 +1,27 @@
+<header class="sgg-header" role="banner">
+
+    <a class="site-title" href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
+
+    <nav class="site-nav">
+
+      <div class="trigger">
+        {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+
+    <nav class="sgg-nav" role="navigation">
+        <ul>
+            <li><a href="">Brand</a></li>
+            <li><a href="">Principles</a></li>
+            <li><a href="">Voice and Tone</a></li>
+            <li><a href="">Writing</a></li>
+            <li><a href="">Patterns</a></li>
+            <li><a href="">Code</a></li>
+        </ul>
+    </nav>
+
+</header><!--end sgg-header-->

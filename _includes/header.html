@@ -1,16 +1,14 @@
 <header class="sgg-header" role="banner">
-    <a class="site-title" href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
-
 	<nav class="sgg-nav" role="navigation">
 	    <div class="trigger">
         	<a href="#" class="trigger__toggle">Menu</a>
       	</div>
         <ul class="sgg-nav__list">
-            <li class="sgg-nav__list__item">
+           	<li class="sgg-nav__list__item">		  	
 	            <a class="sgg-nav__link" href="/brand/index.html">
 		            Brand
 	            </a>
-	            <ul class="sgg-nav__sublist">
+	            <ul class="sgg-nav__sublist__has-children">	    
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "brand" %}
@@ -19,7 +17,7 @@
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
-					  	{% endif %}
+					  	{% endif %}					  	
 				  	{% endif %}
 			    {% endfor %}
 	            </ul>
@@ -47,7 +45,7 @@
 	            <a class="sgg-nav__link" href="/voice-and-tone/index.html">
 		            Voice and Tone
 		        </a>
-		        <ul class="sgg-nav__sublist">
+		        <ul class="sgg-nav__sublist__has-children">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "voice-and-tone" %}
@@ -103,7 +101,7 @@
 	            <a class="sgg-nav__link" href="/code/index.html">
 		            Code
 		        </a>
-		        <ul class="sgg-nav__sublist">
+		        <ul class="sgg-nav__sublist__has-children">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "code" %}
@@ -119,4 +117,5 @@
 	        </li>
         </ul>
     </nav>
+    <a class="site-title" href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
 </header><!--end sgg-header-->

@@ -1444,8 +1444,57 @@ a.avatar {
 }
 
 .sgg-nav {
-	&__sublist {
-		margin-left: 1em;
+	&__list {
+		display: none;
+		height: 100vh;
+		padding: 0.5em;
+		min-width:10em;
+		
+		&__item {
+			
+			&:hover, &:focus {
+				.sgg-nav__sublist__has-children {
+					display: block;
+					padding: 0.5em;
+				}
+			}
+		}
+		
+		&--active {
+			display: block;
+			position: absolute;
+			background: $gray-light;
+			top: 48px;
+			left: 0;
+		}
+	}
+	&__sublist__has-children {
+		display: none;
+		background: $gray-light-2;
+		height: 100vh;
+		position: absolute;
+		left: 159px;
+		top: 0;
+		min-width: 10em;
+		
+		&:before {
+			content: "";
+			display: block;
+			width: 0; 
+			height: 0; 
+		    border-bottom: 10px solid transparent;
+		    border-top: 10px solid transparent;
+		    border-right: 10px solid $gray-light-2;
+		    font-size: 0;
+		    line-height: 0;
+		    position: absolute;
+		    top: 9px;
+		    left: -10px;
+		}
+	}
+	
+	&__link {
+		display: flex;
 	}
 }
 
@@ -1885,5 +1934,7 @@ a.avatar {
 //Site Title
 
 .site-title {
+	display: block;
 	font-size: 1.3rem;
+	margin: 0 auto;
 }

@@ -1,8 +1,6 @@
 <header class="sgg-header" role="banner">
     <a class="site-title" href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
-</header><!--end sgg-header-->
 
-<div class="sgg-sidebar">
 	<nav class="sgg-nav" role="navigation">
 	    <div class="trigger">
         	<a href="#" class="trigger__toggle">Menu</a>
@@ -18,7 +16,7 @@
 						{% if group == brand %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}  
+					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
 					  	{% endif %}
@@ -36,7 +34,7 @@
 						{% if group == principles %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}  
+					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
 					  	{% endif %}
@@ -55,7 +53,7 @@
 						{% if group == voice-and-tone %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}  
+					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
 					  	{% endif %}
@@ -73,7 +71,7 @@
 						{% if group == writing %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}  
+					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
 					  	{% endif %}
@@ -84,7 +82,7 @@
             </li>
             <li class="sgg-nav__list__item">
 	            <a href="/patterns.html">
-		            Patterns 
+		            Patterns
 	            </a>
 	            <ul class="sgg-nav__sublist">
 		        {% for my_page in site.pages %}
@@ -92,7 +90,7 @@
 						{% if group == patterns %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}  
+					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
 					  	{% endif %}
@@ -111,7 +109,7 @@
 						{% if group == code %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}  
+					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
 					  	{% endif %}
@@ -121,4 +119,4 @@
 	        </li>
         </ul>
     </nav>
-</div>
+</header><!--end sgg-header-->

@@ -13,7 +13,7 @@
 	            <ul class="sgg-nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
-						{% if group == brand %}
+						{% if my_page.group == "brand" %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
@@ -31,7 +31,7 @@
 	            <ul class="sgg-nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
-						{% if group == principles %}
+						{% if my_page.group == "principles" %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
@@ -50,7 +50,7 @@
 		        <ul class="sgg-nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
-						{% if group == voice-and-tone %}
+						{% if my_page.group == "voice-and-tone" %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
@@ -68,7 +68,7 @@
 	            <ul class="sgg-nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
-						{% if group == writing %}
+						{% if my_page.group == "writing" %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
@@ -87,7 +87,7 @@
 	            <ul class="sgg-nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
-						{% if group == patterns %}
+						{% if my_page.group == "patterns" %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
@@ -106,7 +106,7 @@
 		        <ul class="sgg-nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
-						{% if group == code %}
+						{% if my_page.group == "code" %}
 						<li class="sgg-nav__sublist__item">
 							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}

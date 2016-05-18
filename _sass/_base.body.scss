@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #BODY
+\*------------------------------------*/
+
+body {
+    display: flex;
+    background: $white;
+    min-height: 100%;
+    font: 100%/1.5 $font;
+    -webkit-text-size-adjust: 100%;
+    color: $gray-dark;
+}

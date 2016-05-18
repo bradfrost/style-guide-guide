@@ -3,18 +3,22 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="sgg-body">
 
-    {% include header.html %}
+        {% include header.html %}
 
-    <main role="main">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+        <div class="sgg-content">
 
-    {% include footer.html %}
+            <main role="main" class="sgg-main">
 
-  </body>
+                {{ content }}
+
+            </main><!--end .sgg-main-->
+
+            {% include footer.html %}
+
+        </div>
+
+    </body><!--end .sgg-body-->
 
 </html>

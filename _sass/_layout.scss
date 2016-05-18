@@ -2,16 +2,6 @@
 @import "variables";
 @import "mixins";
 
-[role=main] {
-	flex: 1 0 auto;
-    padding: $spacing-unit 0;
-}
-
-.sgg-header {
-	display: flex;
-	padding: 0.5em;
-	border-bottom: 1px solid #000;
-=======
 /*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
@@ -24,5 +14,5 @@
     width: 100%;
     display: flex;
     flex-direction: column;
->>>>>>> aa6ceab2730d34bdff29aebfd420f48a86e9aab7
+
 }

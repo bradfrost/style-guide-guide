@@ -9,62 +9,48 @@
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
- 
+
 // Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/
-* { 
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
-    box-sizing: border-box; 
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
-html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure { 
+
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
     margin: 0;
     padding: 0;
-} 
- 
+}
+
 header, footer, nav, section, article, hgroup, figure, main {
-    display: block; 
-} 
+    display: block;
+}
 
 /*------------------------------------*\
     $FORMS
 \*------------------------------------*/
 
-/*------------------------------------*\
-    $BODY
-\*------------------------------------*/
- 
 html {
     position: relative;
     height: 100%;
 }
- 
-body  {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-    background: $white;
-    font: 100%/1.5 $font;
-    font-weight: 300;
-    -webkit-text-size-adjust: 100%;
-    color: $gray-dark;
-}
- 
+
 form ol, form ul {
     list-style: none;
     margin-left: 0;
 }
- 
+
 fieldset {
     padding: 0;
     border: 0;
 }
- 
+
 legend {
     font-weight: bold;
     color: $gray;
     margin-bottom: $space;
 }
- 
+
 label {
     color: $gray-dark;
     font-size: $font-size-med;
@@ -73,13 +59,13 @@ label {
     padding-bottom: $space-quarter;
     margin: 0;
 }
- 
+
 button, input, select, textarea {
     font-family: inherit;
     font-size: 100%;
     margin: 0;
 }
- 
+
 input, textarea {
     width: 100%;
     border: 2px solid $gray-light-2;
@@ -88,61 +74,60 @@ input, textarea {
     font-size: $font-size-med-2;
     font-weight: 300;
     transition: border-color $anim-fast ease-out;
-     
+
     &:hover {
         border-color: $gray-light-3;
     }
-     
+
     &:focus {
         border-color: $brand-color;
     }
 }
- 
+
 textarea {
     display: block;
     min-height: 4em;
 }
- 
+
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
     -webkit-appearance: none;
 }
- 
+
 //Color input
 input[type=color] {
     padding: 0.1em;
     min-height: 5em;
     width: 100%;
 }
- 
+
 //Submit buttons
 button, input[type=submit] {
-    @extend .btn;
     cursor: pointer;
     width: auto;
 }
- 
+
 //Checkbox and radio
 input[type=checkbox], input[type=radio] {
     width: auto;
     margin-right: 0.3em;
 }
- 
+
 //Search input
 input[type=search] {
     -webkit-appearance: none;
     border-radius: 0;
 }
- 
+
 //Datalist
 input[list] {
     position: relative;
 }
- 
+
 //Search input
 input[type=file] {
     line-height: 1;
 }
- 
+
 //Select input
 select {
     display: block;
@@ -150,7 +135,7 @@ select {
     border: 1px solid $gray-light-3;
     border-radius: $border-radius;
 }
- 
+
 input[type=search]::-webkit-search-cancel-button,
 input[type=search]::-webkit-search-decoration {
     -webkit-appearance: none;
@@ -159,29 +144,29 @@ input[type=search]::-webkit-search-decoration {
 /*------------------------------------*\
     $HEADINGS
 \*------------------------------------*/
- 
-h1  { 
+
+h1  {
     font-size: 1.75em;
     font-weight: 300;
     line-height: 1.3;
     margin-bottom: 0.1em;
 }
- 
-h2 { 
+
+h2 {
     font-size: 2.2em;
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 0.3em;
 }
- 
-h3 { 
+
+h3 {
     font-size: 1.5em;
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 0.4em;
 }
- 
-h4 { 
+
+h4 {
     font-size: 1em;
     font-weight: 300;
     line-height: 1.2;
@@ -191,13 +176,13 @@ h4 {
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
- 
+
 a {
     color: $gray-dark;
     text-decoration: none;
     outline: 0;
     transition: all $anim-fast ease-out; //Fade animation for all links on the interface
-     
+
     &:hover, &:focus {
         color: $brand-color;
     }
@@ -206,29 +191,29 @@ a {
 /*------------------------------------*\
     $LISTS
 \*------------------------------------*/
- 
+
 //List Reset
 ol, ul {
     list-style: none;
 }
- 
+
 //Definition Lists
 dl {
     overflow: hidden;
     margin: 0;
- 
+
     dt:last-of-type {
         border: 0;
     }
- 
+
     dd:last-of-type {
         border: 0;
     }
 }
- 
+
 dt {
     font-weight: bold;
- 
+
     @media all and (min-width: $bp-med) {
         padding: $pad-half $pad-half $pad-half 0;
         border-bottom: 1px solid $gray-light-2;
@@ -237,12 +222,12 @@ dt {
         width: 30%;
     }
 }
- 
+
 dd {
     margin: 0 0 $space-half 0;
     border-bottom: 1px solid $gray-light-2;
     padding-bottom: $pad-half;
- 
+
     @media all and (min-width: $bp-med) {
         float: left;
         width: 70%;
@@ -254,27 +239,27 @@ dd {
 /*------------------------------------*\
     $MEDIA
 \*------------------------------------*/
- 
+
 //Flexible Media
 img, video, object {
     max-width: 100%;
     height: auto;
 }
- 
+
 //Iframe
 iframe {
     margin-bottom: $space;
 }
- 
+
 //Figure
 figure {
     margin-bottom: $space;
- 
+
     img {
         margin-bottom: $space-quarter;
     }
 }
- 
+
 figcaption {
     font-style: italic;
 }
@@ -282,12 +267,12 @@ figcaption {
 /*------------------------------------*\
     $TABLE
 \*------------------------------------*/
- 
+
 table {
-    border-collapse: collapse; 
-    border-spacing: 0; 
+    border-collapse: collapse;
+    border-spacing: 0;
 }
- 
+
 th {
     text-align: left;
     color: $gray-light-3;
@@ -298,11 +283,11 @@ th {
 /*------------------------------------*\
     $TEXT
 \*------------------------------------*/
- 
+
 p {
     margin-bottom: $space;
 }
- 
+
 //Blockquote
 blockquote {
     font-style:italic;
@@ -311,7 +296,7 @@ blockquote {
     padding-left: $pad;
     margin-bottom: $space;
 }
- 
+
 //Horizontal Rule
 hr {
     border: 0;
@@ -319,150 +304,17 @@ hr {
     background: $gray-light-3;
     margin: $space-double 0;
 }
- 
+
 //Abbreviation
 abbr {
     border-bottom: 1px dotted $gray;
     cursor: help;
 }
- 
+
 strong {
     font-weight: 500;
 }
- 
-//Bold
-b {
-    font-weight: normal;
-}
- 
-//Italic
-i {
-    font-style: normal;
-}
 
-/*------------------------------------*\
-    $UTILITY CLASSES
-\*------------------------------------*/
- 
-//Clearfix
-.cf {
-    *zoom: 1;
- 
-    &:before, &:after {
-      content: " ";
-      display: table;
-    }
- 
-    &:after {
-      clear: both;
-    }
+.sgg-body {
+    display: flex;
 }
- 
-// Completely remove from the flow and screen readers.
-.hidden {
-    display: none !important;
-    visibility: hidden !important;
-}
- 
-// Completely remove from the flow but leave available to screen readers.
-.is-vishidden {
-    position: absolute !important;
-    overflow: hidden;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-}
- 
-// Floats
-.right {
-    float: right;
-    padding: 0 0 $pad $pad;
-}
- 
-.left {
-    float: left;
-    padding: 0 $pad $pad 0;
-}
- 
-//State classes
-.valid {
-    color: $success;
-}
- 
-.error {
-    color: $error;
-}
- 
-.info {
-  color: $info;
-}
- 
-.warning {
-  color: $warning;
-}
- 
-.success {
-    background: $success;
-}
- 
-.success-tone {
-    background: $success-tone;
-}
- 
-.success-tone-med {
-    background: $success-tone-med;
-}
- 
-.success-tone-max {
-    background: $success-tone-max;
-}
- 
-.info {
-    background: $info;
-}
- 
-.info-tone {
-    background: $info-tone;
-}
- 
-.info-tone-med {
-    background: $info-tone-med;
-}
- 
-.info-tone-max {
-    background: $info-tone-max;
-}
- 
-.warning {
-    background: $warning;
-}
- 
-.warning-tone {
-    background: $warning-tone;
-}
- 
-.warning-tone-med {
-    background: $warning-tone-med;
-}
- 
-.warning-tone-max {
-    background: $warning-tone-max;
-}
- 
-.error {
-    background: $error;
-}
- 
-.error-tone {
-    background: $error-tone;
-}
- 
-.error-tone-med {
-    background: $error-tone-med;
-}
- 
-.error-tone-max {
-    background: $error-tone-max;
-}	

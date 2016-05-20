@@ -8,7 +8,7 @@
 	            <a class="sgg-nav__link" href="/brand/index.html">
 		            Brand
 	            </a>
-	            <ul class="sgg-nav__sublist__has-children">	    
+	            <ul class="sgg-nav__sublist">	    
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "brand" %}
@@ -45,7 +45,7 @@
 	            <a class="sgg-nav__link" href="/voice-and-tone/index.html">
 		            Voice and Tone
 		        </a>
-		        <ul class="sgg-nav__sublist__has-children">
+		        <ul class="sgg-nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "voice-and-tone" %}
@@ -101,7 +101,7 @@
 	            <a class="sgg-nav__link" href="/code/index.html">
 		            Code
 		        </a>
-		        <ul class="sgg-nav__sublist__has-children">
+		        <ul class="sgg-nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "code" %}
@@ -117,5 +117,5 @@
 	        </li>
         </ul>
     </nav>
-    <a class="site-title" href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
+    <a class="sgg-header__title" href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
 </header><!--end sgg-header-->

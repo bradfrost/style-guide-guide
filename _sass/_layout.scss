@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-@import "variables";
-@import "mixins";
-
 /*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
@@ -14,5 +10,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1;
 
 }

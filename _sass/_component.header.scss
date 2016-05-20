@@ -5,9 +5,22 @@
 .sgg-header {
     background: $gray-light;
     padding: 1em;
+    display: flex;
+    
+    &__title {
+	    margin: 0 auto;
+    }
+    
+    @media all and (min-width: 35em) {
+	    flex-direction: column;
+	    width: 12em;
+	    
+	    &__title {
+		    margin: 0;
+	    }
+    }
 }
 
 .sgg-main {
     width: 100%;
-
 }

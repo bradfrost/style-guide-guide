@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #HEADER
+    #SGG NAVIGATION
 \*------------------------------------*/
 
 .sgg-nav {
@@ -12,7 +12,7 @@
 		&__item {
 			
 			&:hover, &:focus {
-				.sgg-nav__sublist__has-children {
+				.sgg-nav__sublist {
 					display: block;
 					padding: 0.5em;
 				}
@@ -27,7 +27,7 @@
 			left: 0;
 		}
 	}
-	&__sublist__has-children {
+	&__sublist {
 		display: none;
 		background: $gray-light-2;
 		height: 100vh;
@@ -54,5 +54,9 @@
 	
 	&__link {
 		display: flex;
+	}
+	
+	@media all and (min-width: 35em) {
+		order: 1;
 	}
 }

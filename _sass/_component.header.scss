@@ -9,15 +9,15 @@
     
     &__title {
 	    margin: 0 auto;
+	    
+	    @media all and (min-width: 35em) {
+			margin: 0;
+	    }
     }
     
     @media all and (min-width: 35em) {
 	    flex-direction: column;
 	    width: 12em;
-	    
-	    &__title {
-		    margin: 0;
-	    }
     }
 }
 

@@ -25,6 +25,15 @@
 			background: $gray-light;
 			top: 48px;
 			left: 0;
+			
+			@media all and (min-width: 35em) {
+				position: relative;
+				top: 0;
+			}
+		}
+		
+		@media all and (min-width: 35em) {
+			display: block;
 		}
 	}
 	&__sublist {

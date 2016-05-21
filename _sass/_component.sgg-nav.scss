@@ -10,12 +10,32 @@
 		min-width:10em;
 		
 		&__item {
+			position: relative;
 			
 			&:hover, &:focus {
+				
+				&:after {
+					border-right-color: $gray-light-2;
+				}
 				.sgg-nav__sublist {
 					display: block;
 					padding: 0.5em;
 				}
+			}
+			
+			&:after {
+				content: "";
+				display: block;
+				width: 0; 
+				height: 0; 
+			    border-bottom: 10px solid transparent;
+			    border-top: 10px solid transparent;
+			    border-right: 10px solid $gray-light;
+			    font-size: 0;
+			    line-height: 0;
+			    position: absolute;
+			    top: 0;
+			    right: -8px;
 			}
 		}
 		
@@ -41,24 +61,9 @@
 		background: $gray-light-2;
 		height: 100vh;
 		position: absolute;
-		left: 159px;
+		left: 152px;
 		top: 0;
 		min-width: 10em;
-		
-		&:before {
-			content: "";
-			display: block;
-			width: 0; 
-			height: 0; 
-		    border-bottom: 10px solid transparent;
-		    border-top: 10px solid transparent;
-		    border-right: 10px solid $gray-light-2;
-		    font-size: 0;
-		    line-height: 0;
-		    position: absolute;
-		    top: 9px;
-		    left: -10px;
-		}
 	}
 	
 	&__link {

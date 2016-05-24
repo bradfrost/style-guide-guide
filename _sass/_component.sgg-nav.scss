@@ -91,9 +91,10 @@
 		position: absolute;
 		left: 160px;
 		top: 8px;
-		width: 10em;
+		min-width: 10em;
 		
 		@media all and (min-width: 35em) {
+			width: 12em;
 			top: 0;
 			left: 192px;
 		}
@@ -101,6 +102,11 @@
 	
 	&__link {
 		display: flex;
+	}
+	
+	&__bottom {
+		position: absolute;
+		bottom: 0;
 	}
 	
 	@media all and (min-width: 35em) {

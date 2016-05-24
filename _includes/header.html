@@ -1,19 +1,19 @@
-<header class="sgg-header" role="banner">
-	<nav class="sgg-nav" role="navigation">
-	    <div class="sgg-nav__trigger">
-        	<a href="#" class="sgg-nav__trigger__toggle">Menu</a>
+<header class="header" role="banner">
+	<nav class="nav" role="navigation">
+	    <div class="nav__trigger">
+        	<a href="#" class="nav__trigger__toggle">Menu</a>
       	</div>
-        <ul class="sgg-nav__list">
-           	<li class="sgg-nav__list__item">		  	
-	            <a class="sgg-nav__link" href="/brand/index.html">
+        <ul class="nav__list">
+           	<li class="nav__item">		  	
+	            <a class="nav__link" href="/brand/index.html">
 		            Brand
 	            </a>
-	            <ul class="sgg-nav__sublist">	    
+	           	<ul class="nav__sublist">	    
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "brand" %}
-						<li class="sgg-nav__sublist__item">
-							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
+						<li class="nav__sublist__item">
+							<a class="nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -22,16 +22,16 @@
 			    {% endfor %}
 	            </ul>
             </li>
-            <li class="sgg-nav__list__item">
-	            <a class="sgg-nav__link" href="/principles.html">
+            <li class="nav__item">
+	            <a class="nav__link" href="/principles.html">
 		            Principles
 	            </a>
-	            <ul class="sgg-nav__sublist">
+	            <ul class="nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "principles" %}
-						<li class="sgg-nav__sublist__item">
-							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
+						<li class="nav__sublist__item">
+							<a class="nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -39,18 +39,17 @@
 				  	{% endif %}
 			    {% endfor %}
 	            </ul>
-
             </li>
-            <li class="sgg-nav__list__item">
-	            <a class="sgg-nav__link" href="/voice-and-tone/index.html">
+            <li class="nav__item">
+	            <a class="nav__link" href="/voice-and-tone/index.html">
 		            Voice and Tone
 		        </a>
-		        <ul class="sgg-nav__sublist">
+		        <ul class="nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "voice-and-tone" %}
-						<li class="sgg-nav__sublist__item">
-							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
+						<li class="nav__sublist__item">
+							<a class="nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -59,16 +58,16 @@
 			    {% endfor %}
 	            </ul>
 	        </li>
-            <li class="sgg-nav__list__item">
-	            <a class="sgg-nav__link" href="/writing.html">
+            <li class="nav__item">
+	            <a class="nav__link" href="/writing.html">
 		            Writing
 	            </a>
-	            <ul class="sgg-nav__sublist">
+	            <ul class="nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "writing" %}
-						<li class="sgg-nav__sublist__item">
-							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
+						<li class="nav__sublist__item">
+							<a class="nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -76,18 +75,17 @@
 				  	{% endif %}
 			    {% endfor %}
 	            </ul>
-
             </li>
-            <li class="sgg-nav__list__item">
-	            <a href="/patterns.html">
+            <li class="nav__item">
+	            <a class="nav__link" href="/patterns.html">
 		            Patterns
 	            </a>
-	            <ul class="sgg-nav__sublist">
+	            <ul class="nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "patterns" %}
-						<li class="sgg-nav__sublist__item">
-							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
+						<li class="nav__sublist__item">
+							<a class="nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -95,18 +93,17 @@
 				  	{% endif %}
 			    {% endfor %}
 	            </ul>
-
             </li>
-            <li class="sgg-nav__list__item">
-	            <a class="sgg-nav__link" href="/code/index.html">
+            <li class="nav__item">
+	            <a class="nav__link" href="/code/index.html">
 		            Code
 		        </a>
-		        <ul class="sgg-nav__sublist">
+		        <ul class="nav__sublist">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "code" %}
-						<li class="sgg-nav__sublist__item">
-							<a class="sgg-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
+						<li class="nav__sublist__item">
+							<a class="nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -117,5 +114,5 @@
 	        </li>
         </ul>
     </nav>
-    <a class="sgg-header__title" href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
+    <a class="header__title" href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
 </header><!--end sgg-header-->

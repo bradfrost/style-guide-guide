@@ -1,0 +1,135 @@
+/*------------------------------------*\
+    #NAVIGATION
+\*------------------------------------*/
+
+.nav {
+	height: 100%;
+	
+	@media all and (min-width: 35em) {
+		order: 1;
+	}
+}
+
+
+.nav__trigger {
+		display: block;
+		
+		@media all and (min-width: 35em) {
+			display: none;
+		}
+	}
+
+.nav__list {
+	display: none;
+	height: 100vh;
+	padding: 1em;
+	min-width: 10em;
+	
+	.nav--is-active & {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		background: $gray-light;
+		top: 48px;
+		left: 0;
+		
+		@media all and (min-width: 35em) {
+			position: inherit;
+			top: 0;
+		}
+	}
+	
+	@media all and (min-width: 35em) {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+}
+
+.nav__sublist {
+	display: none;
+	background: $gray-light-2;
+	height: 100vh;
+	position: absolute;
+	left: 160px;
+	top: 8px;
+	min-width: 10em;
+	
+	.nav--is-active & {
+		left: 152px;
+		
+		@media all and (min-width: 35em) {
+			left: 192px;
+		}
+	}
+	
+	.nav__item--is-active & {
+		display: block;
+		padding: 0.5em;
+	}
+	
+	@media all and (min-width: 35em) {
+		width: 12em;
+		top: 0;
+		left: 192px;
+	}
+}
+
+.nav__item--separated {
+		background: red;
+		margin-top: auto;
+}
+
+.nav__link {
+	display: flex;
+}
+
+.js-nav__link {
+	
+	position: relative;
+	
+	&:after {
+		content: "";
+		display: block;
+		width: 0; 
+		height: 0; 
+	    border-bottom: 10px solid transparent;
+	    border-top: 10px solid transparent;
+	    border-right: 10px solid $gray-light;
+	    font-size: 0;
+	    line-height: 0;
+	    position: absolute;
+	    top: 0;
+	    right: -8px;
+	    
+	    @media all and (min-width: 35em) {
+		    right: -16px;
+	    }
+	}
+	
+	.nav__item--is-active & {
+		&:after {
+				border-right-color: $gray-light-2;
+		}
+	}
+}
+
+/*Secondary Nav*/
+
+.secondary-nav {
+	display: none;
+	
+	.nav--is-active & {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		
+		@media all and (min-width: 35em) {
+			position: inherit;
+		}
+	}
+	
+	@media all and (min-width: 35em) {
+		display: block;
+	}
+}

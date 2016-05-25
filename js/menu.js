@@ -1,15 +1,15 @@
 $('.nav__trigger').click(function(event) {
 	event.preventDefault();
-	$('.nav__list').toggleClass('nav__list--active');
+	$('.nav').toggleClass('nav--is-active');
 });
 
 $('.content').click(function(event) {
-	$('.nav__list').removeClass('nav__list--active');
-	$('.nav__item').removeClass('nav__item--active');
+	$('.nav').removeClass('nav--is-active');
+	$('.nav__item').removeClass('nav__item--is-active');
 });
 
-$('.nav__item').click(function(event) {
+$('.js-nav__link').click(function(event) {
 	event.preventDefault();
-	$('.nav__item').removeClass('nav__item--active');
-	$(this).toggleClass('nav__item--active');
+	$('.nav__item').removeClass('nav__item--is-active');
+	$(this).parent('.nav__item').toggleClass('nav__item--is-active');
 });

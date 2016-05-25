@@ -2,6 +2,7 @@
     #NAVIGATION
 \*------------------------------------*/
 
+/* Navigation Wrapper */
 .nav {
 	height: 100%;
 	
@@ -10,7 +11,7 @@
 	}
 }
 
-
+/* Navigation Trigger Button */
 .nav__trigger {
 		display: block;
 		
@@ -19,12 +20,14 @@
 		}
 	}
 
+/* Navigation Primary List */
 .nav__list {
 	display: none;
 	height: 100vh;
 	padding: 1em;
 	min-width: 10em;
 	
+	/* .nav__list styling when nav is active */
 	.nav--is-active & {
 		display: flex;
 		flex-direction: column;
@@ -46,6 +49,7 @@
 	}
 }
 
+/* Navigation Sub List */
 .nav__sublist {
 	display: none;
 	background: $gray-light-2;
@@ -55,6 +59,7 @@
 	top: 8px;
 	min-width: 10em;
 	
+	/* .nav__sublist styling when nav is active */
 	.nav--is-active & {
 		left: 152px;
 		
@@ -63,6 +68,7 @@
 		}
 	}
 	
+	/* .nav__sublist styling when nav__item is active */
 	.nav__item--is-active & {
 		display: block;
 		padding: 0.5em;
@@ -75,19 +81,16 @@
 	}
 }
 
-.nav__item--separated {
-		background: red;
-		margin-top: auto;
-}
-
+/* Navigation Link */
 .nav__link {
 	display: flex;
 }
 
+/* Navigation Link That Uses Javascript for Functionality */
 .js-nav__link {
-	
 	position: relative;
 	
+	/* Right Facing Arrow after Navigation Link between List and Sub List */
 	&:after {
 		content: "";
 		display: block;
@@ -107,6 +110,7 @@
 	    }
 	}
 	
+	/* .js-nav__link styling when nav__item is active */
 	.nav__item--is-active & {
 		&:after {
 				border-right-color: $gray-light-2;
@@ -114,11 +118,11 @@
 	}
 }
 
-/*Secondary Nav*/
-
+/* Secondary Nav */
 .secondary-nav {
 	display: none;
 	
+	/* Secondary Nav styling when Navigation is active */
 	.nav--is-active & {
 		display: block;
 		position: absolute;

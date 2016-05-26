@@ -81,6 +81,14 @@
 		top: 0;
 		left: 192px;
 	}
+	
+	@media all and (min-width: 74em) {
+		.nav__item:first-of-type & {
+			padding: 1em;
+			display: block;
+			height: calc(100vh - 3em);
+		}
+	}
 }
 
 /* Navigation Link */

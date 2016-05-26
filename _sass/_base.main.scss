@@ -5,4 +5,8 @@
 [role=main] {
     padding: 2em;
     flex: 1;
+    
+    @media all and (min-width: 74em) {
+	    padding-left: 14em;
+    }
 }

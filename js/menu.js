@@ -9,7 +9,9 @@ $('.content').click(function(event) {
 });
 
 $('.js-nav__link').click(function(event) {
+	if($(this).parent('.nav__item').children('.nav__sublist').hasClass('nav__sublist--has-children')) {
 	event.preventDefault();
 	$('.nav__item').removeClass('nav__item--is-active');
 	$(this).parent('.nav__item').toggleClass('nav__item--is-active');
+	}
 });

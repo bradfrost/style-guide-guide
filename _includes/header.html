@@ -6,7 +6,7 @@
 	            <a class="nav__link js-nav__link" href="/brand/index.html">
 		            Brand
 	            </a>
-	           	<ul class="nav__sublist">	    
+	           	<ul class="nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">	    
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "brand" %}
@@ -24,7 +24,7 @@
 	            <a class="nav__link js-nav__link" href="/principles.html">
 		            Principles
 	            </a>
-	            <ul class="nav__sublist">
+	            <ul class="nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'principles' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "principles" %}
@@ -42,7 +42,7 @@
 	            <a class="nav__link js-nav__link" href="/voice-and-tone/index.html">
 		            Voice and Tone
 		        </a>
-		        <ul class="nav__sublist">
+		        <ul class="nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'voice-and-tone' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "voice-and-tone" %}
@@ -60,7 +60,7 @@
 	            <a class="nav__link js-nav__link" href="/writing.html">
 		            Writing
 	            </a>
-	            <ul class="nav__sublist">
+	            <ul class="nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'writing' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "writing" %}
@@ -78,7 +78,7 @@
 	            <a class="nav__link js-nav__link" href="/patterns.html">
 		            Patterns
 	            </a>
-	            <ul class="nav__sublist">
+	            <ul class="nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'patterns' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "patterns" %}
@@ -96,7 +96,7 @@
 	            <a class="nav__link js-nav__link" href="/code/index.html">
 		            Code
 		        </a>
-		        <ul class="nav__sublist">
+		        <ul class="nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'code' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "code" %}

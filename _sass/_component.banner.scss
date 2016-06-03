@@ -4,8 +4,6 @@
 
 /* BANNER */
 .c-banner {
-	padding: 1.5em 1em;
-	margin: -1.5em -2em 0;
 	
 	@media all and (min-width: 35em) {
 		margin-bottom: 1em;
@@ -13,8 +11,7 @@
 }
 
 .c-banner__heading {
-	margin: 0 0.5em;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	
 	@media all and (min-width: 35em) {
 		font-size: 3.2rem;

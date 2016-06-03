@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #TOUT
+\*------------------------------------*/
+
+/* Tout List */
+.c-tout__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.c-tout__item {
+	padding: 1em;
+	border: 2px solid $gray-dark;
+	margin: 0.5em;
+	border-radius: 5px;
+}
+
+.c-tout__link {
+	display: flex;
+}

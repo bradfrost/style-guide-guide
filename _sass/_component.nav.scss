@@ -30,6 +30,10 @@
 /* Navigation Trigger Button */
 .c-nav__trigger {
 		display: block;
+		border: 1px solid $gray-dark;
+		background: $gray-light;
+		border-radius: 5px;
+		padding: 0.5em;
 		
 		@media all and (min-width: 35em) {
 			display: none;

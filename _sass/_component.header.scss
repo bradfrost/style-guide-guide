@@ -6,6 +6,7 @@
     background: $gray-light;
     padding: 1em;
     display: flex;
+    align-items: center;
     
     &__title {
 	    margin: 0 auto;
@@ -20,5 +21,6 @@
 	    width: 12em;
 	    position: fixed;
 	    height: 100%;
+	    align-items: flex-start;
     }
 }

@@ -2,14 +2,16 @@
     #BANNER
 \*------------------------------------*/
 
-/* BANNER */
-.c-banner {
-	
+.c-banner {	
 	@media all and (min-width: 35em) {
 		margin-bottom: 1em;
 	}
 }
 
+/**
+ * Banner Heading
+ * 1) These are the styles for the heading inside the banner
+ */
 .c-banner__heading {
 	font-size: 2.5rem;
 	

@@ -65,10 +65,9 @@
 /* Navigation Sub List */
 .c-nav__sublist--has-children {
 	display: none;
-	list-style: disc;
-	margin-left: 1em;
 	left: 160px;
 	top: 0;
+	box-shadow: 0px 2px 0px #888, 0px -2px 0px #888;
 	
 	/* .nav__sublist styling when nav is active */
 	.c-nav--is-active & {
@@ -106,7 +105,6 @@
 		position: absolute;
 		bottom: 0;
 		padding: 1em;
-		width: 100%;
 		
 		@media all and (min-width: 35em) {
 			padding: 0;

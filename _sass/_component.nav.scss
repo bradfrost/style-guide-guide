@@ -9,41 +9,45 @@
 	height: calc(100vh - 3.5em);
 	background: $gray-light;
 	position: absolute;
+	overflow: auto;
 	
 	&--is-active {
-		left: 0;
 		top: 3.5em;
+		left: 0;
 		width: 12em;
 		
 		@media all and (min-width: 35em) {
-			margin-left: 1em;
+			top: 0;
 			width: initial;
 		}
 	}
 	
 	@media all and (min-width: 35em) {
-		position: inherit;
+		position: relative;
+		width: 12em;
 		order: 1;
 	}
 }
 
 /* Navigation Trigger Button */
 .c-nav__trigger {
-		display: block;
-		border: 1px solid $gray-dark;
-		background: $gray-light;
-		border-radius: 5px;
-		padding: 0.5em;
-		
-		@media all and (min-width: 35em) {
-			display: none;
-		}
+	display: block;
+	position: absolute;
+    top: 0.6em;
+    left: 0.5em;
+	border: 1px solid $gray-dark;
+	background: $gray-light;
+	border-radius: 5px;
+	padding: 0.5em;
+	
+	@media all and (min-width: 35em) {
+		display: none;
 	}
+}
 
 /* Navigation Primary List */
 .c-nav__list {
 	display: none;
-	padding: 1em;
 	
 	/* .nav__list styling when nav is active */
 	.c-nav--is-active & {
@@ -67,7 +71,9 @@
 	display: none;
 	left: 160px;
 	top: 0;
-	box-shadow: 0px 2px 0px #888, 0px -2px 0px #888;
+	background: #f9f7f7;
+	box-shadow: 0 22px 22px -22px rgba(0, 0, 0, 0.3) inset, 
+	0 -22px 22px -22px rgba(0, 0, 0,0.3) inset;
 	
 	/* .nav__sublist styling when nav is active */
 	.c-nav--is-active & {
@@ -89,6 +95,22 @@
 	}
 }
 
+
+.c-nav__item{
+	&:nth-child(odd) {
+		background: $gray-light-2;
+	}
+}
+.c-nav__link {
+	display: flex;
+	padding: 1em;
+	
+	.c-nav__sublist__item & {
+		display: block;
+		padding: 0.5em 1em;
+	}
+}
+
 /* Navigation Link That Uses Javascript for Functionality */
 .js-c-nav__link {
 	position: relative;
@@ -101,10 +123,10 @@
 	
 	/* Secondary Nav styling when Navigation is active */
 	.c-nav--is-active & {
+		width: 100%;
 		display: block;
 		position: absolute;
 		bottom: 0;
-		padding: 1em;
 		
 		@media all and (min-width: 35em) {
 			padding: 0;

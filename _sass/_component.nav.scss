@@ -3,24 +3,25 @@
 \*------------------------------------*/
 
 /* Navigation Wrapper */
-.nav {
+.c-nav {
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - 3.5em);
 	background: $gray-light;
 	position: absolute;
-	left: 0;
-	top: 3.5em;
+	
+	&--is-active {
+		width: 12em;
+	}
 	
 	@media all and (min-width: 35em) {
-		padding: 0;
 		position: inherit;
 		order: 1;
 	}
 }
 
 /* Navigation Trigger Button */
-.nav__trigger {
+.c-nav__trigger {
 		display: block;
 		
 		@media all and (min-width: 35em) {
@@ -29,13 +30,12 @@
 	}
 
 /* Navigation Primary List */
-.nav__list {
+.c-nav__list {
 	display: none;
 	padding: 1em;
-	min-width: 10em;
 	
 	/* .nav__list styling when nav is active */
-	.nav--is-active & {
+	.c-nav--is-active & {
 		display: block;
 		top: 48px;
 		left: 0;
@@ -52,17 +52,15 @@
 }
 
 /* Navigation Sub List */
-.nav__sublist--has-children {
+.c-nav__sublist--has-children {
 	display: none;
-	background: $gray-light-2;
-	height: 100vh;
-	position: absolute;
+	list-style: disc;
+	margin-left: 1em;
 	left: 160px;
 	top: 0;
-	min-width: 10em;
 	
 	/* .nav__sublist styling when nav is active */
-	.nav--is-active & {
+	.c-nav--is-active & {
 		left: 152px;
 		
 		@media all and (min-width: 35em) {
@@ -71,19 +69,17 @@
 	}
 	
 	/* .nav__sublist styling when nav__item is active */
-	.nav__item--is-active & {
+	.c-nav__item--is-active & {
 		display: block;
-		padding: 0.5em;
 	}
 	
 	@media all and (min-width: 35em) {
-		width: 12em;
 		top: 0;
 		left: 192px;
 	}
 	
 	@media all and (min-width: 74em) {
-		.nav__item:first-of-type & {
+		.c-nav__item:first-of-type & {
 			padding: 1em;
 			display: block;
 			height: calc(100vh - 3em);
@@ -91,50 +87,18 @@
 	}
 }
 
-/* Navigation Link */
-.nav__link {
-	display: flex;
-}
-
 /* Navigation Link That Uses Javascript for Functionality */
-.js-nav__link {
+.js-c-nav__link {
 	position: relative;
-	
-	/* Right Facing Arrow after Navigation Link between List and Sub List */
-	&:after {
-		content: "";
-		display: block;
-		width: 0; 
-		height: 0; 
-	    border-bottom: 10px solid transparent;
-	    border-top: 10px solid transparent;
-	    border-right: 10px solid $gray-light;
-	    font-size: 0;
-	    line-height: 0;
-	    position: absolute;
-	    top: 0;
-	    right: -8px;
-	    
-	    @media all and (min-width: 35em) {
-		    right: -16px;
-	    }
-	}
-	
-	/* .js-nav__link styling when nav__item is active */
-	.nav__item--is-active & {
-		&:after {
-			border-right-color: $gray-light-2;
-		}
-	}
 }
 
 /* Secondary Nav */
-.secondary-nav {
+.c-secondary-nav {
 	display: none;
 	margin-top: auto;
 	
 	/* Secondary Nav styling when Navigation is active */
-	.nav--is-active & {
+	.c-nav--is-active & {
 		display: block;
 		position: absolute;
 		bottom: 0;

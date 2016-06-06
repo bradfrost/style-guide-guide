@@ -2,7 +2,7 @@
     #HEADER
 \*------------------------------------*/
 
-.header {
+.c-header {
     background: $gray-light;
     padding: 1em;
     display: flex;
@@ -18,9 +18,7 @@
     @media all and (min-width: 35em) {
 	    flex-direction: column;
 	    width: 12em;
+	    position: fixed;
+	    height: 100%;
     }
-}
-
-.main {
-    width: 100%;
 }

@@ -11,7 +11,14 @@
 	position: absolute;
 	
 	&--is-active {
+		left: 0;
+		top: 3.5em;
 		width: 12em;
+		
+		@media all and (min-width: 35em) {
+			margin-left: 1em;
+			width: initial;
+		}
 	}
 	
 	@media all and (min-width: 35em) {
@@ -76,14 +83,6 @@
 	@media all and (min-width: 35em) {
 		top: 0;
 		left: 192px;
-	}
-	
-	@media all and (min-width: 74em) {
-		.c-nav__item:first-of-type & {
-			padding: 1em;
-			display: block;
-			height: calc(100vh - 3em);
-		}
 	}
 }
 

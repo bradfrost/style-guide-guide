@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="detail">
+
+  <header class="detail__header {% if page.title %}c-banner{% endif %}">
+    <h1 class="post-title {% if page.title %}c-banner__heading{% endif %}">{{ page.title }}</h1>
+  </header>
+
+  <div class="detail__main">
+    {{ content }}
+  </div>
+
+</article>

@@ -31,8 +31,9 @@ layout: page
 	</div>
 	
 	<ul class="c-tout__list">
-	        {% for my_page in site.pages %}
-				{% if my_page.title %}
+        {% for my_page in site.pages %}
+			{% if my_page.title %}
+				{% if my_page.title != "Overview" %}
 					{% if my_page.group == "code" %}
 					<li class="c-tout__item">
 						<a class="c-tout__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
@@ -40,8 +41,9 @@ layout: page
 			          	</a>
 				  	</li>
 				  	{% endif %}
-			  	{% endif %}
-		    {% endfor %}
+				{% endif %}
+		  	{% endif %}
+	    {% endfor %}
 	</ul>
 	
 </div>

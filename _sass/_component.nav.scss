@@ -1,0 +1,143 @@
+/*------------------------------------*\
+    #NAVIGATION
+\*------------------------------------*/
+
+/* Navigation Wrapper */
+.c-nav {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 3.5em);
+	background: $gray-light;
+	position: absolute;
+	overflow: auto;
+	
+	&--is-active {
+		top: 3.5em;
+		left: 0;
+		width: 12em;
+		
+		@media all and (min-width: 35em) {
+			top: 0;
+			width: initial;
+		}
+	}
+	
+	@media all and (min-width: 35em) {
+		position: relative;
+		width: 12em;
+		order: 1;
+	}
+}
+
+/* Navigation Trigger Button */
+.c-nav__trigger {
+	display: block;
+	position: absolute;
+    top: 0.6em;
+    left: 0.5em;
+	border: 1px solid $gray-dark;
+	background: $gray-light;
+	border-radius: 5px;
+	padding: 0.5em;
+	
+	@media all and (min-width: 35em) {
+		display: none;
+	}
+}
+
+/* Navigation Primary List */
+.c-nav__list {
+	display: none;
+	background: $gray-light;
+	
+	/* .nav__list styling when nav is active */
+	.c-nav--is-active & {
+		display: block;
+		top: 48px;
+		left: 0;
+		
+		@media all and (min-width: 35em) {
+			top: 0;
+		}
+	}
+	
+	@media all and (min-width: 35em) {
+		display: block;
+		padding: 0;
+	}
+}
+
+/* Navigation Sub List */
+.c-nav__sublist--has-children {
+	left: 160px;
+	top: 0;
+	max-height: 0px;
+	overflow: hidden;
+	background: #f9f7f7;
+	box-shadow: 0 22px 11px -22px rgba(0, 0, 0, 0.3) inset, 
+	0 -22px 11px -22px rgba(0, 0, 0, 0.3) inset;
+	transition: all 0.5s ease;
+	
+	/* .nav__sublist styling when nav is active */
+	.c-nav--is-active & {
+		left: 152px;
+		
+		@media all and (min-width: 35em) {
+			left: 192px;
+		}
+	}
+	
+	/* .nav__sublist styling when nav__item is active */
+	.c-nav__item--is-active & {
+		max-height: 800px;
+	}
+	
+	@media all and (min-width: 35em) {
+		top: 0;
+		left: 192px;
+	}
+}
+
+
+.c-nav__item {
+	border-bottom: 1px solid #E8D7D7;
+	background: $gray-light;
+}
+
+.c-nav__link {
+	display: flex;
+	padding: 1em;
+	
+	.c-nav__sublist__item & {
+		display: block;
+		padding: 0.5em 1em;
+	}
+}
+
+/* Navigation Link That Uses Javascript for Functionality */
+.js-c-nav__link {
+	position: relative;
+}
+
+/* Secondary Nav */
+.c-secondary-nav {
+	display: none;
+	margin-top: auto;
+	
+	/* Secondary Nav styling when Navigation is active */
+	.c-nav--is-active & {
+		width: 100%;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		
+		@media all and (min-width: 35em) {
+			padding: 0;
+			position: inherit;
+		}
+	}
+	
+	@media all and (min-width: 35em) {
+		display: block;
+	}
+}

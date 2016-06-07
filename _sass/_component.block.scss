@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #BLOCK
+\*------------------------------------*/
+
+/* Block Containing Title and List */
+.c-block {
+	padding: 1em;
+	border: 1px solid $gray-dark;
+	border-radius: 5px;
+}
+
+/* List Inside of Block*/
+.c-block__list {
+	list-style: disc;
+	margin-left: 1em;
+}
+
+/* Link Within Block */
+.c-block__link {
+	 box-shadow: 0 5px 1px -2px #e59400;
+	 
+	 &:hover, &:focus {
+		 box-shadow: none;
+	 }
+}

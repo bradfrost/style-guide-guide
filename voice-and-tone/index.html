@@ -1,23 +1,50 @@
 ---
-layout: page
+layout: landing
 ---
 
 <div class="voice-and-tone">
 
-  <h1 class="page-heading">Voice and Tone</h1>
+	<div class="c-banner">
+		<h1 class="c-banner__heading">Voice and Tone</h1>
+	</div>
+	  <p>Voice represents the message that the company wants to deliver to the user and the way the user perceives this message. Tone is the emotion behind the message, representing the company's voice but allowing the user to feel a certain way depending on the circumstance. Tone varies depending on the message the company is trying to convey and the situation that the user is in. Together, voice and tone convey the the company's message while making the users feel comfortable during their experience.</p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+	<div class="c-block">
+		<h2 class="c-block__heading">Resources</h2>
+		<ul class="c-block__list">
+			<li class="c-block__item">
+				<a href="http://voiceandtone.com/success-message/" class="c-block__link">Mail Chimp</a>
+			</li>
+			<li class="c-block__item">
+				<a href="https://www.lightningdesignsystem.com/voice-and-tone/" class="c-block__link">Lightning Design System</a>
+			</li>
+			<li class="c-block__item">
+				<a href="http://workmanship.io/" class="c-block__link">workmanship.io</a> by Michael Fouquet
+			</li>
+			<li class="c-block__item">
+				<a href="http://workmanship.io/" class="c-block__link">workmanship.io</a> by Michael Fouquet
+			</li>
+			<li class="c-block__item">
+				<a href="http://workmanship.io/" class="c-block__link">workmanship.io</a> by Michael Fouquet
+			</li>
+		</ul>
+	</div>
+	
+	<h2 class="c-tout__heading">Examples</h2>
+	<ul class="c-tout__list">
+        {% for my_page in site.pages %}
+			{% if my_page.title %}
+				{% if my_page.title != "Overview" %}
+					{% if my_page.group == "voice-and-tone" %}
+					<li class="c-tout__item">
+						<a class="c-tout__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
+				      	{{ my_page.title }}
+			          	</a>
+				  	</li>
+				  	{% endif %}
+			  	{% endif %}
+		  	{% endif %}
+	    {% endfor %}
+	</ul>
+	
 </div>

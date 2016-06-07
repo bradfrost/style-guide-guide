@@ -2,12 +2,24 @@
     #HEADER
 \*------------------------------------*/
 
-.sgg-header {
+.c-header {
     background: $gray-light;
-    padding: 1em;
-}
-
-.sgg-main {
-    width: 100%;
-
+    display: flex;
+    align-items: center;
+    
+    &__title {
+	    margin: 0 auto;
+	    padding: 1em;
+	    
+	    @media all and (min-width: 35em) {
+			margin: 0;
+	    }
+    }
+    
+    @media all and (min-width: 35em) {
+	    flex-direction: column;
+	    position: fixed;
+	    height: 100%;
+	    align-items: flex-start;
+    }
 }

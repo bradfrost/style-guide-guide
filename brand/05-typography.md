@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: detail
 title: Typography
 group: brand
 ---

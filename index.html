@@ -4,20 +4,46 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+	<div class="c-banner">
+		<h1 class="c-banner__heading">Welcome to the Style Guide Guide!</h1>
+	</div>
+	
+	<p class="home__description">The Style Guide Guide is a boilerplate to help organizations spin up their own custom style guides. The guide includes brand style guides, voice and tone, code, patterns, and principles.</p>
+	
+	<ul class="c-tout__list">
+	   	<li class="c-tout__item">		  	
+	        <a class="c-tout__link" href="/brand/index.html">
+	            Brand
+	        </a>
+	    </li>
+	    <li class="c-tout__item">		  	
+	        <a class="c-tout__link" href="/principles.html">
+	            Principles
+	        </a>
+	    </li>
+	    <li class="c-tout__item">		  	
+	        <a class="c-tout__link" href="/voice-and-tone/index.html">
+	            Voice and Tone
+	        </a>
+	    </li>
+	    <li class="c-tout__item">	
+	        <a class="c-tout__link"  href="/writing.html">
+	            Writing
+	        </a>
+	    </li>
+	    <li class="c-tout__item">	
+	        <a class="c-tout__link"  href="/patterns.html">
+	            Patterns
+	        </a>
+	    </li>
+	    <li class="c-tout__item">	
+	        <a class="c-tout__link" href="/code/index.html">
+	            Code
+	        </a>
+	    </li>
+	</ul>
 </div>
+
+
+
+

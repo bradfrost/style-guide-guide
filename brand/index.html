@@ -1,23 +1,49 @@
 ---
-layout: page
+layout: landing
 ---
 
 <div class="brand">
 
-  <h1 class="page-heading">Brand</h1>
+  <div class="c-banner">
+		<h1 class="c-banner__heading">Brand</h1>
+  </div>
+  <p>This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. </p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+	<div class="c-block">
+		<h2 class="c-block__heading">Resources</h2>
+		<ul class="c-block__list">
+			<li class="c-block__item">
+				<a href="http://workmanship.io/" class="c-block__link">workmanship.io</a> by Michael Fouquet
+			</li>
+			<li class="c-block__item">
+				<a href="http://workmanship.io/" class="c-block__link">workmanship.io</a> by Michael Fouquet
+			</li>
+			<li class="c-block__item">
+				<a href="http://workmanship.io/" class="c-block__link">workmanship.io</a> by Michael Fouquet
+			</li>
+			<li class="c-block__item">
+				<a href="http://workmanship.io/" class="c-block__link">workmanship.io</a> by Michael Fouquet
+			</li>
+			<li class="c-block__item">
+				<a href="http://workmanship.io/" class="c-block__link">workmanship.io</a> by Michael Fouquet
+			</li>
+		</ul>
+	</div>
+	
+	<ul class="c-tout__list">
+        {% for my_page in site.pages %}
+			{% if my_page.title %}
+				{% if my_page.title != "Overview" %}
+					{% if my_page.group == "brand" %}
+						<li class="c-tout__item">
+							<a class="c-tout__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
+					      	{{ my_page.title }}
+				          	</a>
+					  	</li>
+			  		{% endif %}
+			  	{% endif %}
+		  	{% endif %}
+	    {% endfor %}
+	</ul>
 
 </div>

@@ -48,6 +48,7 @@
 /* Navigation Primary List */
 .c-nav__list {
 	display: none;
+	background: $gray-light;
 	
 	/* .nav__list styling when nav is active */
 	.c-nav--is-active & {
@@ -68,12 +69,14 @@
 
 /* Navigation Sub List */
 .c-nav__sublist--has-children {
-	display: none;
 	left: 160px;
 	top: 0;
+	max-height: 0px;
+	overflow: hidden;
 	background: #f9f7f7;
-	box-shadow: 0 22px 22px -22px rgba(0, 0, 0, 0.3) inset, 
-	0 -22px 22px -22px rgba(0, 0, 0,0.3) inset;
+	box-shadow: 0 22px 11px -22px rgba(0, 0, 0, 0.3) inset, 
+	0 -22px 11px -22px rgba(0, 0, 0, 0.3) inset;
+	transition: all 0.5s ease;
 	
 	/* .nav__sublist styling when nav is active */
 	.c-nav--is-active & {
@@ -86,7 +89,7 @@
 	
 	/* .nav__sublist styling when nav__item is active */
 	.c-nav__item--is-active & {
-		display: block;
+		max-height: 1000px;
 	}
 	
 	@media all and (min-width: 35em) {
@@ -96,11 +99,11 @@
 }
 
 
-.c-nav__item{
-	&:nth-child(odd) {
-		background: $gray-light-2;
-	}
+.c-nav__item {
+	border-bottom: 1px solid #E8D7D7;
+	background: $gray-light;
 }
+
 .c-nav__link {
 	display: flex;
 	padding: 1em;

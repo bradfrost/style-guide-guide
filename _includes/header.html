@@ -46,7 +46,7 @@
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "voice-and-tone" %}
-						<li class="c-c-nav__sublist__item">
+						<li class="c-nav__sublist__item">
 							<a class="c-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
 					      	{{ my_page.title }}
 				          	</a>

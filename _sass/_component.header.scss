@@ -6,20 +6,32 @@
     background: $gray-light;
     display: flex;
     align-items: center;
-    
-    &__title {
-	    margin: 0 auto;
-	    padding: 1em;
-	    
-	    @media all and (min-width: 35em) {
-			margin: 0;
-	    }
-    }
-    
+
     @media all and (min-width: 35em) {
 	    flex-direction: column;
 	    position: fixed;
 	    height: 100%;
 	    align-items: flex-start;
+        box-shadow: 3px 0 6px rgba(0,0,0,0.1);
     }
+}
+
+/**
+ * Header Title
+ * 1) The header title is the container area that houses
+ * the style guide's title, which may include either a text
+ * heading or logo.
+ */
+.c-header__title {
+    margin: 0 auto;
+    padding: 0.5rem 1rem 1rem;
+    display: block;
+}
+
+/**
+ * Logo
+ */
+.c-logo {
+    display: block;
+    margin: 0 auto;
 }

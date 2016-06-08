@@ -3,7 +3,7 @@ $('.c-nav__trigger').click(function(event) {
 	$('.c-nav').toggleClass('c-nav--is-active');
 });
 
-$('.js-c-nav__link').click(function(event) {
+$('.js-nav__link').click(function(event) {
 	if($(this).parent('.c-nav__item').children('.c-nav__sublist').hasClass('c-nav__sublist--has-children')) {
 	event.preventDefault();
 	$(this).parent('.c-nav__item').toggleClass('c-nav__item--is-active');

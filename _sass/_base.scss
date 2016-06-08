@@ -85,13 +85,6 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
     -webkit-appearance: none;
 }
 
-//Color input
-input[type=color] {
-    padding: 0.1em;
-    min-height: 5em;
-    width: 100%;
-}
-
 //Submit buttons
 button, input[type=submit] {
     cursor: pointer;

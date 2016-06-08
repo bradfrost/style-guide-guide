@@ -1,12 +1,14 @@
 <header class="c-header" role="banner">
-	<button class="c-nav__trigger">Menu</button>
-	<nav class="c-nav" role="navigation">
+
+    <button class="c-nav__trigger">Menu</button>
+
+    <nav class="c-nav" role="navigation">
         <ul class="c-nav__list">
-           	<li class="c-nav__item">		  	
-	            <a class="c-nav__link js-c-nav__link" href="/brand/index.html">
+           	<li class="c-nav__item">
+	            <a class="c-nav__link js-nav__link" href="/brand/index.html">
 		            Brand
 	            </a>
-	           	<ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">	    
+	           	<ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "brand" %}
@@ -15,13 +17,13 @@
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
-					  	{% endif %}					  	
+					  	{% endif %}
 				  	{% endif %}
 			    {% endfor %}
 	            </ul>
             </li>
             <li class="c-nav__item">
-	            <a class="c-nav__link js-c-nav__link" href="/principles/index.html">
+	            <a class="c-nav__link js-nav__link" href="/principles/index.html">
 		            Principles
 	            </a>
 	            <ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'principles' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
@@ -39,7 +41,7 @@
 	            </ul>
             </li>
             <li class="c-nav__item">
-	            <a class="c-nav__link js-c-nav__link" href="/voice-and-tone/index.html">
+	            <a class="c-nav__link js-nav__link" href="/voice-and-tone/index.html">
 		            Voice and Tone
 		        </a>
 		        <ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'voice-and-tone' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
@@ -57,7 +59,7 @@
 	            </ul>
 	        </li>
             <li class="c-nav__item">
-	            <a class="c-nav__link js-c-nav__link" href="/writing/index.html">
+	            <a class="c-nav__link js-nav__link" href="/writing/index.html">
 		            Writing
 	            </a>
 	            <ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'writing' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
@@ -75,7 +77,7 @@
 	            </ul>
             </li>
             <li class="c-nav__item">
-	            <a class="c-nav__link js-c-nav__link" href="/patterns/index.html">
+	            <a class="c-nav__link js-nav__link" href="/patterns/index.html">
 		            Patterns
 	            </a>
 	            <ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'patterns' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
@@ -93,7 +95,7 @@
 	            </ul>
             </li>
             <li class="c-nav__item">
-	            <a class="c-nav__link js-c-nav__link" href="/code/index.html">
+	            <a class="c-nav__link js-nav__link" href="/code/index.html">
 		            Code
 		        </a>
 		        <ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'code' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
@@ -122,7 +124,26 @@
 		      	Updates
 	          	</a>
 		  	</li>
-		</ul>
-    </nav>
-    <a class="c-header__title" href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
-</header><!--end sgg-header-->
+		</ul><!-- end .c-nav__list-->
+    </nav><!-- end .c-nav-->
+
+    <a class="c-header__title" href="{{ site.baseurl }}/" rel="home">
+
+        <svg class="c-logo" width="122px" height="116px" viewBox="2421 474 122 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>{{ site.title }}</title>
+            <defs></defs>
+            <g id="Group-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(2421.000000, 474.000000)" font-family="AvenirNext-Heavy, Avenir Next" font-weight="600">
+                <text id="STYLE" font-size="40.4662755" letter-spacing="-3.0999999" fill="#5E5E5E">
+                    <tspan x="0.847222222" y="40">STYLE</tspan>
+                </text>
+                <text id="GUIDE" font-size="37.9371332" letter-spacing="-2.90625" fill="#5E5E5E">
+                    <tspan x="0" y="70.6960784">GUIDE</tspan>
+                </text>
+                <text id="GUIDE" font-size="37.9371332" letter-spacing="-2.90625" fill="#5E5E5E">
+                    <tspan x="0" y="101.137255">GUIDE</tspan>
+                </text>
+            </g>
+        </svg><!--end .c-header__logo-->
+
+    </a><!--end .c-header__title-->
+</header><!--end .c-header-->

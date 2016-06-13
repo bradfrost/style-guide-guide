@@ -30,13 +30,13 @@ layout: landing
 		</ul>
 	</div>
 
-	<ul class="c-tout__list">
+	<ul class="c-grid-list">
 	        {% for my_page in site.pages %}
 				{% if my_page.title %}
 					{% if my_page.title != "Overview" %}
 						{% if my_page.group == "patterns" %}
-						<li class="c-tout__item">
-							<a class="c-tout__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
+						<li class="c-grid-nav__item">
+							<a class="c-grid-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>

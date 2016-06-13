@@ -5,7 +5,9 @@
 [role=main] {
     padding: 1em 2em 2em;
     flex: 1;
-    
+    display: flex;
+    flex-direction: column;
+
     @media all and (min-width: 35em) {
 	    margin-left: 12em;
     }

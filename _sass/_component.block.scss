@@ -4,8 +4,9 @@
 
 /* Block Containing Title and List */
 .c-block {
-	padding: 1em;
-	border: 1px solid $gray-dark;
+	padding: 1rem;
+    margin-bottom: 2rem;
+	border: 1px dotted $gray-dark;
 	border-radius: 5px;
 }
 
@@ -18,7 +19,7 @@
 /* Link Within Block */
 .c-block__link {
 	 box-shadow: 0 5px 1px -2px #e59400;
-	 
+
 	 &:hover, &:focus {
 		 box-shadow: none;
 	 }

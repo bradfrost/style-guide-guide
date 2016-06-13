@@ -33,7 +33,7 @@
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import 
+@import
 		"variables",
         "mixins",
         "base.body",
@@ -45,6 +45,6 @@
         "component.nav",
         "component.block",
         "component.banner",
-        "component.tout",
+        "component.grid-nav",
 		"scope"
 ;

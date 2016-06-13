@@ -35,24 +35,6 @@ $transparent-min: 0.9;
 $transparent-med: 0.5;
 $transparent-max: 0.1;
 
-
-$success: #dff0d8;
-$success-tone: darken( $success, $tone );
-$success-tone-med: darken( $success, $tone-med );
-$success-tone-max: darken( $success, $tone-max );
-$info: #d9edf7;
-$info-tone: darken( $info, $tone );
-$info-tone-med: darken( $info, $tone-med );
-$info-tone-max: darken( $info, $tone-max );
-$warning: #fcf8e3;
-$warning-tone: darken( $warning, $tone );
-$warning-tone-med: darken( $warning, $tone-med );
-$warning-tone-max: darken( $warning, $tone-max );
-$error: #f2dede;
-$error-tone: darken( $error, $tone );
-$error-tone-med: darken( $error, $tone-med );
-$error-tone-max: darken( $error, $tone-max );
-
 //Typography
 $font: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 
@@ -86,8 +68,9 @@ $pad-half: $pad/2;
 $pad-quarter: $pad/4;
 
 //Borders
+$border: 1px dotted #808080;
+
 $border-med: 3px;
-$border-thick: 10px;
 
 $border-radius: 4px;
 

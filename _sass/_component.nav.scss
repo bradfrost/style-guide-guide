@@ -106,16 +106,16 @@
 		&:after {
 			content: "";
 		    position: absolute;
-	        top: 20px;
-			right: 10px;
+		    top: 23px;
+		    right: 10px;
 		    display: block;
 		    width: 0;
 		    height: 0;
 		    margin-left: -4px;
 		    pointer-events: none;
-		    border-top: 8px solid transparent;
-		    border-bottom: 8px solid transparent;
-		    border-left: 10px solid #5E5E5E;
+		    border-top: 6px solid transparent;
+		    border-bottom: 6px solid transparent;
+		    border-left: 8px solid #5E5E5E;
 	    }
 	    
 	    &--is-active {

@@ -86,7 +86,7 @@
     /**
      * Nav Sublist styling when parent nav item is active
      */
-	.c-nav__item--is-active & {
+	.c-nav__item--has-children--is-active & {
 		max-height: 800px;
         padding: 0.3rem 0;
         transition-timing-function: ease-in;
@@ -99,6 +99,43 @@
 .c-nav__item {
 	border-bottom: 1px dotted #e6e6e6;
 	background: $gray-light;
+	position: relative;
+	
+	&--has-children {
+		
+		&:after {
+			content: "";
+		    position: absolute;
+	        top: 20px;
+			right: 10px;
+		    display: block;
+		    width: 0;
+		    height: 0;
+		    margin-left: -4px;
+		    pointer-events: none;
+		    border-top: 8px solid transparent;
+		    border-bottom: 8px solid transparent;
+		    border-left: 10px solid #5E5E5E;
+	    }
+	    
+	    &--is-active {
+		    
+		    &:after {
+			    content: "";
+			    position: absolute;
+			    top: 26px;
+			    right: 10px;
+			    display: block;
+			    width: 0;
+			    height: 0;
+			    margin-left: -4px;
+			    pointer-events: none;
+			    border-top: 10px solid #5E5E5E;
+			    border-right: 8px solid transparent;
+			    border-left: 8px solid transparent;
+			}
+	    }
+	}
 }
 
 /**

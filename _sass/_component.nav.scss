@@ -133,6 +133,10 @@
 .c-nav__link {
 	display: flex;
 	padding: 1em;
+	
+	&--is-active {
+		color: $color-brand;
+	}
 
 	.c-nav__sublist__item & {
 		display: block;

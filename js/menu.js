@@ -1,3 +1,14 @@
+$(function() {
+     var pgurl = window.location.href.replace(/^.*\/\/[^\/]+/, '');
+     $(".c-nav__link").each(function(){
+	     console.log(pgurl);
+	     console.log($(this).attr("href"));
+          if($(this).attr("href") == pgurl || $(this).attr("href") == '' ) {
+          $(this).addClass("c-nav__link--is-active");
+          }
+     })
+});
+
 $('.c-nav__trigger').click(function(event) {
 	event.preventDefault();
 	$('.c-nav').toggleClass('c-nav--is-active');

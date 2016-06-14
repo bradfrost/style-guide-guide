@@ -4,7 +4,7 @@
 
     <nav class="c-nav" role="navigation">
         <ul class="c-nav__list">
-           	<li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}">
+           	<li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/brand' %} c-nav__item--has-children--is-active{% endif %}">
 	            <a class="c-nav__link js-nav__link" href="/brand/index.html">
 		            Brand
 	            </a>
@@ -22,7 +22,7 @@
 			    {% endfor %}
 	            </ul>
             </li>
-            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'principles' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}">
+            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'principles' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/principles' %} c-nav__item--has-children--is-active{% endif %}">
 	            <a class="c-nav__link js-nav__link" href="/principles/index.html">
 		            Principles      
 	            </a>
@@ -40,7 +40,7 @@
 			    {% endfor %}
 	            </ul>
             </li>
-            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'voice-and-tone' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}">
+            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'voice-and-tone' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/voice-and-tone' %} c-nav__item--has-children--is-active{% endif %}">
 	            <a class="c-nav__link js-nav__link" href="/voice-and-tone/index.html">
 		            Voice and Tone
 		        </a>
@@ -58,7 +58,7 @@
 			    {% endfor %}
 	            </ul>
 	        </li>
-            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'writing' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}">
+            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'writing' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/writing' %}  c-nav__item--has-children--is-active{% endif %}">
 	            <a class="c-nav__link js-nav__link" href="/writing/index.html">
 		            Writing
 	            </a>
@@ -76,7 +76,7 @@
 			    {% endfor %}
 	            </ul>
             </li>
-            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'patterns' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}">
+            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'patterns' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/patterns' %} c-nav__item--has-children--is-active{% endif %}">
 	            <a class="c-nav__link js-nav__link" href="/patterns/index.html">
 		            Patterns
 	            </a>
@@ -94,7 +94,7 @@
 			    {% endfor %}
 	            </ul>
             </li>
-            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'code' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}">
+            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'code' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/code' %} c-nav__item--has-children--is-active{% endif %}">
 	            <a class="c-nav__link js-nav__link" href="/code/index.html">
 		            Code
 		        </a>

@@ -2,6 +2,7 @@
 layout: detail
 title: Success
 group: voice-and-tone
+parent: Voice and Tone
 ---
 
 ## Tone

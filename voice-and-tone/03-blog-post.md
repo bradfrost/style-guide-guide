@@ -2,6 +2,7 @@
 layout: detail
 title: Blog Post
 group: voice-and-tone
+parent: Voice and Tone
 ---
 
 ## Tone

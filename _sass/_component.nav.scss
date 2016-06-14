@@ -6,7 +6,7 @@
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - 3.5em);
-	background: $gray-light;
+	background: $color-gray-2;
 	position: absolute;
 	overflow: auto;
 
@@ -22,7 +22,7 @@
 	}
 
 	@media all and (min-width: 35em) {
-        border-top: 1px dotted #e6e6e6;
+        border-top: 1px dotted $color-gray-13;
         position: relative;
 		width: 12em;
 		order: 1;
@@ -35,8 +35,8 @@
 	position: absolute;
     top: 0.6em;
     left: 0.5em;
-	border: 1px solid $gray-dark;
-	background: $gray-light;
+	border: 1px solid $color-gray-63;
+	background: $color-gray-2;
 	border-radius: 5px;
 	padding: 0.5em;
 
@@ -51,7 +51,7 @@
  */
 .c-nav__list {
 	display: none;
-	background: $gray-light;
+	background: $color-gray-2;
 
     /**
      * Nav list styling when parent nav is active
@@ -78,9 +78,9 @@
 .c-nav__sublist--has-children {
 	max-height: 0px;
 	overflow: hidden;
-	background: #f9f7f7;
-	box-shadow: 0 22px 11px -22px rgba(0,0,0,0.1) inset,
-	            0 -22px 11px -22px rgba(0,0,0,0.1) inset;
+	background: $color-gray-3;
+	box-shadow: 0 22px 11px -22px $color-gray-13 inset,
+	            0 -22px 11px -22px $color-gray-13 inset;
 	transition: all 0.2s ease-out;
 
     /**
@@ -97,31 +97,31 @@
  * Nav list item
  */
 .c-nav__item {
-	border-bottom: 1px dotted #e6e6e6;
-	background: $gray-light;
+	border-bottom: 1px dotted $color-gray-13;
+	background: $color-gray-2;
 	position: relative;
 	
 	&--has-children {
 		
 		&:after {
-			content: "";
+		    content: "";
 		    position: absolute;
-		    top: 23px;
+		    top: 26px;
 		    right: 10px;
 		    display: block;
 		    width: 0;
 		    height: 0;
 		    margin-left: -4px;
 		    pointer-events: none;
-		    border-top: 6px solid transparent;
-		    border-bottom: 6px solid transparent;
-		    border-left: 8px solid #5E5E5E;
+		    border-top: 7px solid $color-gray-27;
+		    border-right: 5px solid transparent;
+		    border-left: 5px solid transparent;
 	    }
 	    
 	    &--is-active {
 		    
 		    &:after {
-			    transform: rotate(90deg);
+			    transform: rotate(180deg);
 			}
 	    }
 	}

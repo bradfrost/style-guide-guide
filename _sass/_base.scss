@@ -39,12 +39,12 @@ fieldset {
 
 legend {
     font-weight: bold;
-    color: $gray;
+    color: $color-gray-50;
     margin-bottom: $space;
 }
 
 label {
-    color: $gray-dark;
+    color: $color-gray-63;
     font-size: $font-size-med;
     font-weight: 500;
     display: block;
@@ -60,7 +60,7 @@ button, input, select, textarea {
 
 input, textarea {
     width: 100%;
-    border: 2px solid $gray-light-2;
+    border: 2px solid $color-gray-13;
     border-radius: $border-radius;
     padding: 0.7em;
     font-size: $font-size-med-2;
@@ -68,11 +68,11 @@ input, textarea {
     transition: border-color $anim-fast ease-out;
 
     &:hover {
-        border-color: $gray-light-3;
+        border-color: $color-gray-27;
     }
 
     &:focus {
-        border-color: $brand-color;
+        border-color: $color-brand;
     }
 }
 
@@ -117,7 +117,7 @@ input[type=file] {
 select {
     display: block;
     width: 100%;
-    border: 1px solid $gray-light-3;
+    border: 1px solid $color-gray-27;
     border-radius: $border-radius;
 }
 
@@ -170,13 +170,13 @@ h4 {
 \*------------------------------------*/
 
 a {
-    color: $gray-dark;
+    color: $color-gray-63;
     text-decoration: none;
     outline: 0;
     transition: all $anim-fast ease-out; //Fade animation for all links on the interface
 
     &:hover, &:focus {
-        color: $brand-color;
+        color: $color-brand;
     }
 }
 
@@ -208,7 +208,7 @@ dt {
 
     @media all and (min-width: $bp-med) {
         padding: $pad-half $pad-half $pad-half 0;
-        border-bottom: 1px solid $gray-light-2;
+        border-bottom: 1px solid $color-gray-13;
         float: left;
         clear: left;
         width: 30%;
@@ -217,7 +217,7 @@ dt {
 
 dd {
     margin: 0 0 $space-half 0;
-    border-bottom: 1px solid $gray-light-2;
+    border-bottom: 1px solid $color-gray-13;
     padding-bottom: $pad-half;
 
     @media all and (min-width: $bp-med) {
@@ -267,7 +267,7 @@ table {
 
 th {
     text-align: left;
-    color: $gray-light-3;
+    color: $color-gray-27;
     font-weight: normal;
     font-size: $font-size-small;
 }
@@ -283,8 +283,8 @@ p {
 //Blockquote
 blockquote {
     font-style:italic;
-    border-left: 1px solid $gray;
-    color: $gray;
+    border-left: 1px solid $color-gray-50;
+    color: $color-gray-50;
     padding-left: $pad;
     margin-bottom: $space;
 }
@@ -293,13 +293,13 @@ blockquote {
 hr {
     border: 0;
     height: 1px;
-    background: $gray-light-3;
+    background: $color-gray-27;
     margin: $space-double 0;
 }
 
 //Abbreviation
 abbr {
-    border-bottom: 1px dotted $gray;
+    border-bottom: 1px dotted $color-gray-50;
     cursor: help;
 }
 

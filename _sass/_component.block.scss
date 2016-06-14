@@ -6,7 +6,7 @@
 .c-block {
 	padding: 1rem;
     margin-bottom: 2rem;
-	border: 1px dotted $gray-dark;
+	border: 1px dotted $color-gray-63;
 	border-radius: 5px;
 }
 
@@ -18,7 +18,7 @@
 
 /* Link Within Block */
 .c-block__link {
-	 box-shadow: 0 5px 1px -2px #e59400;
+	 box-shadow: 0 5px 1px -2px $color-gray-50;
 
 	 &:hover, &:focus {
 		 box-shadow: none;

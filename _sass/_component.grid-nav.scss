@@ -17,7 +17,7 @@
         right: 0;
         width: 1px;
         height: 100%;
-        background: #fff;
+        background: $color-white;
     }
 
     &:after {
@@ -27,15 +27,15 @@
         left: 0;
         width: 100%;
         height: 1px;
-        background: #fff;
+        background: $color-white;
     }
 }
 
 .c-grid-nav__item {
     display: flex;
 	width: 50%;
-    border-bottom: 1px dotted #808080;
-    border-right: 1px dotted #808080;
+    border-bottom: 1px dotted $color-gray-50;
+    border-right: 1px dotted $color-gray-50;
 
     &:last-of-type {
         border-bottom: 0;

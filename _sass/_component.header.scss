@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .c-header {
-    background: $gray-light;
+    background: $color-gray-2;
     display: flex;
     align-items: center;
 
@@ -12,7 +12,7 @@
 	    position: fixed;
 	    height: 100%;
 	    align-items: flex-start;
-        box-shadow: 3px 0 6px rgba(0,0,0,0.1);
+        box-shadow: 3px 0 6px $color-gray-13;
     }
 }
 

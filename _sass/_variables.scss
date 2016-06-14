@@ -3,21 +3,19 @@
 \*------------------------------------*/
 
 //Colors
-$brand: #333;
+$color-brand: #008ebc; //brand-color
 
-$gray-light: #fbfbfb;
-$gray-light-1: #f9f7f7;
-$gray-light-2: #ddd;
-$gray-light-3: #bbb;
-$gray-light-4: #999;
-$gray-med: #666;
-$gray: #808080;
-$gray-dark: #5E5E5E;
-$gray-dark-2: #131313;
-$white: #fff;
-$black: #000;
-
-$brand-color: #008ebc;
+$color-gray-2: #fbfbfb;   //gray-light
+$color-gray-3: #f9f7f7; //gray-light-1
+$color-gray-13: #ddd; //gray-light-2
+$color-gray-27: #bbb; //gray-light-3
+$color-gray-40: #999; //gray-light-4
+$color-gray-50: #808080; //gray
+$color-gray-60: #666; //gray-med
+$color-gray-63: #5E5E5E;  //gray-dark
+$color-gray-93: #131313;  //gray-dark-2
+$color-white: #fff; //white
+$color-black: #000; //black
 
 
 $tint: 20%;

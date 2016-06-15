@@ -24,8 +24,12 @@
  */
 .c-header__title {
     margin: 0 auto;
-    padding: 0.5rem 1rem 1rem;
+    padding: 0.5rem 0.5rem;
     display: block;
+    
+    @media all and (min-width: 35em) {
+	    padding: 0.5rem 1rem 1rem;
+    }
 }
 
 /**
@@ -34,4 +38,10 @@
 .c-logo {
     display: block;
     margin: 0 auto;
+    height: 60px;
+    
+    @media all and (min-width: 35em) {
+	    height: auto;
+    }
+    
 }

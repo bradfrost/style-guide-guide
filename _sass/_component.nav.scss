@@ -9,9 +9,10 @@
 	background: $color-gray-2;
 	position: absolute;
 	overflow: auto;
+	z-index: 1;
 
 	&--is-active {
-		top: 3.5em;
+		top: 4.7em;
 		left: 0;
 		width: 12em;
 
@@ -33,8 +34,9 @@
 .c-nav__trigger {
 	display: block;
 	position: absolute;
-    top: 0.6em;
-    left: 0.5em;
+    top: 1.2rem;
+    left: 2em;
+    color: $color-gray-63;
 	border: 1px solid $color-gray-63;
 	background: $color-gray-2;
 	border-radius: 5px;

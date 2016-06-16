@@ -10,8 +10,23 @@ $(function() {
 });
 
 $('.c-nav__trigger').click(function(event) {
+	var trigger = $('.c-nav__trigger');
 	event.preventDefault();
 	$('.c-nav').toggleClass('c-nav--is-active');
+	trigger.toggleClass('c-nav__trigger--is-active');
+	$('.c-header').toggleClass('c-header--is-active');
+	$('.content').toggleClass('content--is-overlayed');
+	if (trigger.hasClass("c-nav__trigger--is-active")) {
+            trigger.html("close");
+        } 
+    else {
+        trigger.html("menu");
+    }
+});
+
+$('.content').click(function(event) {
+	event.preventDefault();
+	$('.c-nav').removeClass('c-nav--is-active');	
 });
 
 $('.js-nav__link').click(function(event) {

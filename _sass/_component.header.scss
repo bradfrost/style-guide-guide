@@ -6,6 +6,16 @@
     background: $color-gray-2;
     display: flex;
     align-items: center;
+    z-index: 1;
+    
+    &--is-active {
+	    position: fixed;
+	    width: 100%;
+	    
+	    @media all and (min-width: 35em) {
+		    width: inherit;
+	    }
+    }
 
     @media all and (min-width: 35em) {
 	    flex-direction: column;

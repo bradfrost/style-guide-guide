@@ -11,6 +11,10 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    
+    &--is-overlayed {
+	    padding-top: 4.75em;
+    }
 }
 
 /**

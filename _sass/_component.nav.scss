@@ -5,7 +5,7 @@
 .c-nav {
 	display: flex;
 	flex-direction: column;
-	height: calc(100vh - 3.5em);
+	height: calc(100vh - 4.7em);
 	background: $color-gray-2;
 	position: absolute;
 	overflow: auto;
@@ -34,13 +34,24 @@
 .c-nav__trigger {
 	display: block;
 	position: absolute;
-    top: 1.2rem;
+    top: 0.85rem;
     left: 2em;
-    color: $color-gray-63;
-	border: 1px solid $color-gray-63;
-	background: $color-gray-2;
+    color: $color-gray-50;
+    border: 1px dotted $color-gray-50;
+    background: transparent;
 	border-radius: 5px;
-	padding: 0.5em;
+	padding: 0.8em 0.5em;
+	text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    
+    &--is-active {
+	    color: $color-gray-63;
+    }
+    
+    &:hover, &:focus {
+	    color: $color-gray-63;
+    }
 
 	@media all and (min-width: 35em) {
 		display: none;

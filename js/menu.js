@@ -1,6 +1,6 @@
 $(function() {
      var pgurl = window.location.href.replace(/^.*\/\/[^\/]+/, '');
-     $(".c-nav__sublist__item .c-nav__link").each(function(){
+     $(".c-nav__link").each(function(){
 	     console.log(pgurl);
 	     console.log($(this).attr("href"));
           if($(this).attr("href") == pgurl || $(this).attr("href") == '' ) {

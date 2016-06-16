@@ -5,6 +5,7 @@ $(function() {
 	     console.log($(this).attr("href"));
           if($(this).attr("href") == pgurl || $(this).attr("href") == '' ) {
           $(this).addClass("c-nav__link--is-active");
+          $(this).parentsUntil('.c-nav__list').children('.c-nav__link').addClass('c-nav__link--is-active');
           }
      })
 });

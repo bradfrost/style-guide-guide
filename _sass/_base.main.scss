@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
 
-    @media all and (min-width: 35em) {
+    @media all and (min-width: $bp-small) {
 	    margin-left: 12em;
     }
 }

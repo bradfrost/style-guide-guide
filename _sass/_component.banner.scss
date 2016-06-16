@@ -3,7 +3,20 @@
 \*------------------------------------*/
 
 .c-banner {
-	@media all and (min-width: 35em) {
+	@media all and (min-width: $bp-small) {
 		margin-bottom: 1em;
+	}
+}
+
+/**
+ * Heading Within the Banner
+ */
+.c-banner__heading {
+	@media all and (min-width: $bp-small) {
+		font-size: 3.2rem;
+	}
+
+	@media all and (min-width: $bp-large) {
+		font-size: 4.5rem;
 	}
 }

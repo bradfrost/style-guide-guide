@@ -2,10 +2,14 @@
     #SCOPE
 \*------------------------------------*/
 
-//Detail Template
-
+/**
+ * Detail Page Scope
+ */
 .s-detail {
 	
+	/**
+	 * Unordered lists style within the detail scope
+	 */
 	ul {
 		list-style: disc;
 		margin: 0 0 1em 1em;

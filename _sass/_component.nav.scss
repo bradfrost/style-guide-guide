@@ -20,13 +20,13 @@
 		left: 0;
 		width: 12em;
 
-		@media all and (min-width: 35em) {
+		@media all and (min-width: $bp-small) {
 			top: 0;
 			width: initial;
 		}
 	}
 
-	@media all and (min-width: 35em) {
+	@media all and (min-width: $bp-small) {
         border-top: 1px dotted $color-gray-13;
         position: relative;
 		width: 12em;
@@ -34,7 +34,9 @@
 	}
 }
 
-/* Navigation Trigger Button */
+/**
+ * Navigation Trigger Button
+ */
 .c-nav__trigger {
 	display: block;
 	position: absolute;
@@ -43,11 +45,11 @@
     color: $color-gray-50;
     border: 1px dotted $color-gray-50;
     background: transparent;
-	border-radius: 5px;
+	border-radius: $border-radius;
 	padding: 0.8em 0.5em;
 	text-transform: uppercase;
     font-weight: bold;
-    transition: all 0.2s ease;
+    transition: all $anim-fast ease;
     
     &--is-active {
 	    color: $color-gray-63;
@@ -57,7 +59,7 @@
 	    color: $color-gray-63;
     }
 
-	@media all and (min-width: 35em) {
+	@media all and (min-width: $bp-small) {
 		display: none;
 	}
 }
@@ -78,12 +80,12 @@
 		top: 48px;
 		left: 0;
 
-		@media all and (min-width: 35em) {
+		@media all and (min-width: $bp-small) {
 			top: 0;
 		}
 	}
 
-	@media all and (min-width: 35em) {
+	@media all and (min-width: $bp-small) {
 		display: block;
 		padding: 0;
 	}
@@ -98,7 +100,7 @@
 	background: $color-gray-3;
 	box-shadow: 0 22px 11px -22px $color-gray-13 inset,
 	            0 -22px 11px -22px $color-gray-13 inset;
-	transition: all 0.2s ease-out;
+	transition: all $anim-fast ease-out;
 
     /**
      * Nav Sublist styling when parent nav item is active
@@ -185,7 +187,7 @@
 		display: block;
 	}
 
-	@media all and (min-width: 35em) {
+	@media all and (min-width: $bp-small) {
 		display: block;
 	}
 }

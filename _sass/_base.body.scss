@@ -11,7 +11,7 @@ body {
     -webkit-text-size-adjust: 100%;
     color: $color-gray-63;
     
-    @media all and (min-width: 35em) {
+    @media all and (min-width: $bp-small) {
 	    flex-direction: row;
     }
 }

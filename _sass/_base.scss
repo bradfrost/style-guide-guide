@@ -2,148 +2,80 @@
     #RESET
 \*------------------------------------*/
 
-// Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/
+/**
+ * Border Box Everything
+ */
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+/**
+ * Zero Out Padding and Margin for Most Elements Initially
+ */
 html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
     margin: 0;
     padding: 0;
 }
 
+/**
+ * Display Elements As Block Initially
+ */
 header, footer, nav, section, article, hgroup, figure, main {
     display: block;
 }
+
+/**
+ * Button Reset
+ */
+button {
+	cursor: pointer;
+}
+
+
 
 /*------------------------------------*\
     #FORMS
 \*------------------------------------*/
 
+/**
+ * HTML Reset
+ */
 html {
     position: relative;
     height: 100%;
 }
 
-form ol, form ul {
-    list-style: none;
-    margin-left: 0;
-}
-
-fieldset {
-    padding: 0;
-    border: 0;
-}
-
-legend {
-    font-weight: bold;
-    color: $color-gray-50;
-    margin-bottom: $space;
-}
-
-label {
-    color: $color-gray-63;
-    font-size: $font-size-med;
-    font-weight: 500;
-    display: block;
-    padding-bottom: $space-quarter;
-    margin: 0;
-}
-
+/**
+ * Zero Out Margins and Add Font Size and Font Family to Buttons, Input, Select, and Text Areas
+ */
 button, input, select, textarea {
     font-family: inherit;
     font-size: 100%;
     margin: 0;
 }
 
-input, textarea {
-    width: 100%;
-    border: 2px solid $color-gray-13;
-    border-radius: $border-radius;
-    padding: 0.7em;
-    font-size: $font-size-med-2;
-    font-weight: 300;
-    transition: border-color $anim-fast ease-out;
 
-    &:hover {
-        border-color: $color-gray-27;
-    }
 
-    &:focus {
-        border-color: $color-brand;
-    }
-}
 
-textarea {
-    display: block;
-    min-height: 4em;
-}
-
-input[type=text], input[type=search], input[type=url], input[type=number], textarea {
-    -webkit-appearance: none;
-}
-
-//Submit buttons
-button, input[type=submit] {
-    cursor: pointer;
-    width: auto;
-}
-
-//Checkbox and radio
-input[type=checkbox], input[type=radio] {
-    width: auto;
-    margin-right: 0.3em;
-}
-
-//Search input
-input[type=search] {
-    -webkit-appearance: none;
-    border-radius: 0;
-}
-
-//Datalist
-input[list] {
-    position: relative;
-}
-
-//Search input
-input[type=file] {
-    line-height: 1;
-}
-
-//Select input
-select {
-    display: block;
-    width: 100%;
-    border: 1px solid $color-gray-27;
-    border-radius: $border-radius;
-}
-
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
 
 /*------------------------------------*\
     #HEADINGS
 \*------------------------------------*/
 
-h1  {
+/**
+ * Heading 1 Reset
+ */
+h1 {
     font-size: 2.5rem;
     line-height: 1.3;
     margin-bottom: 0.1em;
-
-	@media all and (min-width: 35em) {
-		font-size: 3.2rem;
-	}
-
-	@media all and (min-width: 74em) {
-		font-size: 4.5rem;
-	}
 }
 
+/**
+ * Heading 2 Reset
+ */
 h2 {
     font-size: 2.2em;
     font-weight: 300;
@@ -151,6 +83,9 @@ h2 {
     margin-bottom: 0.3em;
 }
 
+/**
+ * Heading 3 Reset
+ */
 h3 {
     font-size: 1.5em;
     font-weight: 300;
@@ -158,6 +93,9 @@ h3 {
     margin-bottom: 0.4em;
 }
 
+/**
+ * Heading 4 Reset
+ */
 h4 {
     font-size: 1em;
     font-weight: 300;
@@ -165,12 +103,20 @@ h4 {
     margin-bottom: 0.4em;
 }
 
+
+
+
+
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
 
+/**
+ * Link Reset
+ */
 a {
     color: $color-gray-63;
+	cursor: pointer;
     text-decoration: none;
     outline: 0;
     transition: all $anim-fast ease-out; //Fade animation for all links on the interface
@@ -180,133 +126,33 @@ a {
     }
 }
 
+
+
+
+
 /*------------------------------------*\
     #LISTS
 \*------------------------------------*/
 
-//List Reset
+/**
+ * List Reset
+ */
 ol, ul {
     list-style: none;
 }
 
-//Definition Lists
-dl {
-    overflow: hidden;
-    margin: 0;
 
-    dt:last-of-type {
-        border: 0;
-    }
 
-    dd:last-of-type {
-        border: 0;
-    }
-}
 
-dt {
-    font-weight: bold;
-
-    @media all and (min-width: $bp-med) {
-        padding: $pad-half $pad-half $pad-half 0;
-        border-bottom: 1px solid $color-gray-13;
-        float: left;
-        clear: left;
-        width: 30%;
-    }
-}
-
-dd {
-    margin: 0 0 $space-half 0;
-    border-bottom: 1px solid $color-gray-13;
-    padding-bottom: $pad-half;
-
-    @media all and (min-width: $bp-med) {
-        float: left;
-        width: 70%;
-        padding: $pad-half 0;
-        margin-bottom: 0;
-    }
-}
-
-/*------------------------------------*\
-    #MEDIA
-\*------------------------------------*/
-
-//Flexible Media
-img, video, object {
-    max-width: 100%;
-    height: auto;
-}
-
-//Iframe
-iframe {
-    margin-bottom: $space;
-}
-
-//Figure
-figure {
-    margin-bottom: $space;
-
-    img {
-        margin-bottom: $space-quarter;
-    }
-}
-
-figcaption {
-    font-style: italic;
-}
-
-/*------------------------------------*\
-    #TABLE
-\*------------------------------------*/
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-th {
-    text-align: left;
-    color: $color-gray-27;
-    font-weight: normal;
-    font-size: $font-size-small;
-}
 
 /*------------------------------------*\
     #TEXT
 \*------------------------------------*/
 
+/**
+ * Paragraph Reset
+ */
 p {
     margin-bottom: $space;
 }
 
-//Blockquote
-blockquote {
-    font-style:italic;
-    border-left: 1px solid $color-gray-50;
-    color: $color-gray-50;
-    padding-left: $pad;
-    margin-bottom: $space;
-}
-
-//Horizontal Rule
-hr {
-    border: 0;
-    height: 1px;
-    background: $color-gray-27;
-    margin: $space-double 0;
-}
-
-//Abbreviation
-abbr {
-    border-bottom: 1px dotted $color-gray-50;
-    cursor: help;
-}
-
-strong {
-    font-weight: 500;
-}
-
-.sgg-body {
-    display: flex;
-}

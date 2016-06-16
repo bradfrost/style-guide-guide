@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     z-index: 1;
+    
     /**
 	 * Header Active State
 	 * 1) Triggered when Menu Button is clicked
@@ -15,12 +16,12 @@
 	    position: fixed;
 	    width: 100%;
 	    
-	    @media all and (min-width: 35em) {
+	    @media all and (min-width: $bp-small) {
 		    width: inherit;
 	    }
     }
 
-    @media all and (min-width: 35em) {
+    @media all and (min-width: $bp-small) {
 	    flex-direction: column;
 	    position: fixed;
 	    height: 100%;
@@ -40,7 +41,7 @@
     padding: 0.5rem 0.5rem;
     display: block;
     
-    @media all and (min-width: 35em) {
+    @media all and (min-width: $bp-small) {
 	    padding: 0.5rem 1rem 1rem;
     }
 }
@@ -53,7 +54,7 @@
     margin: 0 auto;
     height: 60px;
     
-    @media all and (min-width: 35em) {
+    @media all and (min-width: $bp-small) {
 	    height: auto;
     }
     

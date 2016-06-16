@@ -5,7 +5,6 @@
 /**
  * Content
  */
-
 .content {
     width: 100%;
     display: flex;
@@ -15,7 +14,7 @@
     &--is-overlayed {
 	    padding-top: 4.75em;
 	    
-	    @media all and (min-width: 35em) {
+	    @media all and (min-width: $bp-small) {
 		    padding-top: 0;
 	    }
     }
@@ -24,12 +23,11 @@
 /**
  * 1 To 2 Up Grid Layout
  */
- 
  .l-g--2up {
 	 display: flex;
 	 flex-direction: column;
 	 
-	 @media all and (min-width: 70em) {
+	 @media all and (min-width: $bp-large) {
 		 flex-direction: row;
 	 }
  }
@@ -38,7 +36,7 @@
  * 1 To 2 Up Grid Item
  */
  .l-g--2up__gi {
-	 @media all and (min-width: 70em) {
+	 @media all and (min-width: $bp-large) {
 		 width: 50%;
 		 
 		 &:first-child {

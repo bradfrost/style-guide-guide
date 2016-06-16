@@ -10,7 +10,11 @@
 	position: absolute;
 	overflow: auto;
 	z-index: 1;
-
+	
+	/**
+	 * Navigation Active State
+	 * 1) Triggered when Menu Button is clicked
+ 	 */
 	&--is-active {
 		top: 4.7em;
 		left: 0;

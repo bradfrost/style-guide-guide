@@ -2,7 +2,9 @@
     #BLOCK
 \*------------------------------------*/
 
-/* Block Containing Title and List */
+/**
+ * Block Containing Title and List 
+ */
 .c-block {
 	padding: 1rem;
     margin-bottom: 2rem;
@@ -10,15 +12,26 @@
 	border-radius: 5px;
 }
 
-/* List Inside of Block*/
+/**
+ * Block Heading
+ */
+ .c-block__heading {
+	 font-size: 1.4rem;
+ }
+
+/** 
+ * List Inside of Block
+ */
 .c-block__list {
 	list-style: disc;
 	margin-left: 1em;
 }
 
-/* Link Within Block */
+/**
+ * Link Within Block 
+ */
 .c-block__link {
-	 box-shadow: 0 5px 1px -2px $color-gray-50;
+	 box-shadow: 0 5px 1px -2px $color-gray-27;
 
 	 &:hover, &:focus {
 		 box-shadow: none;

@@ -14,6 +14,10 @@
     
     &--is-overlayed {
 	    padding-top: 4.75em;
+	    
+	    @media all and (min-width: 35em) {
+		    padding-top: 0;
+	    }
     }
 }
 

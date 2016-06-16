@@ -7,7 +7,10 @@
     display: flex;
     align-items: center;
     z-index: 1;
-    
+    /**
+	 * Header Active State
+	 * 1) Triggered when Menu Button is clicked
+ 	 */
     &--is-active {
 	    position: fixed;
 	    width: 100%;

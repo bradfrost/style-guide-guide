@@ -8,18 +8,20 @@ parent: Code
 
 	<div class="c-banner">
 		<h1 class="c-banner__heading">Code</h1>
-	</div>
-	<div class="l-g--2up">
-		
-		<div class="l-g--2up__gi">
+	</div><!--end c-panel-->
+
+	<div class="l-g l-g--2up">
+
+		<div class="l-g__item">
 			<p>This is an overview of the code. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-		</div>
-		
-		<div class="l-g--2up__gi">
-			
+		</div><!--end l-g__item-->
+
+		<div class="l-g__item">
+
 			<div class="c-block">
 				<h2 class="c-block__heading">Resources</h2>
-				<ul class="c-block__list">
+
+                <ul class="c-block__list">
 					<li class="c-block__item">
 						<a href="http://www.yellowshoe.com.au/standards/" class="c-block__link">Mark Brown's Standards Guidelines</a>
 					</li>
@@ -36,12 +38,13 @@ parent: Code
 						<a href="https://github.com/airbnb/javascript" class="c-block__link">Airbnb JavaScript Style Guide</a>
 					</li>
 				</ul>
-			</div>
-			
-		</div>
-		
-	</div>
-		
+
+			</div><!--end c-block-->
+
+		</div><!--end l-g__item-->
+
+	</div><!--end l-g--2up-->
+
 	<ul class="c-grid-nav">
         {% for my_page in site.pages %}
 			{% if my_page.title %}
@@ -51,10 +54,10 @@ parent: Code
 						<a class="c-grid-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
 				      	{{ my_page.title }}
 			          	</a>
-				  	</li>
+				  	</li><!--end c-grid-nav__item-->
 				  	{% endif %}
 				{% endif %}
 		  	{% endif %}
 	    {% endfor %}
-	</ul>
+	</ul><!--end c-grid-nav-->
 </div>

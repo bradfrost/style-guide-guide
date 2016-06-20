@@ -33,17 +33,37 @@
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-		"variables",
-        "base.body",
-        "base.main",
-        "base",
-        "layout",
-        "component.header",
-        "component.footer",
-        "component.nav",
-        "component.block",
-        "component.banner",
-        "component.grid-nav",
-		"scope"
-;
+/*------------------------------------*\
+    #ABSTRACTS
+\*------------------------------------*/
+@import "abstracts/variables";
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+@import "base/body";
+@import "base/main";
+@import "base/base";
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+@import "components/header";
+@import "components/footer";
+@import "components/nav";
+@import "components/block";
+@import "components/banner";
+@import "components/grid-nav";
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+@import "layout/layout";
+
+/*------------------------------------*\
+    #SCOPE
+\*------------------------------------*/
+@import "scope/scope";
+/*------------------------------------*\
+    #UTILITIES
+\*------------------------------------*/

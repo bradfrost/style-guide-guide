@@ -1,4 +1,3 @@
-
 /**
  * Add Active State to Current Page(and parent link if it is a sublist page) in Nav 
  */
@@ -35,7 +34,7 @@ $('.c-nav__trigger').click(function(event) {
 /**
  * Close Nav on Small Screens by Clicking Anywhere Within the .content Portion of the Page 
  */
-$('.content').click(function(event) {
+/*$('.content').click(function(event) {
 	event.preventDefault();
 	$('.c-nav').removeClass('c-nav--is-active');	
 });

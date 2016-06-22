@@ -2,6 +2,17 @@
 layout: landing
 type: landing
 parent: Principles
+resources:
+- resource: U.S Web Design Standards
+  url: https://standards.usa.gov/ 
+- resource: CFPB Design Manual
+  url: https://cfpb.github.io/design-manual/
+- resource: Field Manuals by Gravity Department
+  url: http://manuals.gravitydept.com/ 
+- resource: Greenpeace Greenwire Style Guide
+  url: http://ggw-prototype.goalgorilla.com/
+- resource: Drupal Style Guide Content
+  url: https://www.drupal.org/drupalorg/style-guide/content
 ---
 
 <div class="principles">
@@ -16,21 +27,11 @@ parent: Principles
 			<div class="c-block">
 				<h2 class="c-block__heading">Resources</h2>
 				<ul class="c-block__list">
-					<li class="c-block__item">
-						<a href="https://standards.usa.gov/" class="c-block__link">U.S. Web Design Standards</a>
-					</li>
-					<li class="c-block__item">
-						<a href="https://cfpb.github.io/design-manual/" class="c-block__link">CFPB Design Manual</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://manuals.gravitydept.com/" class="c-block__link">Field Manuals by Gravity Department</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://ggw-prototype.goalgorilla.com/" class="c-block__link">Greenpeace Greenwire Style Guide</a>
-					</li>
-					<li class="c-block__item">
-						<a href="https://www.drupal.org/drupalorg/style-guide/content" class="c-block__link">Drupal Style Guide Content</a>
-					</li>
+					{% for item in page.resources %}
+						<li class="c-block__item">
+							<a href="{{ item.url }}" class="c-block__link">{{ item.resource }}</a>
+						</li>
+					{% endfor %}
 				</ul>
 			</div>
 		</div>

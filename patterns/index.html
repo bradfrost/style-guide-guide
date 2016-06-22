@@ -2,6 +2,17 @@
 layout: landing
 type: landing
 parent: Patterns
+resources:
+- resource: Code for America
+  url: http://codeforamerica.clearleft.com/
+- resource: Codepen's Design Patterns
+  url: http://codepen.io/guide/
+- resource: Lonely Planet
+  url: http://rizzo.lonelyplanet.com/styleguide/design-elements/colours
+- resource: South Tees Hospitals Style Guide
+  url: http://southtees.nhs.uk/style-guide/
+- resource: Bristol City Council Style Guide
+  url: http://style.bristol.gov.uk/
 ---
 
 <div class="patterns">
@@ -13,32 +24,20 @@ parent: Patterns
 		
 		<div class="l-g__item">
 			<p>This is an overview of the patterns. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-		</div>
+		</div><!--end l-g__item--->
 		
 		<div class="l-g__item">
-			
 			<div class="c-block">
-				<h2 class="section-heading">Resources</h2>
+				<h2 class="c-block__heading">Resources</h2>
 				<ul class="c-block__list">
-					<li class="c-block__item">
-						<a href="http://codeforamerica.clearleft.com/" class="c-block__link">Code for America</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://codepen.io/guide/" class="c-block__link">Codepen's Design Patterns</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://rizzo.lonelyplanet.com/styleguide/design-elements/colours" class="c-block__link">Lonely Planet</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://southtees.nhs.uk/style-guide/" class="c-block__link">South Tees Hospitals Style Guide</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://style.bristol.gov.uk/" class="c-block__link">Bristol City Council Style Guide</a>
-					</li>
+					{% for item in page.resources %}
+						<li class="c-block__item">
+							<a href="{{ item.url }}" class="c-block__link">{{ item.resource }}</a>
+						</li>
+					{% endfor %}
 				</ul>
-			</div>
-			
-		</div>
+			</div><!--end c-block-->
+		</div><!--end l-g__item--->
 		
 	</div>
 		

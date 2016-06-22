@@ -2,6 +2,17 @@
 layout: landing
 type: landing
 parent: Brand
+resources:
+- resource: Carnegie Mellon Brand Guidelines
+  url: http://www.cmu.edu/marcom/brand-guidelines/
+- resource: Wordpress Brand Guidelines
+  url: https://wordpress.org/about/logos/
+- resource: Dropbox Branding
+  url: https://www.dropbox.com/branding/
+- resource: MailChimp Brand Assets
+  url: http://mailchimp.com/about/brand-assets/
+- resource: MYOB Design
+  url: http://feelix.myob.com/
 ---
 
 <div class="brand">
@@ -14,33 +25,20 @@ parent: Brand
 
 		<div class="l-g__item">
 			<p>This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-		</div>
+		</div><!--end l-g__item--->
 
 		<div class="l-g__item">
-
 			<div class="c-block">
 				<h2 class="c-block__heading">Resources</h2>
 				<ul class="c-block__list">
-					<li class="c-block__item">
-						<a href="http://www.cmu.edu/marcom/brand-guidelines/" class="c-block__link">Carnegie Mellon Brand Guidelines</a>
-					</li>
-					<li class="c-block__item">
-						<a href="https://wordpress.org/about/logos/" class="c-block__link">Wordpress Brand Guidelines</a>
-					</li>
-					<li class="c-block__item">
-						<a href="https://www.dropbox.com/branding/" class="c-block__link">Dropbox Branding</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://mailchimp.com/about/brand-assets/" class="c-block__link">MailChimp Brand Assets</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://feelix.myob.com/" class="c-block__link">MYOB Design</a>
-					</li>
+					{% for item in page.resources %}
+						<li class="c-block__item">
+							<a href="{{ item.url }}" class="c-block__link">{{ item.resource }}</a>
+						</li>
+					{% endfor %}
 				</ul>
-			</div>
-
-		</div>
-
+			</div><!--end c-block-->
+		</div><!--end l-g__item--->
 	</div>
 
 			<ul class="c-grid-nav">

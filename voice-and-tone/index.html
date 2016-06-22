@@ -2,6 +2,17 @@
 layout: landing
 type: landing
 parent: Voice and Tone
+resources:
+- resource: Mail Chimp
+  url: http://voiceandtone.com/success-message/
+- resource: Lightning Design System
+  url: https://www.lightningdesignsystem.com/voice-and-tone/
+- resource: A List Apart Style Guide
+  url: http://alistapart.com/about/style-guide
+- resource: Dubizzle Style Guide
+  url: http://dubizzle.uno/
+- resource: Channel 4 Identity Style Guide
+  url: http://www.channel4.com/about_c4/styleguide/downloads/C4StyleGuide1.1.pdf
 ---
 
 <div class="voice-and-tone">
@@ -14,33 +25,21 @@ parent: Voice and Tone
 		
 		<div class="l-g__item">
 			<p>Voice represents the message that the company wants to deliver to the user and the way the user perceives this message. Tone is the emotion behind the message, representing the company's voice but allowing the user to feel a certain way depending on the circumstance. Tone varies depending on the message the company is trying to convey and the situation that the user is in. Together, voice and tone convey the the company's message while making the users feel comfortable during their experience.</p>
-		</div>
+		</div><!--end l-g__item--->
 		
 		<div class="l-g__item">
-			
 			<div class="c-block">
 				<h2 class="c-block__heading">Resources</h2>
 				<ul class="c-block__list">
-					<li class="c-block__item">
-						<a href="http://voiceandtone.com/success-message/" class="c-block__link">Mail Chimp</a>
-					</li>
-					<li class="c-block__item">
-						<a href="https://www.lightningdesignsystem.com/voice-and-tone/" class="c-block__link">Lightning Design System</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://alistapart.com/about/style-guide" class="c-block__link">A List Apart Style Guide</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://dubizzle.uno/#/" class="c-block__link">Dubizzle Style Guide</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://www.channel4.com/about_c4/styleguide/downloads/C4StyleGuide1.1.pdf" class="c-block__link">Channel 4 Identity Style Guide</a>
-					</li>
+					{% for item in page.resources %}
+						<li class="c-block__item">
+							<a href="{{ item.url }}" class="c-block__link">{{ item.resource }}</a>
+						</li>
+					{% endfor %}
 				</ul>
-			</div>
-			
-		</div>
-		
+			</div><!--end c-block-->
+		</div><!--end l-g__item--->
+	
 	</div>
 		
 	<ul class="c-grid-nav">

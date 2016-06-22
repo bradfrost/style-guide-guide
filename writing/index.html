@@ -2,6 +2,17 @@
 layout: landing
 type: landing
 parent: Writing
+resources:
+- resource: GOV.UK
+  url: https://www.gov.uk/guidance/content-design/writing-for-gov-uk
+- resource: National Geographic Style Manual
+  url: http://stylemanual.natgeo.com/
+- resource: Mapbox Style Guide
+  url: https://www.mapbox.com/base/copy/
+- resource: Drupal Writing Guidelines
+  url: https://www.drupal.org/drupalorg/style-guide/content#writingstyle
+- resource: BuzzFeed Writing Guidelines
+  url: https://www.buzzfeed.com/emmyf/buzzfeed-style-guide/?utm_term=.bse272AKq#.ccLv4vqRY
 ---
 
 <div class="writing">
@@ -14,32 +25,20 @@ parent: Writing
 		
 		<div class="l-g__item">
 			<p>This is an overview of writing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-		</div>
+		</div><!--end l-g__item--->
 		
 		<div class="l-g__item">
-			
 			<div class="c-block">
 				<h2 class="c-block__heading">Resources</h2>
 				<ul class="c-block__list">
-					<li class="c-block__item">
-						<a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk" class="c-block__link">GOV.UK</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://stylemanual.natgeo.com/" class="c-block__link">National Geographic Style Manual</a>
-					</li>
-					<li class="c-block__item">
-						<a href="https://www.mapbox.com/base/copy/" class="c-block__link">Mapbox Style Guide</a>
-					</li>
-					<li class="c-block__item">
-						<a href="https://www.drupal.org/drupalorg/style-guide/content#writingstyle" class="c-block__link">Drupal Writing Guidelines</a>
-					</li>
-					<li class="c-block__item">
-						<a href="https://www.buzzfeed.com/emmyf/buzzfeed-style-guide/?utm_term=.bse272AKq#.ccLv4vqRY" class="c-block__link">BuzzFeed Writing Guidelines</a>
-					</li>
+					{% for item in page.resources %}
+						<li class="c-block__item">
+							<a href="{{ item.url }}" class="c-block__link">{{ item.resource }}</a>
+						</li>
+					{% endfor %}
 				</ul>
-			</div>
-				
-		</div>
+			</div><!--end c-block-->
+		</div><!--end l-g__item--->
 		
 	</div>
 

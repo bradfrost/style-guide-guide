@@ -2,6 +2,17 @@
 layout: landing
 type: landing
 parent: Code
+resources:
+- resource: Mark Brown's Standards Guidelines
+  url: http://www.yellowshoe.com.au/standards/
+- resource: Code Guide by @mdo
+  url: http://codeguide.co/
+- resource: CSS Guidelines by Harry Roberts
+  url: http://cssguidelin.es/
+- resource: workmanship.io by Michael Fouquet
+  url: http://workmanship.io/
+- resource: Airbnb JavaScript Style Guide
+  url: https://github.com/airbnb/javascript
 ---
 
 <div class="code">
@@ -17,31 +28,17 @@ parent: Code
 		</div><!--end l-g__item-->
 
 		<div class="l-g__item">
-
 			<div class="c-block">
 				<h2 class="c-block__heading">Resources</h2>
-
-                <ul class="c-block__list">
-					<li class="c-block__item">
-						<a href="http://www.yellowshoe.com.au/standards/" class="c-block__link">Mark Brown's Standards Guidelines</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://codeguide.co/" class="c-block__link">Code Guide by @mdo</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://cssguidelin.es/" class="c-block__link">CSS Guidelines by Harry Roberts</a>
-					</li>
-					<li class="c-block__item">
-						<a href="http://workmanship.io/" class="c-block__link">workmanship.io by Michael Fouquet</a>
-					</li>
-					<li class="c-block__item">
-						<a href="https://github.com/airbnb/javascript" class="c-block__link">Airbnb JavaScript Style Guide</a>
-					</li>
+				<ul class="c-block__list">
+					{% for item in page.resources %}
+						<li class="c-block__item">
+							<a href="{{ item.url }}" class="c-block__link">{{ item.resource }}</a>
+						</li>
+					{% endfor %}
 				</ul>
-
 			</div><!--end c-block-->
-
-		</div><!--end l-g__item-->
+		</div><!--end l-g__item--->
 
 	</div><!--end l-g--2up-->
 

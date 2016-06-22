@@ -25,19 +25,8 @@ resources:
 		<p>This is an overview of writing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
 	</div><!--end l-g__item--->
 	
-	<div class="l-g__item">
-		
-		<div class="c-block">
-			<h2 class="c-block__heading">Resources</h2>
-			<ul class="c-block__list">
-				{% for item in page.resources %}
-					<li class="c-block__item">
-						<a href="{{ item.url }}" class="c-block__link">{{ item.resource }}</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</div><!--end c-block-->
-		
+	<div class="l-g__item">	
+		{% include c-block.html %}
 	</div><!--end l-g__item--->
 	
 </div><!--end l-g--2up--->

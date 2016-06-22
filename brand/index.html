@@ -15,45 +15,45 @@ resources:
   url: http://feelix.myob.com/
 ---
 
-<div class="brand">
-
-	<div class="c-banner">
-		<h1 class="c-banner__heading">Brand</h1>
-	</div>
-
-	<div class="l-g l-g--2up">
-
-		<div class="l-g__item">
-			<p>This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-		</div><!--end l-g__item--->
-
-		<div class="l-g__item">
-			<div class="c-block">
-				<h2 class="c-block__heading">Resources</h2>
-				<ul class="c-block__list">
-					{% for item in page.resources %}
-						<li class="c-block__item">
-							<a href="{{ item.url }}" class="c-block__link">{{ item.resource }}</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</div><!--end c-block-->
-		</div><!--end l-g__item--->
-	</div>
-
-			<ul class="c-grid-nav">
-		        {% for my_page in site.pages %}
-					{% if my_page.title %}
-						{% if my_page.title != "Overview" %}
-							{% if my_page.group == "brand" %}
-								<li class="c-grid-nav__item">
-									<a class="c-grid-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
-							      	{{ my_page.title }}
-						          	</a>
-							  	</li>
-					  		{% endif %}
-					  	{% endif %}
-				  	{% endif %}
-			    {% endfor %}
-			</ul>
+<div class="c-banner">
+	<h1 class="c-banner__heading">Brand</h1>
 </div>
+
+<div class="l-g l-g--2up">
+
+	<div class="l-g__item">
+		<p>This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+	</div><!--end l-g__item--->
+
+	<div class="l-g__item">
+		
+		<div class="c-block">
+			<h2 class="c-block__heading">Resources</h2>
+			<ul class="c-block__list">
+				{% for item in page.resources %}
+					<li class="c-block__item">
+						<a href="{{ item.url }}" class="c-block__link">{{ item.resource }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div><!--end c-block-->
+		
+	</div><!--end l-g__item--->
+	
+</div><!--end l-g--2up--->
+
+<ul class="c-grid-nav">
+    {% for my_page in site.pages %}
+		{% if my_page.title %}
+			{% if my_page.title != "Overview" %}
+				{% if my_page.group == "brand" %}
+					<li class="c-grid-nav__item">
+						<a class="c-grid-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
+				      	{{ my_page.title }}
+			          	</a>
+				  	</li>
+		  		{% endif %}
+		  	{% endif %}
+	  	{% endif %}
+    {% endfor %}
+</ul>

@@ -1,48 +1,18 @@
 ---
 layout: landing
 type: landing
-parent: Principles
+title: Principles
+group: principles
+description: this is the principles description.
 resources:
 - resource: U.S Web Design Standards
-  url: https://standards.usa.gov/ 
+  url: https://standards.usa.gov/
 - resource: CFPB Design Manual
   url: https://cfpb.github.io/design-manual/
 - resource: Field Manuals by Gravity Department
-  url: http://manuals.gravitydept.com/ 
+  url: http://manuals.gravitydept.com/
 - resource: Greenpeace Greenwire Style Guide
   url: http://ggw-prototype.goalgorilla.com/
 - resource: Drupal Style Guide Content
   url: https://www.drupal.org/drupalorg/style-guide/content
 ---
-
-<div class="c-banner">
-	<h1 class="c-banner__heading">{{ page.parent }}</h1>
-</div>
-
-<div class="l-g l-g--2up">
-	
-	<div class="l-g__item">
-		<p>This is an overview of the principles. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-	</div><!--end l-g__item--->
-	
-	<div class="l-g__item">
-		{% include c-block.html %}
-	</div><!--end l-g__item--->
-	
-</div><!--end l-g--2up--->
-
-<ul class="c-grid-nav">
-    {% for my_page in site.pages %}
-		{% if my_page.title %}
-			{% if my_page.title != "Overview" %}
-				{% if my_page.group == "principles" %}
-				<li class="c-grid-nav__item">
-					<a class="c-grid-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
-			      	{{ my_page.title }}
-		          	</a>
-			  	</li>
-			  	{% endif %}
-		  	{% endif %}
-	  	{% endif %}
-    {% endfor %}
-</ul>

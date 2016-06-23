@@ -1,7 +1,9 @@
 ---
 layout: landing
 type: landing
-parent: Code
+title: Code
+group: code
+description: this is the code description.
 resources:
 - resource: Mark Brown's Standards Guidelines
   url: http://www.yellowshoe.com.au/standards/
@@ -14,35 +16,3 @@ resources:
 - resource: Airbnb JavaScript Style Guide
   url: https://github.com/airbnb/javascript
 ---
-
-<div class="c-banner">
-	<h1 class="c-banner__heading">{{ page.parent }}</h1>
-</div><!--end c-panel-->
-
-<div class="l-g l-g--2up">
-
-	<div class="l-g__item">
-		<p>This is an overview of the code. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. This is an overview of the brand. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-	</div><!--end l-g__item-->
-
-	<div class="l-g__item">
-		{% include c-block.html %}
-	</div><!--end l-g__item--->
-
-</div><!--end l-g--2up-->
-
-<ul class="c-grid-nav">
-    {% for my_page in site.pages %}
-		{% if my_page.title %}
-			{% if my_page.title != "Overview" %}
-				{% if my_page.group == "code" %}
-				<li class="c-grid-nav__item">
-					<a class="c-grid-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
-			      	{{ my_page.title }}
-		          	</a>
-			  	</li><!--end c-grid-nav__item-->
-			  	{% endif %}
-			{% endif %}
-	  	{% endif %}
-    {% endfor %}
-</ul><!--end c-grid-nav-->

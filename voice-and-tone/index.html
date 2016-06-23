@@ -1,9 +1,11 @@
 ---
 layout: landing
 type: landing
-parent: Voice and Tone
+title: Voice and Tone
+group: voice-and-tone
+description: this is the voice and tone description.
 resources:
-- resource: Mail Chimp
+- resource: MailChimp's Voice and Tone
   url: http://voiceandtone.com/success-message/
 - resource: Lightning Design System
   url: https://www.lightningdesignsystem.com/voice-and-tone/
@@ -14,35 +16,3 @@ resources:
 - resource: Channel 4 Identity Style Guide
   url: http://www.channel4.com/about_c4/styleguide/downloads/C4StyleGuide1.1.pdf
 ---
-
-<div class="c-banner">
-	<h1 class="c-banner__heading">{{ page.parent }}</h1>
-</div>
-
-<div class="l-g l-g--2up">
-	
-	<div class="l-g__item">
-		<p>Voice represents the message that the company wants to deliver to the user and the way the user perceives this message. Tone is the emotion behind the message, representing the company's voice but allowing the user to feel a certain way depending on the circumstance. Tone varies depending on the message the company is trying to convey and the situation that the user is in. Together, voice and tone convey the the company's message while making the users feel comfortable during their experience.</p>
-	</div><!--end l-g__item--->
-	
-	<div class="l-g__item">
-		{% include c-block.html %}	
-	</div><!--end l-g__item--->
-
-</div><!--end l-g--2up--->
-	
-<ul class="c-grid-nav">
-    {% for my_page in site.pages %}
-		{% if my_page.title %}
-			{% if my_page.title != "Overview" %}
-				{% if my_page.group == "voice-and-tone" %}
-				<li class="c-grid-nav__item">
-					<a class="c-grid-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">
-			      	{{ my_page.title }}
-		          	</a>
-			  	</li>
-			  	{% endif %}
-		  	{% endif %}
-	  	{% endif %}
-    {% endfor %}
-</ul>

@@ -2,6 +2,7 @@
 layout: landing
 title: Overview
 group: voice-and-tone
+permalink: /voice-and-tone/
 description: this is the voice and tone description.
 resources:
 - resource: MailChimp's Voice and Tone

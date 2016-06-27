@@ -3,12 +3,14 @@ layout: landing
 type: landing
 title: Overview
 group: principles
+permalink: /principles/
 description: this is the principles description.
 resources:
 - resource: U.S Web Design Standards
   url: https://standards.usa.gov/
 - resource: CFPB Design Manual
   url: https://cfpb.github.io/design-manual/
+  
 - resource: Field Manuals by Gravity Department
   url: http://manuals.gravitydept.com/
 - resource: Greenpeace Greenwire Style Guide

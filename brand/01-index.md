@@ -2,6 +2,7 @@
 layout: landing
 title: Overview
 group: brand
+permalink: /brand/
 description: this is the description.
 resources:
 - resource: Carnegie Mellon Brand Guidelines

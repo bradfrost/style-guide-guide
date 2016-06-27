@@ -2,6 +2,7 @@
 layout: landing
 title: Overview
 group: code
+permalink: /code/
 description: this is the code description.
 resources:
 - resource: Mark Brown's Standards Guidelines

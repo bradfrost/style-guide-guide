@@ -2,6 +2,7 @@
 layout: landing
 title: Overview
 group: patterns
+permalink: /patterns/
 description: this is the voice and tone description.
 resources:
 - resource: MailChimp's Voice and Tone

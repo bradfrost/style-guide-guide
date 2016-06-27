@@ -2,6 +2,7 @@
 layout: landing
 title: Overview
 group: writing
+permalink: /writing/
 description: this is the writing description.
 resources:
 - resource: GOV.UK

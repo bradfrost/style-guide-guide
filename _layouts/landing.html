@@ -21,7 +21,7 @@ layout: default
 <ul class="c-grid-nav">
 {% for my_page in site.pages %}
 	{% if my_page.title %}
-		{% if my_page.title != "Overview" %}
+		{% if my_page.layout != "landing" %}
 			{% if my_page.group == page.group %}
 				<li class="c-grid-nav__item">
 					<a class="c-grid-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %} {{ my_page.url | prepend: site.baseurl }}{% endif %}">

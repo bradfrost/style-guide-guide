@@ -1,7 +1,6 @@
 ---
 layout: landing
-type: landing
-title: Voice and Tone
+title: Overview
 group: voice-and-tone
 description: this is the voice and tone description.
 resources:

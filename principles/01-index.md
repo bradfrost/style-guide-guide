@@ -1,7 +1,7 @@
 ---
 layout: landing
 type: landing
-title: Principles
+title: Overview
 group: principles
 description: this is the principles description.
 resources:
@@ -16,3 +16,4 @@ resources:
 - resource: Drupal Style Guide Content
   url: https://www.drupal.org/drupalorg/style-guide/content
 ---
+

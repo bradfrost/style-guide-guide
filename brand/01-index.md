@@ -1,7 +1,6 @@
 ---
 layout: landing
-type: landing
-title: Brand
+title: Overview
 group: brand
 description: this is the description.
 resources:
@@ -16,3 +15,4 @@ resources:
 - resource: MYOB Design
   url: http://feelix.myob.com/
 ---
+

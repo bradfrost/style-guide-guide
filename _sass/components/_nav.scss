@@ -94,22 +94,29 @@
 /**
  * Nav Sublist
  */
-.c-nav__sublist--has-children {
-	max-height: 0px;
-	overflow: hidden;
-	background: $color-gray-3;
-	box-shadow: 0 22px 11px -22px $color-gray-13 inset,
-	            0 -22px 11px -22px $color-gray-13 inset;
-	transition: all $anim-fast ease-out;
-
-    /**
-     * Nav Sublist styling when parent nav item is active
-     */
-	.c-nav__item--has-children--is-active & {
-		max-height: 800px;
-        padding: 0.3rem 0;
-        transition-timing-function: ease-in;
-	}
+ 
+.c-nav__sublist {
+	display: none;
+ 
+	&--has-children {
+		display: block;
+		max-height: 0px;
+		overflow: hidden;
+		background: $color-gray-3;
+		box-shadow: 0 22px 11px -22px $color-gray-13 inset,
+		            0 -22px 11px -22px $color-gray-13 inset;
+		transition: all $anim-fast ease-out;
+	
+	    /**
+	     * Nav Sublist styling when parent nav item is active
+	     */
+		.c-nav__item--has-children--is-active & {
+			max-height: 800px;
+	        padding: 0.3rem 0;
+	        transition-timing-function: ease-in;
+		}
+		
+	} 
 }
 
 /**

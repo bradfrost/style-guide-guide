@@ -4,16 +4,16 @@
 
     <nav class="c-nav" role="navigation">
         <ul class="c-nav__list">
-           	<li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/brand' %} c-nav__item--has-children--is-active{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/brand/index.html">
+           	<li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/brand' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
+	            <a class="c-nav__link js-nav__link" href="/brand/01-index.html">
 		            Brand
 	            </a>
-	           	<ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
+	           	<ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "brand" %}
 						<li class="c-nav__sublist__item">
-							<a class="c-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %}{{ my_page.url | prepend: site.baseurl }}{% endif %}">
+							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -22,16 +22,16 @@
 			    {% endfor %}
 	            </ul>
             </li>
-            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'principles' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/principles' %} c-nav__item--has-children--is-active{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/principles/index.html">
+            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'principles' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/principles' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
+	            <a class="c-nav__link js-nav__link" href="/principles/01-index.html">
 		            Principles      
 	            </a>
-	            <ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'principles' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
+	            <ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'principles' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "principles" %}
 						<li class="c-c-nav__sublist__item">
-							<a class="c-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %}{{ my_page.url | prepend: site.baseurl }}{% endif %}">
+							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -40,16 +40,16 @@
 			    {% endfor %}
 	            </ul>
             </li>
-            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'voice-and-tone' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/voice-and-tone' %} c-nav__item--has-children--is-active{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/voice-and-tone/index.html">
+            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'voice-and-tone' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/voice-and-tone' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
+	            <a class="c-nav__link js-nav__link" href="/voice-and-tone/01-index.html">
 		            Voice and Tone
 		        </a>
-		        <ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'voice-and-tone' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
+		        <ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'voice-and-tone' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "voice-and-tone" %}
 						<li class="c-nav__sublist__item">
-							<a class="c-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %}{{ my_page.url | prepend: site.baseurl }}{% endif %}">
+							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -58,16 +58,16 @@
 			    {% endfor %}
 	            </ul>
 	        </li>
-            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'writing' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/writing' %}  c-nav__item--has-children--is-active{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/writing/index.html">
+            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'writing' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/writing' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
+	            <a class="c-nav__link js-nav__link" href="/writing/01-index.html">
 		            Writing
 	            </a>
-	            <ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'writing' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
+	            <ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'writing' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "writing" %}
 						<li class="c-nav__sublist__item">
-							<a class="c-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %}{{ my_page.url | prepend: site.baseurl }}{% endif %}">
+							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -76,16 +76,16 @@
 			    {% endfor %}
 	            </ul>
             </li>
-            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'patterns' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/patterns' %} c-nav__item--has-children--is-active{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/patterns/index.html">
+            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'patterns' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/patterns' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
+	            <a class="c-nav__link js-nav__link" href="/patterns/01-index.html">
 		            Patterns
 	            </a>
-	            <ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'patterns' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
+	            <ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'patterns' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "patterns" %}
 						<li class="c-nav__sublist__item">
-							<a class="c-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %}{{ my_page.url | prepend: site.baseurl }}{% endif %}">
+							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>
@@ -94,16 +94,16 @@
 			    {% endfor %}
 	            </ul>
             </li>
-            <li class="c-nav__item {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'code' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__item--has-children{% endif %}{% endif %}{% endfor %}{% if page.url contains '/code' %} c-nav__item--has-children--is-active{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/code/index.html">
+            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'code' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/code' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
+	            <a class="c-nav__link js-nav__link" href="/code/01-index.html">
 		            Code
 		        </a>
-		        <ul class="c-nav__sublist {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'code' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% if post_index < '2' %}c-nav__sublist--has-children{% endif %}{% endif %}{% endfor %}">
+		        <ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'code' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
 		        {% for my_page in site.pages %}
 					{% if my_page.title %}
 						{% if my_page.group == "code" %}
 						<li class="c-nav__sublist__item">
-							<a class="c-nav__link" href="{% if my_page.title == 'Overview' %}/{{ my_page.group }}/index.html{% else %}{{ my_page.url | prepend: site.baseurl }}{% endif %}">
+							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
 					      	{{ my_page.title }}
 				          	</a>
 					  	</li>

@@ -1,7 +1,6 @@
 ---
 layout: landing
-type: landing
-title: Code
+title: Overview
 group: code
 description: this is the code description.
 resources:
@@ -16,3 +15,4 @@ resources:
 - resource: Airbnb JavaScript Style Guide
   url: https://github.com/airbnb/javascript
 ---
+

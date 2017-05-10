@@ -1,0 +1,146 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * 1) Button or link that has functionality to it
+ * 2) Remove box-shadow that's globally applied to links
+ */
+.c-btn {
+	display: inline-block;
+	background: $color-gray-73;
+	border-radius: $border-radius;
+	cursor: pointer;
+	color: $color-white;
+	line-height: 1;
+	font-weight: bold;
+	padding: 1rem 2rem;
+	border: 0;
+	box-shadow: none; /* 2 */
+	text-align: center;
+	transition: all $fade-quick ease-out;
+
+	&:hover, &:focus {
+		background: $color-black;
+		color: $color-white;
+	}
+
+	/**
+	 * Button within hero
+	 */
+	.c-hero & {
+		display: block;
+		margin-left: auto;
+	}
+
+	/**
+	 * Button within button group
+	 */
+	.c-btn-group & {
+		margin-right: 0.5rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	/**
+	 * Button within button group
+	 */
+	.c-btn-group & {
+		margin-right: 0.5rem;
+
+		/**
+		 * Remove right margin on last button group button
+		 */
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	/**
+	 * Button within button group
+	 */
+	.c-btn-group--responsive & {
+		margin-right: 0;
+		margin-bottom: 0.5rem;
+
+		@media all and (min-width: $bp-small) {
+			margin-right: 0.5rem;
+			margin-bottom: 0;
+
+			/**
+			 * Remove right margin on last responsive button group button
+			 */
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+/**
+ * Small button
+ */
+.c-btn--small {
+	padding: .375rem .75rem;
+}
+
+/*
+ * Inner container of the buton
+ * Allows for display flex on a button
+ */
+.c-btn__inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*
+ * Button icon
+ */
+.c-btn__icon {
+	width: 16px;
+	height: 16px;
+	fill: $color-gray-50;
+	position: relative;
+	transition: fill $fade-quick $anim-ease;
+
+	/*
+	 * Button icon within button hover
+	 */
+	.c-btn:hover &, .c-btn:focus & {
+		fill: $color-gray-73;
+	}
+
+	/*
+	 * Button icon within active button
+	 */
+	.c-btn.is-active & {
+		fill: $color-black;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    #TEXT BUTTON
+\*------------------------------------*/
+
+/**
+ * 1) Button that is text only and doesn't contain a border or fill.
+ */
+.c-text-btn {
+	background: none;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	border-radius: $border-radius;
+	transition: background $fade-quick $anim-ease;
+
+	&:hover, &:focus {
+		color: $color-gray-50;
+	}
+}

@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #LOGO
+\*------------------------------------*/
+
+/**
+ * Branding image or text of the site
+ */
+.c-logo {
+	margin: 0 2rem 0 0;
+	max-width: 14rem;
+
+	@media all and (min-width: $bp-xl) {
+		margin: 0;
+	}
+
+	/**
+	 * Logo within vertical header
+	 */
+	.c-header--vertical & {
+		@media all and (min-width: $bp-xl) {
+			margin: 0 0 1rem;
+		}
+	}
+}
+
+/**
+ * Logo link
+ */
+.c-logo__link {
+	display: block;
+}

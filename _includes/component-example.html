@@ -1,0 +1,46 @@
+<div class="c-pattern-example">
+
+	<div class="c-tabs c-tabs--underline js-tabs">
+
+		<ul class="c-tabs__list">
+			{% for variation in page.variations %}
+			<li class="c-tabs__item">
+				<a href="#tab-{{ variation.title | downcase | replace: ' ', '-' }}" class="c-tabs__link js-tab">{% if variation.title %}{{ variation.title }}{% endif %}</a>
+			</li><!-- end c-tabs__item -->
+			{% endfor %}
+
+
+		</ul><!-- end c-tabs__list -->
+
+		<div class="c-tabs__body c-tabs__body--no-border">
+			{% for variation in page.variations %}
+			<div class="c-tabs__panel js-tabs-panel" id="tab-{{ variation.title | downcase | replace: ' ', '-' }}">
+				<section class="c-section u-margin-bottom-none">
+					<header class="c-section__header c-section__header--bare">
+						{% if variation.title %}<h5 class="c-section__title">{{ variation.title }} {% if variation.styleModifier %}<code class="u-font-size-med">{{ variation.styleModifier }}</code>{% endif %}</h5>{% endif %}
+						{% if variation.description %}<div class="u-margin-bottom u-margin-top">{{ variation.description | markdownify }} </div>{% endif %}
+					</header>
+
+					<div class="iffframe">
+
+						<iframe class="iffframe__iframe" frameBorder="0" width="100%" height="100%" src="{{ path | prepend: site.baseurl }}"></iframe>
+
+						<div class="iffframe__handle"></div>
+
+					</div><!--end iffframe-->
+
+					<div class="pattern-code">
+						<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+						<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">{% highlight liquid %}{% include {{ markupOnlyPath }} %}{% endhighlight %}</code></pre>
+						<div class="show-more">
+							<button class="c-btn js-show-more-btn">Show all code</button>
+						</div>
+					</div>
+				</section><!--end section-->
+			</div>
+			{% endfor %}
+		</div>
+
+	</div><!-- end c-tabs -->
+
+</div><!--end c-pattern-example-->

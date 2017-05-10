@@ -1,149 +1,39 @@
-<header class="c-header" role="banner">
+<header class="c-header c-header--vertical" role="banner">
 
-    <button class="c-nav__trigger">Menu</button>
+    <div class="c-header__inner">
 
-    <nav class="c-nav" role="navigation">
-        <ul class="c-nav__list">
-           	<li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/brand' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/brand/">
-		            Brand
-	            </a>
-	           	<ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'brand' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
-		        {% for my_page in site.pages %}
-					{% if my_page.title %}
-						{% if my_page.group == "brand" %}
-						<li class="c-nav__sublist__item">
-							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}
-				          	</a>
-					  	</li>
-					  	{% endif %}
-				  	{% endif %}
-			    {% endfor %}
-	            </ul>
-            </li>
-            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'principles' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/principles' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/principles/">
-		            Principles      
-	            </a>
-	            <ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'principles' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
-		        {% for my_page in site.pages %}
-					{% if my_page.title %}
-						{% if my_page.group == "principles" %}
-						<li class="c-c-nav__sublist__item">
-							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}
-				          	</a>
-					  	</li>
-					  	{% endif %}
-				  	{% endif %}
-			    {% endfor %}
-	            </ul>
-            </li>
-            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'voice-and-tone' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/voice-and-tone' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/voice-and-tone/">
-		            Voice and Tone
-		        </a>
-		        <ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'voice-and-tone' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
-		        {% for my_page in site.pages %}
-					{% if my_page.title %}
-						{% if my_page.group == "voice-and-tone" %}
-						<li class="c-nav__sublist__item">
-							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}
-				          	</a>
-					  	</li>
-					  	{% endif %}
-				  	{% endif %}
-			    {% endfor %}
-	            </ul>
-	        </li>
-            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'writing' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/writing' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/writing/">
-		            Writing
-	            </a>
-	            <ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'writing' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
-		        {% for my_page in site.pages %}
-					{% if my_page.title %}
-						{% if my_page.group == "writing" %}
-						<li class="c-nav__sublist__item">
-							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}
-				          	</a>
-					  	</li>
-					  	{% endif %}
-				  	{% endif %}
-			    {% endfor %}
-	            </ul>
-            </li>
-            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'patterns' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/patterns' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/patterns/">
-		            Patterns
-	            </a>
-	            <ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'patterns' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
-		        {% for my_page in site.pages %}
-					{% if my_page.title %}
-						{% if my_page.group == "patterns" %}
-						<li class="c-nav__sublist__item">
-							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}
-				          	</a>
-					  	</li>
-					  	{% endif %}
-				  	{% endif %}
-			    {% endfor %}
-	            </ul>
-            </li>
-            <li class="c-nav__item{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'code' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__item--has-children{% if page.url contains '/code' %} c-nav__item--has-children--is-active{% endif %}{% endif %}">
-	            <a class="c-nav__link js-nav__link" href="/code/">
-		            Code
-		        </a>
-		        <ul class="c-nav__sublist{% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'code' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if post_index > '1' %} c-nav__sublist--has-children{% endif %}">
-		        {% for my_page in site.pages %}
-					{% if my_page.title %}
-						{% if my_page.group == "code" %}
-						<li class="c-nav__sublist__item">
-							<a class="c-nav__link" href="{{ my_page.url | prepend: site.baseurl }}">
-					      	{{ my_page.title }}
-				          	</a>
-					  	</li>
-					  	{% endif %}
-				  	{% endif %}
-			    {% endfor %}
-	            </ul>
-	        </li>
-        </ul>
-    	<ul class="c-secondary-nav">
-			<li class="c-nav__item c-secondary-nav__item">
-				<a class="c-nav__link c-secondary-nav__link" href="/about.html">
-		      	About
-	          	</a>
-		  	</li>
-		  	<li class="c-nav__item c-secondary-nav__item">
-				<a class="c-nav__link c-secondary-nav__link" href="/updates.html">
-		      	Updates
-	          	</a>
-		  	</li>
-		</ul><!-- end .c-nav__list-->
-    </nav><!-- end .c-nav-->
+    	<h3 class="c-logo">
 
-    <a class="c-header__title" href="{{ site.baseurl }}/" rel="home">
+	        <a href="{{ "/" | prepend: site.baseurl }}" class="c-logo__link" rel="home">
 
-        <svg class="c-logo" width="122px" height="116px" viewBox="2421 474 122 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <title>{{ site.title }}</title>
-            <defs></defs>
-            <g id="Group-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(2421.000000, 474.000000)" font-family="AvenirNext-Heavy, Avenir Next" font-weight="600">
-                <text id="STYLE" font-size="40.4662755" letter-spacing="-3.0999999" fill="#5E5E5E">
-                    <tspan x="0.847222222" y="40">STYLE</tspan>
-                </text>
-                <text id="GUIDE" font-size="37.9371332" letter-spacing="-2.90625" fill="#5E5E5E">
-                    <tspan x="0" y="70.6960784">GUIDE</tspan>
-                </text>
-                <text id="GUIDE" font-size="37.9371332" letter-spacing="-2.90625" fill="#5E5E5E">
-                    <tspan x="0" y="101.137255">GUIDE</tspan>
-                </text>
-            </g>
-        </svg><!--end .c-header__logo-->
+                <svg class="c-logo" width="122px" height="116px" viewBox="2421 474 122 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>{{ site.title }}</title>
+                    <defs></defs>
+                    <g id="Group-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(2421.000000, 474.000000)" font-family="AvenirNext-Heavy, Avenir Next" font-weight="600">
+                        <text id="STYLE" font-size="40.4662755" letter-spacing="-3.0999999" fill="#5E5E5E">
+                            <tspan x="0.847222222" y="40">STYLE</tspan>
+                        </text>
+                        <text id="GUIDE" font-size="37.9371332" letter-spacing="-2.90625" fill="#5E5E5E">
+                            <tspan x="0" y="70.6960784">GUIDE</tspan>
+                        </text>
+                        <text id="GUIDE" font-size="37.9371332" letter-spacing="-2.90625" fill="#5E5E5E">
+                            <tspan x="0" y="101.137255">GUIDE</tspan>
+                        </text>
+                    </g>
+                </svg><!--end .c-header__logo-->
 
-    </a><!--end .c-header__title-->
-</header><!--end .c-header-->
+	        </a><!--end c-logo__link-->
+
+    	</h3><!--end c-logo-->
+
+    	<button class="c-btn c-header__nav-btn js-nav-trigger">Menu</button>
+
+    	<div class="c-header__nav-container js-nav-panel">
+
+			{% include primary-nav.html %}
+
+    	</div><!--end c-header__nav-container-->
+
+    </div><!--end c-header__inner-->
+
+</header><!--end c-header-->

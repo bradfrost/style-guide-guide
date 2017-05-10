@@ -1,0 +1,287 @@
+/*------------------------------------*\
+    #PRIMARY NAVIGATION
+\*------------------------------------*/
+
+/**
+ * Primary navigation existing in the header and maybe the footer
+ */
+
+/**
+ * Primary navigation list
+ */
+.c-primary-nav__list {
+	display: flex;
+	flex-direction: column;
+
+	/**
+	 * Primary navigation list within a vertical header
+	 */
+	.c-header--vertical & {
+		display: block;
+	}
+
+	@media all and (min-width: $bp-xl) {
+		flex-direction: row;
+	}
+}
+
+/**
+ * Primary navigation item
+ */
+.c-primary-nav__item {
+	position: relative;
+
+	@media all and (min-width: $bp-xl) {
+		margin-right: 1rem;
+
+		/**
+		 * Remove margin right from last primary navigation item on large screens
+		 */
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	/**
+	 * Primary navigation item within vertical header
+	 */
+	.c-header--vertical & {
+		margin-right: 0;
+	}
+}
+
+/**
+ * Primary navigation link
+ */
+.c-primary-nav__link {
+	display: block;
+	padding: 0.5rem 0;
+	cursor: pointer;
+
+	/**
+	 * Primary navigation link within vertical header
+	 */
+	.c-header--vertical & {
+		padding: 0.5rem 0;
+	}
+
+	@media all and (min-width: $bp-xl) {
+		padding: 0.5rem 0.3rem;
+	}
+}
+
+/**
+ * Primary navigation link with subnavigation
+ */
+.c-primary-nav__link--has-children {
+	display: flex;
+	align-items: center;
+
+	/**
+	 * Primary navigation link withing active item
+	 */
+	.c-primary-nav__item.is-active & {
+		@media all and (min-width: $bp-xl) {
+			background: $color-gray-73;
+			color: $color-white;
+		}
+	}
+
+	/**
+	 * Primary navigation link within active item in vertical header
+	 */
+	.c-header--vertical .c-primary-nav__item.is-active & {
+		background: none;
+		color: inherit;
+	}
+}
+
+/**
+ * Primary navigation list subnavigation
+ * Targets descendant of the
+ */
+.c-primary-nav__subitem {
+	/**
+	 * Primary navigation sublist within subitem
+	 */
+	.c-primary-nav__subitem & {
+		display: none;
+	}
+
+	/**
+	 * Primary navigation sublist within active subitem
+	 */
+	.c-primary-nav__subitem.is-active & {
+		display: block;
+	}
+}
+
+/**
+ * Primary navigation list subnavigation first of type
+ * 1) First of type is chosen to only choose direct descendant of primary
+ *    navigation item
+ */
+.c-primary-nav__sublist:first-of-type {
+	display: none;
+	margin-left: 1rem;
+
+	/**
+	 * Primary navigation sublist within vertical header
+	 */
+	.c-header--vertical & {
+		margin-left: 1rem;
+	}
+
+	/**
+	 * Primary navigation sublist within vertical header active primary nav item
+	 */
+	.c-header--vertical.is-active > & {
+		display: block
+	}
+
+	/**
+	 * Primary navigation sublist within active primary navigation item
+	 */
+	.c-primary-nav__item.is-active & {
+		display: block;
+
+		@media all and (min-width: $bp-xl) {
+			background: $color-gray-73;
+			padding: .5rem 1rem 1rem;
+			margin: 0;
+			position: absolute;
+			top: 100%;
+			z-index: 6;
+			min-width: 8rem;
+		}
+	}
+
+	/**
+	 * Primary navigation sublist within active item in vertical header
+	 */
+	.c-header--vertical .c-primary-nav__item.is-active & {
+		background: none;
+
+		@media all and (min-width: $bp-xl) {
+			margin: 0;
+			margin-left: 1rem;
+			padding: 0;
+			position: static;
+
+		}
+	}
+
+	@media all and (min-width: $bp-xl) {
+		margin-left: 0;
+	}
+}
+
+/**
+ * Primary navigation sublink
+ */
+.c-primary-nav__sublink {
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 0;
+
+	@media all and (min-width: $bp-xl) {
+		color: $color-white;
+	}
+
+	/**
+	 * Primary navigation sublink within vertical header
+	 */
+	.c-header--vertical & {
+		@media all and (min-width: $bp-xl) {
+			color: inherit;
+		}
+	}
+}
+
+/**
+ * Primary navigation sublink with subnavigation
+ */
+.c-primary-nav__sublink--has-children {
+	display: flex;
+	align-items: center;
+}
+
+
+
+/**
+ * Primary navigation icon
+ */
+.c-primary-nav__icon {
+	fill: $color-gray-73;
+	transition: fill 0.2s ease;
+	margin-left: auto;
+
+	/**
+	 * Primary navigation icon within vertical header
+	 */
+	.c-header--vertical & {
+		margin-left: auto;
+	}
+
+	/**
+	 * Primary navigation icon within active link
+	 */
+	.c-primary-nav__item.is-active & {
+		fill: $color-white;
+		transform: rotate(180deg);
+	}
+
+	/**
+	 * Primary navigation icon within active link within vertical header
+	 */
+	.c-header--vertical .c-primary-nav__item.is-active & {
+		fill: $color-gray-73;
+		transform: rotate(90deg);
+	}
+
+	/**
+	 * Primary navigation icon within hovered/focused primary navigation link
+	 */
+	.c-primary-nav__link:hover &, .c-primary-nav__link:focus & {
+		fill: $color-gray-50;
+	}
+}
+
+/**
+ * Primary navigation subicon
+ */
+.c-primary-nav__subicon {
+	fill: $color-gray-73;
+	transition: fill 0.2s ease;
+	margin-left: auto;
+
+	/**
+	 * Primary navigation icon within vertical header
+	 */
+	.c-header--vertical & {
+		margin-left: auto;
+	}
+
+	/**
+	 * Primary navigation subicon within active link
+	 */
+	.c-primary-nav__subitem.is-active & {
+		fill: $color-white;
+		transform: rotate(180deg);
+	}
+
+	/**
+	 * Primary navigation subicon within active subitem within vertical header
+	 */
+	.c-header--vertical .c-primary-nav__subitem.is-active & {
+		fill: $color-gray-73;
+		transform: rotate(90deg);
+	}
+
+	/**
+	 * Primary navigation icon within hovered/focused primary navigation link
+	 */
+	.c-primary-nav__sublink:hover &, .c-primary-nav__sublink:focus & {
+		fill: $color-gray-50;
+	}
+}

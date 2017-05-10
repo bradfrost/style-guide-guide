@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #FOOTER NAVIGATION
+\*------------------------------------*/
+
+/**
+ * 1) Navigation within the footer
+ */
+.c-footer-nav {
+	display: flex;
+	font-size: $font-size-sm;
+}
+
+/**
+ * Footer navigation link
+ */
+.c-footer-nav__link {
+	display: block;
+	padding: 1rem 1rem 0.5rem;
+	line-height: 1;
+	color: $color-gray-60;
+
+	&:hover, &:focus {
+		color: $color-gray-73;
+	}
+}

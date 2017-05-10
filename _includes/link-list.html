@@ -1,0 +1,11 @@
+<ul class="c-link-list c-link-list--bulleted">
+
+	{% for resource in page.resources %}
+	<li class="c-link-list__item">
+		<a href="{{ resource.url }}" class="c-link-list__link">
+			<span class="c-link-list__text">{{ resource.title }}</span>
+		</a>
+	</li><!-- end c-link-list__item -->
+	{% endfor %}
+
+</ul><!-- end c-link-list -->

@@ -1,0 +1,11 @@
+{% if page.status == 'Deprecated' %}
+{% assign badge = "negative" %}
+{% elsif page.status == 'Complete' %}
+{% assign badge = "positive" %}
+{% else %}
+{% assign badge = "caution" %}
+{% endif %}
+
+{% if page.status and page.status != 'Complete' %}
+<span class="c-badge c-badge--{{ badge }}">{{ page.status }}</span>
+{% endif %}

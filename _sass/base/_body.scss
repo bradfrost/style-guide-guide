@@ -2,16 +2,22 @@
     #BODY
 \*------------------------------------*/
 
+/**
+ * HTML base styles
+ */
+html {
+	height: 100%;
+}
+
+/**
+ * Body base styles
+ */
 body {
-    display: flex;
-    flex-direction: column;
-    background: $color-white;
-    min-height: 100%;
-    font: 100%/1.5 $font;
-    -webkit-text-size-adjust: 100%;
-    color: $color-gray-63;
-    
-    @media all and (min-width: $bp-small) {
-	    flex-direction: row;
-    }
+	background: $color-white;
+	font: 100%/1.5 $font;
+	-webkit-text-size-adjust: 100%;
+	color: $color-gray-73;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }

@@ -1,0 +1,18 @@
+<li class="c-primary-nav__subitem">
+
+	<a class="c-primary-nav__sublink {% if include.subgroup %}c-primary-nav__sublink--has-children js-nav-dropdown-trigger{% endif %} {% if page.url == include.path %}is-active{% endif %}{% if page.url == include.path %} is-current{% endif %}" href="{% if include.subgroup %}#{% else %}{{ include.path | prepend: site.baseurl}}{% endif %}">
+
+		<span class="c-primary-nav__text">{{ include.label }}</span>
+
+		{% if include.subgroup %}
+		<svg class="c-icon c-primary-nav__subicon">
+			<use href="{{ "/icons.svg#chevron-right" | prepend: site.baseurl }}"></use>
+		</svg>
+		{% endif %}
+	</a><!--end c-primary-nav__link-->
+
+	{% if include.subgroup %}
+	{% include primary-nav-submenu.html subgroup=include.subgroup %}
+	{% endif %}
+
+</li><!-- end c-primary-nav__item-->

@@ -1,0 +1,112 @@
+/*------------------------------------*\
+    #TABS
+\*------------------------------------*/
+
+/**
+ * 1) Unordered list of links where the each link targets different information
+ */
+
+ /**
+  * Vertical tabs
+  * 1) Displays tabs on the right and the body on the left
+  */
+.c-tabs--vertical {
+	display: flex;
+	margin-bottom: 1rem;
+}
+
+/**
+ * Tabs list
+ */
+.c-tabs__list {
+	display: flex;
+	border-bottom: 1px solid $color-gray-27;
+
+	/**
+	 * Tabs list within vertical tabs
+	 */
+	.c-tabs--vertical & {
+		border: 1px solid $color-gray-27;
+		display: block;
+		order: 1;
+	}
+
+}
+
+ /**
+ * Tabs list
+ * 1) Overlap the tabs bottom border
+ */
+.c-tabs__link {
+	display: block;
+	padding: 0.5rem 1rem;
+	margin-bottom: -1px;
+    min-width: 5rem;
+    text-align: center;
+
+	/**
+	 * Active tabs link
+	 */
+	&.is-active {
+		border: 1px solid $color-gray-27;
+		border-bottom: 1px solid $color-white;
+	}
+
+	/**
+	 * Tabs link within vertical tabs
+	 */
+	.c-tabs--vertical & {
+		border: 0;
+		border-bottom: 1px solid $color-gray-27;
+
+		/**
+		 * Last tabs item link within vertical tabs
+		 */
+		.c-tabs__item:last-child & {
+			border-bottom: 0;
+		}
+
+		/**
+		 * Active tabs link within vertical tabs
+		 */
+		&.is-active {
+			background: $color-gray-13;
+		}
+	}
+}
+
+
+/**
+ * Tab Body
+ */
+.c-tabs__body {
+	padding: 1rem 0;
+	border-top: 0;
+
+	/**
+	 * Tabs body within vertical tabs
+	 * 1) Take up the remaining space that the actual tabs do not take up
+	 */
+	.c-tabs--vertical & {
+		flex: 1; /* 1 */
+		border: 1px solid $color-gray-27;
+		border-right: 0;
+	}
+
+}
+
+/**
+ * Tab Panel
+ * 1) Display by default, and only hide if JS is available
+ */
+.c-tabs__panel {
+	display: none;
+	padding: 1rem;
+
+	/**
+	 * Active tabs panel
+	 */
+	&.is-active {
+		display: block;
+	}
+}

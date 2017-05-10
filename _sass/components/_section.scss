@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #SECTION
+\*------------------------------------*/
+
+/**
+ * Section block that helps chunk related items together
+ */
+.c-section {
+	margin-bottom: 2rem;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #SECTION HEADER
+\*------------------------------------*/
+
+/**
+ * 1) Block containing section title and description to distinguish section
+ */
+.c-section-header {
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid $color-gray-07;
+}
+
+/**
+ * Section header title
+ */
+.c-section-header__title {
+	font-size: $font-size-large;
+}
+
+/**
+ * Section description
+ */
+.c-section-header__desc {
+	font-size: $font-size-med;
+	margin-bottom: 0;
+}

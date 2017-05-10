@@ -1,14 +1,16 @@
 ---
 layout: default
 ---
-<article class="s-detail">
 
-	<header class="s-detail__header {% if page.title %}c-banner{% endif %}">
-		<h1 class="post-title {% if page.title %}c-banner__heading{% endif %}">{{ page.title }}</h1>
-	</header>
 
-	<div class="s-detail__content">
+{% include page-header.html %}
+
+<div class="l-linelength-container">
+
+	<div class="c-text-passage">
 		{{ content }}
-	</div>
+	</div><!--end c-text-passage-->
 
-</article>
+</div><!--l-linelength-container-->
+
+{% include contribute-section.html %}

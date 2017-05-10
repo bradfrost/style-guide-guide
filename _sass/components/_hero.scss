@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    #HERO
+\*------------------------------------*/
+
+/**
+ * 1) Block containing headline, description text, that serves as a primary content area
+ */
+.c-hero {
+	display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    position: relative;
+	margin-bottom: 1rem;
+}
+
+/**
+ * Hero Image
+ */
+.c-hero__img {
+	display: block;
+    width: 100%;
+	margin-bottom: 1rem;
+
+	@media all and (min-width: $bp-small-2) {
+		margin: 0;
+	}
+}
+
+/**
+ * Hero Body
+ */
+ .c-hero__body {
+    padding: 2rem 1rem;
+
+    @media all and (min-width: $bp-med) {
+ 		padding: 4rem 2rem;
+ 	}
+
+	@media all and (min-width: $bp-xl) {
+ 		padding: 5rem;
+ 	}
+ }
+
+/**
+ * Hero Title
+ */
+.c-hero__title {
+	max-width: 48rem;
+	margin: 0 0 1rem auto;
+	font-size: 2rem;
+	text-align: right;
+
+	@media all and (min-width: $bp-med) {
+		margin: 0 0 2rem auto;
+		font-size: 3rem;
+	}
+}
+
+/**
+ * Hero Description
+ */
+.c-hero__desc {
+	margin-bottom: 2rem;
+	margin-left: auto;
+	max-width: 34rem;
+	text-align: right;
+
+	@media all and (min-width: $bp-med) {
+		font-size: 1.25rem;
+	}
+}

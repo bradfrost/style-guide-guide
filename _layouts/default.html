@@ -2,21 +2,33 @@
 <html>
 
 	{% include head.html %}
-	
-	<body class="body">
-	
-	    {% include header.html %}
-	
-	    <div class="content">
-	
-	        <main role="main" class="main">
-	
-	            {{ content }}
-	
-	        </main><!--end .sgg-main-->
-	
-	        {% include footer.html %}
-	
-	    </div>
-	</body><!--end .sgg-body-->
+
+	<body>
+
+        <div class="l-page-layout l-page-layout--two-column-fixed">
+
+            <div class="l-page-layout__secondary">
+
+                {% include header.html %}
+
+            </div><!--end l-page-layout__secondary-->
+
+            <div class="l-page-layout__main">
+
+                <main role="main">
+                	<div class="l-container">
+
+                        {{ content }}
+
+	                </div><!--end l-container-->
+				</main><!--end role=main-->
+
+                {% include footer.html %}
+
+            </div><!--end l-page-layout__main-->
+
+        </div><!--end l--two-column-fixed-->
+
+	</body>
+
 </html>

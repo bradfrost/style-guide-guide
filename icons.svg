@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+    <defs>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="bin"><path d="M2 5v10c0 .55.45 1 1 1h9c.55 0 1-.45 1-1V5H2zm3 9H4V7h1v7zm2 0H6V7h1v7zm2 0H8V7h1v7zm2 0h-1V7h1v7zM13.25 2H10V.75A.753.753 0 0 0 9.25 0h-3.5A.753.753 0 0 0 5 .75V2H1.75a.752.752 0 0 0-.75.75V4h13V2.75a.752.752 0 0 0-.75-.75zM9 2H6v-.987h3V2z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="bullet"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12zM5 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="cancel-circle"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13z"></path><path d="M10.5 4L8 6.5 5.5 4 4 5.5 6.5 8 4 10.5 5.5 12 8 9.5l2.5 2.5 1.5-1.5L9.5 8 12 5.5z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="checkmark"><path d="M13.5 2L6 9.5 2.5 6 0 8.5l6 6 10-10z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="checkmark2"><path d="M6.21 14.339L-.007 8.22l3.084-3.035L6.21 8.268l6.713-6.607 3.084 3.035-9.797 9.643zM1.686 8.22l4.524 4.453 8.104-7.976-1.391-1.369L6.21 9.935 3.077 6.852 1.686 8.221z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 10 16" id="chevron-down"><title>chevron-down</title><path d="M8 5L5 8 2 5 0 7l5 5 5-5-2-2z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 7 16" id="chevron-left"><title>chevron-left</title><path d="M7 5L5 3 0 8l5 5 2-2-3-3 3-3z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 7 16" id="chevron-right"><title>chevron-right</title><path d="M2 3L0 5l3 3-3 3 2 2 5-5-5-5z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 10 16" id="chevron-up"><title>chevron-up</title><path d="M5 4L0 9l2 2 3-3 3 3 2-2-5-5z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="circle-down"><title>circle-down</title><path fill="#444" d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0z"></path><path fill="#444" d="M4.957 5.543L3.543 6.957 8 11.414l4.457-4.457-1.414-1.414L8 8.586z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="circle-left"><title>circle-left</title><path fill="#444" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM8 1.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13z"></path><path fill="#444" d="M10.457 4.957L9.043 3.543 4.586 8l4.457 4.457 1.414-1.414L7.414 8z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="circle-right"><title>circle-right</title><path fill="#444" d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13z"></path><path fill="#444" d="M5.543 11.043l1.414 1.414L11.414 8 6.957 3.543 5.543 4.957 8.586 8z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="circle-up"><title>circle-up</title><path fill="#444" d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm14.5 0a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path><path fill="#444" d="M11.043 10.457l1.414-1.414L8 4.586 3.543 9.043l1.414 1.414L8 7.414z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="cross"><path d="M15.854 12.854L11 8l4.854-4.854a.503.503 0 0 0 0-.707L13.561.146a.499.499 0 0 0-.707 0L8 5 3.146.146a.5.5 0 0 0-.707 0L.146 2.439a.499.499 0 0 0 0 .707L5 8 .146 12.854a.5.5 0 0 0 0 .707l2.293 2.293a.499.499 0 0 0 .707 0L8 11l4.854 4.854a.5.5 0 0 0 .707 0l2.293-2.293a.499.499 0 0 0 0-.707z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="facebook"><path d="M10.5 3A2.5 2.5 0 0 0 8 5.5V7H6v2h2v7h2V9h2.25l.5-2H10V5.5a.5.5 0 0 1 .5-.5H13V3h-2.5z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="gear"><title>gear</title><path d="M8.034 5.085a2.88 2.88 0 0 0 0 5.76c1.59 0 2.87-1.292 2.87-2.88 0-1.591-1.28-2.88-2.87-2.88zm5.772 4.534l-.518 1.25 1.047 2.058-1.283 1.284-2.106-.995-1.25.514-.635 1.942-.081.258H7.166l-.785-2.192-1.25-.516-2.06 1.043-1.283-1.282.993-2.107-.515-1.25L.07 8.91V7.097l2.194-.786.515-1.248-.923-1.821-.121-.24 1.28-1.28 2.109.993 1.248-.517.634-1.94L7.088 0H8.9l.785 2.195 1.247.516 2.063-1.045 1.283 1.28-.994 2.106.513 1.25 2.2.716V8.83l-2.193.789h.001z" mask="url(#mask-2)"></path></svg>
+      
+        <svg height="16" width="16" viewBox="0 0 32 32" id="google"><title>google-plus</title><path d="M10.181 14.294v3.494h5.775c-.231 1.5-1.744 4.394-5.775 4.394-3.475 0-6.313-2.881-6.313-6.431S6.706 9.32 10.181 9.32c1.981 0 3.3.844 4.056 1.569l2.762-2.662c-1.775-1.656-4.075-2.662-6.819-2.662C4.549 5.571-.001 10.121-.001 15.753s4.55 10.181 10.181 10.181c5.875 0 9.775-4.131 9.775-9.95a9.27 9.27 0 0 0-.163-1.688h-9.613zM32 14h-3v-3h-3v3h-3v3h3v3h3v-3h3z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="link"><path d="M6.879 9.934a.81.81 0 0 1-.575-.238 3.818 3.818 0 0 1 0-5.392l3-3C10.024.584 10.982.187 12 .187s1.976.397 2.696 1.117a3.818 3.818 0 0 1 0 5.392l-1.371 1.371a.813.813 0 0 1-1.149-1.149l1.371-1.371A2.19 2.19 0 0 0 12 1.812c-.584 0-1.134.228-1.547.641l-3 3a2.19 2.19 0 0 0 0 3.094.813.813 0 0 1-.575 1.387z"></path><path d="M4 15.813a3.789 3.789 0 0 1-2.696-1.117 3.818 3.818 0 0 1 0-5.392l1.371-1.371a.813.813 0 0 1 1.149 1.149l-1.371 1.371A2.19 2.19 0 0 0 4 14.188c.585 0 1.134-.228 1.547-.641l3-3a2.19 2.19 0 0 0 0-3.094.813.813 0 0 1 1.149-1.149 3.818 3.818 0 0 1 0 5.392l-3 3A3.789 3.789 0 0 1 4 15.813z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="linkedin2"><path d="M6 6h2.767v1.418h.04C9.192 6.727 10.134 6 11.539 6 14.46 6 15 7.818 15 10.183V15h-2.885v-4.27c0-1.018-.021-2.329-1.5-2.329-1.502 0-1.732 1.109-1.732 2.255V15H6V6zM1 6h3v9H1V6zM4 3.5a1.5 1.5 0 1 1-3.001-.001A1.5 1.5 0 0 1 4 3.5z"></path></svg>
+      
+        <svg id="list-countdown" width="16" height="16" viewBox="-6 8 16 16"><style>.st0{fill:#444}</style><path class="st0" d="M0 21h10v2H0v-2zm0-6h10v2H0v-2zm0-6h10v2H0V9zm-3 11v4h-1v-3h-1v-1h2zm-1-2.8v.8h2v1h-3v-2.3l2-.9V15h-2v-1h3v2.3l-2 .9zM-2 8v5h-3v-1h2v-1h-2v-1h2V9h-2V8h3z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="list-numbered"><path d="M6 13h10v2H6zm0-6h10v2H6zm0-6h10v2H6zM3 0v4H2V1H1V0zM2 8.219V9h2v1H1V7.719l2-.938V6H1V5h3v2.281zM4 11v5H1v-1h2v-1H1v-1h2v-1H1v-1z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="list2"><path d="M6 1h10v2H6V1zm0 6h10v2H6V7zm0 6h10v2H6v-2zM0 2a2 2 0 1 1 3.999-.001A2 2 0 0 1 0 2zm0 6a2 2 0 1 1 3.999-.001A2 2 0 0 1 0 8zm0 6a2 2 0 1 1 3.999-.001A2 2 0 0 1 0 14z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="minus"><path d="M0 6.5v3a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="plus"><path d="M15.5 6H10V.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V6H.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5H6v5.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V10h5.5a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="radio-checked"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12zM5 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="radio-checked2"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="radio-unchecked"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12z"></path></svg>
+      
+        <svg width="15" height="16" viewBox="0 0 15 16" id="search"><path d="M15 13l-3.893-3.893A5.921 5.921 0 0 0 12 6c0-3.313-2.688-6-6-6S0 2.687 0 6a6 6 0 0 0 6 6c1.143 0 2.2-.337 3.107-.891L13 15a.715.715 0 0 0 1 0l1-1a.713.713 0 0 0 0-1zm-9-3a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"></path></svg>
+      
+        <svg width="12" height="16" viewBox="0 0 12 16" id="triangle-down"><title>triangle-down</title><path fill="#444" d="M0 6l5.996 5.996L11.992 6H0z"></path></svg>
+      
+        <svg width="6" height="16" viewBox="0 0 6 16" id="triangle-left"><title>triangle-left</title><path fill="#444" d="M0 7.998l5.996 5.996V2.002L0 7.998z"></path></svg>
+      
+        <svg width="6" height="16" viewBox="0 0 6 16" id="triangle-right"><title>triangle-right</title><path fill="#444" d="M.001 2.004L5.997 8 .001 13.996V2.004z"></path></svg>
+      
+        <svg width="12" height="16" viewBox="0 0 12 16" id="triangle-up"><title>triangle-up</title><path fill="#444" d="M5.996 4L0 9.996h11.992L5.996 4z"></path></svg>
+      
+        <svg width="16" height="16" viewBox="0 0 16 16" id="twitter"><path d="M16 3.038a6.555 6.555 0 0 1-1.885.517 3.291 3.291 0 0 0 1.443-1.816 6.594 6.594 0 0 1-2.085.797 3.283 3.283 0 0 0-5.594 2.993 9.32 9.32 0 0 1-6.766-3.43 3.263 3.263 0 0 0-.444 1.65c0 1.139.579 2.144 1.46 2.732A3.27 3.27 0 0 1 .642 6.07v.041A3.286 3.286 0 0 0 3.275 9.33a3.283 3.283 0 0 1-1.483.056 3.287 3.287 0 0 0 3.066 2.28 6.588 6.588 0 0 1-4.86 1.359A9.295 9.295 0 0 0 5.03 14.5c6.038 0 9.34-5.002 9.34-9.34a8.58 8.58 0 0 0-.01-.425 6.665 6.665 0 0 0 1.638-1.699z"></path></svg>
+      
+  </defs>
+</svg>

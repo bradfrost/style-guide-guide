@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+
+/**
+ * Heading 1 base styles
+ */
+h1 {
+	font-size: 2.25rem;
+	line-height: 1;
+	word-wrap: break-word;
+
+	@media all and (min-width: $bp-med) {
+		font-size: 2.75rem;
+	}
+}
+
+/**
+ * Heading 2 base styles
+ */
+h2 {
+	font-size: 1.6em;
+	line-height: 1.2;
+	letter-spacing: -0.02rem;
+	font-weight: normal;
+	margin-bottom: 0.5rem;
+	word-wrap: break-word;
+}
+
+/**
+ * Heading 3 base styles
+ */
+h3 {
+	font-size: 1.2em;
+	line-height: 1.2;
+	margin-bottom: 0.3rem;
+	word-wrap: break-word;
+}

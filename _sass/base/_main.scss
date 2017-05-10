@@ -1,14 +1,12 @@
 /*------------------------------------*\
-    #MAIN
+    #MAIN ELEMENT
 \*------------------------------------*/
 
+/**
+ * Main element
+ */
 [role=main] {
-    padding: 1em 2em 2em;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-
-    @media all and (min-width: $bp-small) {
-	    margin-left: 12em;
-    }
+	display: block;
+	flex: 1 0 auto;
+	padding: 1rem;
 }

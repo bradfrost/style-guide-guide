@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{% include page-header.html %}
+
+<div class="l-linelength-container">
+	{{ content }}
+
+	<div class="c-text-passage">
+		<h2 class="u-margin-top-none">Browse by category</h2>
+
+		<ul class="c-definition-list u-margin-left-none">
+
+		<li class="c-definition-list__item">
+  			<div class="c-definition-list__key">
+  			  <a href="{{ "/styles/color.html" | prepend: site.baseurl }}">
+  				Color
+  			  </a>
+  			</div>
+  			<!-- end c-def-list__key -->
+  			<div class="c-definition-list__value">
+  			  <p>Color styles description</p>
+
+  			</div>
+  			<!-- end c-def-list__value -->
+  		  </li>
+  		  <!-- end c-def-list__item -->
+
+		  <li class="c-definition-list__item">
+			<div class="c-definition-list__key">
+			  <a href="{{ "/styles/typography.html" | prepend: site.baseurl }}">
+				Typography
+			  </a>
+			</div>
+			<!-- end c-def-list__key -->
+			<div class="c-definition-list__value">
+			  <p>Typography style description</p>
+
+			</div>
+			<!-- end c-def-list__value -->
+		  </li>
+		  <!-- end c-def-list__item -->
+
+		</ul>
+
+	</div><!-- end c-text-passage -->
+    
+</div><!-- end l-linelength-container -->

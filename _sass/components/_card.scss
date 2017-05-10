@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    #CARD
+\*------------------------------------*/
+
+/**
+ * 1) A card is a block of media followed by a body of text in a vertical format
+ */
+.c-card {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+	position: relative;
+    display: flex;
+	padding: 1.5rem 1rem 1rem 1rem;
+	border: 1px solid $color-gray-27;
+}
+
+/**
+* Card Footer
+*/
+.c-card__header {
+	background: $color-gray-02;
+	margin: -1.5rem -1rem 1rem -1rem;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border-bottom: 1px solid $color-gray-13;
+}
+
+/**
+ * Card Body
+ */
+.c-card__body {
+	flex: 1 0 auto;
+}
+
+/**
+ * Card Title
+ */
+.c-card__title {
+	display: flex;
+	align-items: center;
+    font-size: $font-size-large;
+	color: $color-gray-73;
+    margin: 0;
+}
+
+
+ /**
+ * Card Footer
+ */
+.c-card__footer {
+	background: $color-gray-02;
+	margin: 1rem -1rem -1rem -1rem;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border-top: 1px solid $color-gray-13;
+}
+
+/**
+* Card Actions
+* 1) Card actions is a container for links and buttons within a card.
+*/
+.c-card__actions {
+	margin-top: 1rem;
+}
+
+/**
+ * Card icon
+ */
+.c-card__icon {
+	margin-left: auto;
+	transition: transform $fade-quick $anim-ease;
+
+	/**
+	 * Card icon on card hover
+	 */
+    .c-card:hover &, .c-card:focus & {
+		transform: translate(3px);
+	}
+}

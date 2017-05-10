@@ -1,0 +1,17 @@
+<ul class="c-definition-list">
+
+	{% for fp in page.fine-print %}
+	<li class="c-definition-list__item">
+
+		<div class="c-definition-list__key">
+			{{ fp.title }}
+		</div><!-- end c-def-list__key -->
+
+		<div class="c-definition-list__value">
+			{{ fp.description | markdownify }}
+		</div><!-- end c-def-list__value -->
+
+	</li><!-- end c-def-list__item -->
+	{% endfor %}
+
+</ul><!-- end c-def-list -->

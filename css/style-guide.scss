@@ -1,0 +1,286 @@
+---
+---
+
+$color-white: #ffffff;
+$color-gray-dark: #333333;
+$color-gray-lighter: #f5f5f5;
+$color-gray-10: #e5e5e5;
+$color-gray-04: #f5f5f5;
+
+$color-app-red: #d82424;
+$color-app-green: #00af53;
+$color-app-ruby: #b10040;
+$color-app-blue: #225896;
+$color-app-sea-blue: #005f7f;
+$color-app-torquoise: #00aca8;
+$color-app-med-gray: #545459;
+
+$color-app-blue-light: #e1efff;
+$color-app-blue-deep: #111122;
+
+$anim-base-easing: ease;
+$anim-base-duration: .3s;
+
+/**
+ * Max Width
+ */
+$l-max-width: 84em;
+$l-max-width-text: 38em;
+
+/**
+ * Breakpoints
+ */
+$bp-small: 24em;
+$bp-small-2: 30em;
+$bp-med: 35em;
+$bp-large: 47em;
+$bp-xl: 62em;
+$bp-xl-2: 67em;
+$bp-xl-3: $l-max-width;
+
+/*------------------------------------*\
+    #HOME PAGE
+\*------------------------------------*/
+
+/**
+ * 1) This is an overide to have more text breathing room on home
+ */
+@media all and (min-width: 62em) {
+	.c-section--home {
+		padding: 0 3rem;
+	}
+}
+
+/*------------------------------------*\
+    #IFFFRAME
+\*------------------------------------*/
+
+/**
+ * 1) Iffframe creates a resizable component
+ */
+
+.iffframe {
+    padding: 1rem 0.7rem 1rem 0;
+    width: 100%;
+    position: relative;
+    border: 1px solid $color-gray-lighter;
+    border-left: none;
+    overflow: hidden;
+    height: auto;
+    background-color: $color-white;
+    margin-bottom: 2rem;
+	//transition: width 0.6s $anim-base-easing;
+}
+
+.iffframe__iframe {
+    width: 100%;
+    overflow: auto;
+    overflow-x: auto !important;
+
+	@media all and (max-width: 769px) {
+		width: calc(100vw - 2rem);
+	}
+}
+
+/**
+ * Iffframe handle
+ * 1) Hide resize handle for small screens
+ */
+.iffframe__handle {
+	display: none; /* 1 */
+    width: 0.7rem;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: col-resize;
+    background-color: $color-gray-lighter;
+    transition: background-color $anim-base-duration $anim-base-easing;
+
+    &:after {
+        content: "";
+        display: block;
+        height: 1rem;
+        width: 2px;
+        border-right: 1px solid #aaa;
+        border-left: 1px solid #aaa;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -0.5rem;
+        margin-left: -1px;
+    }
+
+	&:hover {
+		background: #e5e5e5;
+	}
+
+	&:active {
+		background: #cccccd;
+	}
+
+	@media all and (min-width: 40em) {
+		display: block;
+	}
+}
+
+// Failed attempt to get the icon grid looking better
+// li.icon-grid__item.c-well {
+// 	padding: 1rem !important;
+// 	border-color: $color-gray-10;
+// 	background-color: $color-gray-04;
+
+// 	h3 {
+// 		margin-top: 2rem;
+// 	}
+// }
+
+
+
+/*------------------------------------*\
+    #CODE
+\*------------------------------------*/
+
+/**
+ * 1) Override some Prism defaults
+ * 2) Fixed width button for showing and hiding code
+ * 3) Change background color
+ * 4) Update the code color to have Exxon colors
+ */
+code[class*="language-"], pre[class*="language-"] {
+	tab-size: 2;
+}
+
+.pattern-code {
+	position: relative;
+	margin-top: 2rem;
+}
+
+/**
+ * Applied to pre element
+ */
+.pattern-code-block {
+    margin-top: 0;
+    max-height: 25rem;
+	overflow-y: hidden;
+
+    .is-expanded & {
+		max-height: none;
+	}
+}
+
+.pattern-code-copy-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+
+/* 2 */
+.pattern-code-showhide-btn {
+	width: 8rem;
+
+	.c-btn__inner {
+		justify-content: space-between;
+	}
+}
+
+/* 3 */
+pre[class*="language-"] {
+	background-color: $color-gray-04;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+	text-shadow: none;
+}
+
+.show-more {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 10rem;
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0)0, $color-white 50%, $color-white 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0)0, $color-white 50%, $color-white 100%);
+        opacity: 1
+    }
+}
+
+/**
+ * Push the button up to be closer to the code-block in the show-more block
+ */
+.c-btn {
+	.show-more & {
+		position: relative;
+		bottom: 2rem;
+		z-index: 1;
+	}
+}
+
+/**
+ * Force last paragraph of page header description to be inline so markdown flows into "Jump To Usage Guidelines Link"
+ */
+.c-page-header__desc {
+	p {
+		&:last-of-type {
+			display: inline;
+		}
+	}
+}
+
+/**
+ * Page header icon
+ * 1) Add height and width for the page header icon for the "Jump to Usage Guidelines Link"
+ * 2) Added within the header__desc to cancel out text-passage styles;
+ */
+.c-page-header__icon {
+
+	.c-page-header__desc & {
+		height: 1rem; /* 1 */
+		width: 1rem; /* 1 */
+	}
+}
+
+/**
+ * Tabs list in reference site
+ * 1) Wrap tabs
+ * 2) Remove overflow
+ * 3) Remove shadows for overflow
+ */
+.c-tabs__list {
+	@media all and (min-width: $bp-large) {
+		flex-wrap: wrap; /* 1 */
+		overflow-x: inherit; /* 2 */
+		overflow-y: inherit; /* 2 */
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    #LAYOUT TWEAKS
+\*------------------------------------*/
+
+.push-right {
+	padding-left: 0.5rem;
+
+	@media all and (min-width: 40em) {
+		padding-left: 8rem;
+	}
+}
+
+.c-tabs-list__item {
+	display: none;
+
+	&.is-active {
+		display: block;
+	}
+}

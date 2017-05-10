@@ -1,0 +1,34 @@
+<ul class="c-primary-nav__sublist js-nav-dropdown {% if page.subgroup == include.subgroup %} is-active{% endif %}">
+
+	{% for my_subpage in site.pages %}
+
+		{% if my_subpage.subgroup == include.subgroup and my_subpage.layout == "component-category" %}
+
+			<li class="c-primary-nav__subitem">
+
+                <a class="c-primary-nav__sublink {% if my_subpage.url == page.url %}is-active is-current{% endif %}" href="{{ my_subpage.permalink | prepend: site.baseurl }}">
+				    Overview
+				</a><!-- end c-primary-nav__link -->
+
+			</li><!-- end c-primary-nav__item -->
+
+		{% endif %}
+
+	{% endfor %}
+
+	{% for my_subpage in site.pages %}
+
+		{% if my_subpage.subgroup == include.subgroup and my_subpage.layout != "component-category" and my_subpage.status != "Planned" %}
+
+			<li class="c-primary-nav__subitem">
+
+                <a class="c-primary-nav__sublink {% if my_subpage.url == page.url %}is-active is-current{% endif %}" href="{{ my_subpage.url | prepend: site.baseurl }}">
+			    	{{ my_subpage.title }}
+				</a><!-- end c-primary-nav__link -->
+
+			</li><!-- end c-primary-nav__item -->
+
+		{% endif %}
+
+	{% endfor %}
+</ul><!-- end c-primary-nav__sublist-->

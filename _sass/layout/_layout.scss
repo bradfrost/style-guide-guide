@@ -3,45 +3,239 @@
 \*------------------------------------*/
 
 /**
- * Content
+ * Layout Container
+ * 1) Caps the width of the content to the maximum width
+ *    and centers the container
  */
-.content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.l-container {
+	max-width: $l-max-width;
+	margin: 0 auto;
+}
 
-    &--is-overlayed {
-	    padding-top: 4.75em;
+/**
+ * Narrow Layout Container
+ * 1) This narrow layout container is for lists, forms,
+ *    and other singular objects that aren't dashboard-y
+ *    kinds of displays
+ */
+.l-container--narrow {
+    max-width: $l-max-width-narrow;
+}
 
-	    @media all and (min-width: $bp-small) {
-		    padding-top: 0;
-	    }
+/**
+ *
+ * 1) This narrow layout container is for lists, forms,
+ *    and other singular objects that aren't dashboard-y
+ *    kinds of displays
+ */
+.l-linelength-container {
+    max-width: 35rem;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #LAYOUT SECTIONS
+\*------------------------------------*/
+
+/**
+ * Main section
+ * 1) The main section is the primary content container
+ */
+.l-page-layout__main {
+	display: flex;
+	height: 100vh;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+    /**
+	 * Main section of 2 column fixed layout
+	 * 1) Margin left equals width of the fixed positioned sidebar
+	 */
+    .l-page-layout--two-column-fixed > & {
+        height: 100vh;
+
+        @media all and (min-width: $bp-xl) {
+            margin-left: 20rem; /* 1 */
+        }
     }
 }
 
 /**
- * 1 To 2 Up Grid Layout
+ * Secondary section
+ * 1) The secondary section is an auxiliary container
+ *    Otherwise known as "sidebar", but we try to
+ *    avoid that term to be mindful of the fact in
+ *    responsive environments "sidebar"
  */
- .l-g--2up {
-	 display: flex;
-	 flex-direction: column;
+.l-page-layout__secondary {
 
-     /**
-     * 1 To 2 Up Grid Item
-     */
-     .l-g__item {
-    	 @media all and (min-width: $bp-large) {
-    		 width: 50%;
+	/**
+	 * Secondary section in a two-column fixed layout
+	 * 1) This is a fixed element
+	 */
+    .l-page-layout--two-column-fixed > & {
+        @media all and (min-width: $bp-xl) {
+            position: fixed;
+    	    z-index: 2;
+            overflow: auto;
+			width: 20rem;
+            height: 100vh;
+        }
+    }
+}
 
-    		 &:first-child {
-    			 flex: 1;
-    			 margin-right: 1em;
-    		 }
-    	 }
-     }
 
-	 @media all and (min-width: $bp-large) {
-		 flex-direction: row;
-	 }
- }
+
+
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+
+/**
+ * Grid Container
+ */
+.l-grid {
+	margin: 0 -0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+
+	@supports (display: grid) {
+		display: grid;
+		grid-gap: 16px;
+		grid-template-columns: repeat(auto-fill, minmax(285px, 1fr) );
+		margin: 0;
+	}
+}
+
+/**
+ * Abstract grid
+ * 1) If display: grid is not supported, create evenly distributed grid using display flex
+ * 2) Otherwise, display abstract grid
+ */
+.l-abstract-grid {
+	display: flex; /* 1 */
+	flex-wrap: wrap;
+	margin: 0 -0.5rem;
+
+	@supports (display: grid) { /* 2 */
+		display: grid;
+		grid-gap: 8px;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		margin: 0;
+	}
+}
+
+/**
+ * Grid Item
+ */
+.l-grid__item {
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+
+	/**
+	 * Grid item within 3-up grid
+	 */
+    .l-grid--3up & {
+
+	    @media all and (min-width: 35em) {
+            width: 50%;
+        }
+
+	    @media all and (min-width: 45em) {
+            width: 33.33333%;
+        }
+
+		/**
+		 * 1) If CSS Grid is supported, set the width
+		 *    of grid__items to 100% to fill space
+		 *    automatically
+		 */
+		@supports (display: grid) {
+			width: 100%; /* 1 */
+			padding: 0;
+		}
+    }
+
+	/**
+	 * Grid item within 3-up grid
+	 */
+	.l-grid--4up & {
+		@media all and (min-width: 35em) {
+			width: 50%;
+		}
+
+		@media all and (min-width: 55em) {
+			width: 33.33333%;
+		}
+
+		@media all and (min-width: 74em) {
+			width: 25%;
+		}
+
+		/**
+		 * 1) If CSS Grid is supported, set the width
+		 *    of grid__items to 100% to fill space
+		 *    automatically
+		 */
+		@supports (display: grid) {
+			width: 100%; /* 1 */
+			padding: 0;
+		}
+	}
+
+	/**
+	 * Grid item within an abstract grid
+	 * 1) If grid is not supported, create 3-up grid using display flex
+	 * 2) If grid is supported, create abstract grid
+	 * 3) On xl screens, first item spans 2 columns
+	 * 4) Even items span only 3rd column
+	 * 5) Multiples of 3 items (3, 6, etc.), span only column 1
+	 * 6) Multiples of 4 span columns 2 and 3
+	 */
+	.l-abstract-grid & { /* 1 */
+		width: 100%;
+
+		@media all and (min-width: 35em) {
+            width: 50%;
+        }
+
+	    @media all and (min-width: 45em) {
+            width: 33.33333%;
+        }
+
+		/**
+		 * 1) If CSS Grid is supported, set the width
+		 *    of grid__items to 100% to fill space
+		 *    automatically
+		 */
+		@supports (display: grid) {
+			padding: 0;
+			width: 100%;
+
+			@media all and (min-width: $bp-xl) {
+				grid-column: 1 / 3; /* 3 */
+
+				&:nth-child(even) {
+					grid-column: 3;/* 4 */
+				}
+
+				&:nth-child(3n) {
+					grid-column: 1;/* 5 */
+				}
+
+				&:nth-child(4n) {
+					grid-column: 2/4; /* 6 */
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

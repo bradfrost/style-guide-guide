@@ -2,60 +2,94 @@
     #HEADER
 \*------------------------------------*/
 
+/**
+ * Global block at the top of each page containing the navigation, logo, and other potential contents
+ */
 .c-header {
-    background: $color-gray-2;
-    display: flex;
-    align-items: center;
-    z-index: 1;
-    
-    /**
-	 * Header Active State
-	 * 1) Triggered when Menu Button is clicked
- 	 */
-    &--is-active {
-	    position: fixed;
-	    width: 100%;
-	    
-	    @media all and (min-width: $bp-small) {
-		    width: inherit;
-	    }
-    }
-
-    @media all and (min-width: $bp-small) {
-	    flex-direction: column;
-	    position: fixed;
-	    height: 100%;
-	    align-items: flex-start;
-        box-shadow: 3px 0 6px $color-gray-13;
-    }
+	position: relative;
+	background: $color-gray-07;
 }
 
 /**
- * Header Title
- * 1) The header title is the container area that houses
- * the style guide's title, which may include either a text
- * heading or logo.
+ * Header inner
  */
-.c-header__title {
-    margin: 0 auto;
-    padding: 0.5rem 0.5rem;
-    display: block;
-    
-    @media all and (min-width: $bp-small) {
-	    padding: 0.5rem 1rem 1rem;
-    }
+.c-header__inner {
+	display: flex;
+	padding: 1rem;
+
+	/**
+	 * Header inner within vertical header
+	 */
+	.c-header--vertical & {
+		@media all and (min-width: $bp-xl) {
+			flex-direction: column;
+			min-height: 100vh;
+		}
+	}
 }
 
 /**
- * Logo
+ * Header navigation button
+ * 1) Button used to toggle the navigation on/off on small screens
  */
-.c-logo {
-    display: block;
-    margin: 0 auto;
-    height: 60px;
-    
-    @media all and (min-width: $bp-small) {
-	    height: auto;
-    }
-    
+.c-header__nav-btn {
+	margin-left: auto;
+
+	@media all and (min-width: $bp-xl) {
+		display: none;
+	}
+}
+
+/**
+ * Header navigation conntainer
+ * 1) Contains the primary navigation and other possible patterns
+ */
+.c-header__nav-container {
+	display: none;
+
+	@media all and (min-width: $bp-xl) {
+		display: block;
+		margin-left: auto;
+	}
+
+	/**
+	 * Header navigation conntainer within vertical header
+	 */
+	.c-header--vertical & {
+		@media all and (min-width: $bp-xl) {
+			margin-left: 0;
+		}
+	}
+}
+
+/**
+ * Active header nav container
+ */
+.c-header__nav-container.is-active {
+	display: block;
+	position: absolute;
+	background: $color-gray-07;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	padding: 1rem;
+
+	@media all and (min-width: $bp-xl) {
+		display: block;
+		position: static;
+		padding: 0;
+		margin-left: auto;
+		width: inherit;
+	}
+
+	/**
+	 * Active header nav container within vertical header
+	 */
+	.c-header--vertical &{
+		@media all and (min-width: $bp-xl) {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
 }

@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #TILE
+\*------------------------------------*/
+
+/**
+ * 1) A block of stylized content containing a key and a value
+ * 2) The root of a tile is typically <a> tag
+ */
+.c-tile {
+	display: block;
+	align-items: center;
+	padding: 1.5rem;
+	background: $color-gray-73;
+	color: $color-white;
+
+}
+
+/**
+ * Tile headline
+ * 1) Headline of the tile
+ */
+.c-tile__headline {
+	display: block;
+	font-size: $font-size-large;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #TILE LIST
+\*------------------------------------*/

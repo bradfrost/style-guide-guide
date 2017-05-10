@@ -1,0 +1,10 @@
+<div class="c-page-header c-text-passage">
+
+	<h1 class="c-page-header__title">{{ page.title }} {% if page.status %}{% include badge.html %}{% endif %}</h1>
+	{% if page.description %}
+	<div class="c-page-header__desc">
+		{{ page.description | markdownify }}
+	</div>
+	{% endif %}
+
+</div><!-- end c-page-header -->

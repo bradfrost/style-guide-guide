@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+{% include breadcrumbs.html %}
+
+{% include page-header.html %}
+
+<ul>
+
+    {% for componentPage in site.pages %}
+
+        <li>
+
+    		<section class="ah_c_section ah_u_margin-bottom-none">
+
+    			<div class="ah_c_section__body">
+
+    				<div class="ah_c_pattern-example">
+
+                        <ul class="ah_c_lined-list">
+
+                        	{% for variation in componentPage.variations %}
+
+                        	<li class="ah_c_lined-list__item">
+
+                        		<section class="ah_c_section ah_u_margin-bottom-none">
+                        			<header class="ah_c_section__header ah_c_section__header--bare">
+                        				<h5 class="ah_c_section__title">{{ variation.title }} <code class="ah_u_font-size-med">{{ variation.styleModifier }}</code></h5>
+                        				<p class="ah_u_margin-bottom">{{ variation.description }} </p>
+                        			</header>
+
+                        			<div class="ah_c_section__body">
+
+                        				<div class="ah_c_pattern-example ah_u_margin-bottom-double">
+
+                        					{% if variation.includeClassification == 'atoms' %}
+                        					{% assign atomicNumber = "00" %}
+                        					{% elsif variation.includeClassification == 'molecules' %}
+                        					{% assign atomicNumber = "01" %}
+                        					{% elsif variation.includeClassification == 'organisms' %}
+                        					{% assign atomicNumber = "02" %}
+                        					{% endif %}
+
+                        					{% capture componentString %}{{ atomicNumber }}-{{ variation.includeClassification }}-{{ variation.includeCategory }}-{{ variation.includeName }}{% endcapture %}
+
+                        					{% capture iframePath %}/patterns/{{ componentString }}/{{ componentString }}.html{% endcapture %}
+
+											<div class="iffframe">
+
+											    <iframe class="iffframe__iframe" frameBorder="0" width="100%" height="100%" src="{{ iframePath  | prepend: site.baseurl }}"></iframe>
+
+											    <div class="iffframe__handle"></div>
+
+											</div><!--end iffframe-->
+
+
+                        				</div><!-- end ah_c_pattern-example -->
+
+                        				<a href="{{ componentPage.permalink  | prepend: site.baseurl }}" class="ah_c_btn ah_c_btn--small ah_c_btn--primary">See code and usage</a>
+
+                        			</div><!-- end ah_l_section__body -->
+
+                        		</section>
+
+                        	</li><!--end ah_c_lined-list__item -->
+
+                        	{% endfor %}
+
+                        </ul><!--end ah_c_lined-list-->
+
+
+    				</div><!-- end ah_c_pattern-example -->
+
+                </div><!-- end ah_c_section__body -->
+
+            </section><!-- end ah_c_section__body -->
+
+    	</li><!--end ah_c_lined-list__item -->
+
+    {% endfor %}
+
+</ul><!--end ah_c_lined-list-->

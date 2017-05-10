@@ -1,0 +1,7 @@
+{% for usage in page.usage %}
+<h4>{{ usage.title }}</h4>
+
+{% capture desc %}{{ usage.description }}{% endcapture %}
+{{ desc | markdownify }}
+
+{% endfor %}

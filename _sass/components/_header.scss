@@ -15,7 +15,8 @@
  */
 .c-header__inner {
 	display: flex;
-	padding: 1rem;
+	align-items: center;
+	padding: 1rem 0;
 
 	/**
 	 * Header inner within vertical header
@@ -23,6 +24,7 @@
 	.c-header--vertical & {
 		@media all and (min-width: $bp-xl) {
 			flex-direction: column;
+			align-items: flex-start;
 			min-height: 100vh;
 		}
 	}
@@ -34,6 +36,7 @@
  */
 .c-header__nav-btn {
 	margin-left: auto;
+	margin-right: 1rem;
 
 	@media all and (min-width: $bp-xl) {
 		display: none;
@@ -46,6 +49,7 @@
  */
 .c-header__nav-container {
 	display: none;
+	width: 100%;
 
 	@media all and (min-width: $bp-xl) {
 		display: block;
@@ -73,7 +77,6 @@
 	left: 0;
 	width: 100%;
 	z-index: 5;
-	padding: 1rem;
 
 	@media all and (min-width: $bp-xl) {
 		display: block;

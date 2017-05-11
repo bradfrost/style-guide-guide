@@ -58,7 +58,7 @@
         height: 100vh;
 
         @media all and (min-width: $bp-xl) {
-            margin-left: 20rem; /* 1 */
+            margin-left: 18rem; /* 1 */
         }
     }
 }
@@ -81,7 +81,7 @@
             position: fixed;
     	    z-index: 2;
             overflow: auto;
-			width: 20rem;
+			width: 18rem;
             height: 100vh;
         }
     }

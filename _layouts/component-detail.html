@@ -5,26 +5,26 @@ layout: default
 {% include breadcrumbs.html %}
 {% include page-header.html %}
 
-<section class="ah_c_section">
+<section class="c-section">
 
-	<div class="ah_c_tabs ah_c_tabs--vertical ah_js_tabs">
+	<div class="c-tabs c-tabs--vertical js-tabs">
 
-		<ul class="ah_c_tabs__list">
+		<ul class="c-tabs__list">
 			{% for variation in page.variations %}
-			<li class="ah_c_tabs__item">
-				<a href="#tab-{{ variation.title | downcase | replace: ' ', '-' }}" class="ah_c_tabs__link ah_js_tab" data-code-tabs="tab-{{ variation.title | downcase | replace: ' ', '-' }}">{% if variation.title %}{{ variation.title }}{% endif %}</a>
-			</li><!-- end ah_c_tabs__item -->
+			<li class="c-tabs__item">
+				<a href="#tab-{{ variation.title | downcase | replace: ' ', '-' }}" class="c-tabs__link js-tab" data-code-tabs="tab-{{ variation.title | downcase | replace: ' ', '-' }}">{% if variation.title %}{{ variation.title }}{% endif %}</a>
+			</li><!-- end c-tabs__item -->
 			{% endfor %}
 
 
-		</ul><!-- end ah_c_tabs__list -->
+		</ul><!-- end c-tabs__list -->
 
-		<div class="ah_c_tabs__body">
+		<div class="c-tabs__body">
 			{% for variation in page.variations %}
-			<div class="ah_c_tabs__panel ah_js_tabs-panel" id="tab-{{ variation.title | downcase | replace: ' ', '-' }}">
-				<section class="ah_c_section">
-					<header class="ah_c_section__header">
-						{% if variation.title %}<h5 class="ah_c_section__title">{{ variation.title }} {% if variation.styleModifier %}<code class="ah_u_font-size-med">{{ variation.styleModifier }}</code>{% endif %}</h5>{% endif %}
+			<div class="c-tabs__panel js-tabs-panel" id="tab-{{ variation.title | downcase | replace: ' ', '-' }}">
+				<section class="c-section">
+					<header class="c-section__header">
+						{% if variation.title %}<h5 class="c-section__title">{{ variation.title }} {% if variation.styleModifier %}<code class="u-font-size-med">{{ variation.styleModifier }}</code>{% endif %}</h5>{% endif %}
 						{% if variation.description %}<div>{{ variation.description | markdownify }} </div>{% endif %}
 					</header>
 
@@ -37,62 +37,62 @@ layout: default
 					</div><!--end iffframe-->
 
 				</section><!--end section-->
-			</div><!--end ah_c_tabs__panel-->
+			</div><!--end c-tabs__panel-->
 			{% endfor %}
-		</div><!--end ah_c_tabs__body-->
-	</div><!--end ah_c_tabs-->
+		</div><!--end c-tabs__body-->
+	</div><!--end c-tabs-->
 
-		<ul class="ah_c_tabs-list ah_js_tabs-list">
+		<ul class="c-tabs-list js-tabs-list">
 		{% for variation in page.variations %}
-			<li class="ah_c_tabs-list__item ah_js_tabs-list-item" data-code-tabs="tab-{{ variation.title | downcase | replace: ' ', '-' }}">
-			<div class="ah_c_tabs test-tabs  ah_js_tabs">
+			<li class="c-tabs-list__item js-tabs-list-item" data-code-tabs="tab-{{ variation.title | downcase | replace: ' ', '-' }}">
+			<div class="c-tabs test-tabs  js-tabs">
 
-				<ul class="ah_c_tabs__list">
+				<ul class="c-tabs__list">
 
-					<li class="ah_c_tabs__item">
-						<a href="#html-{{ forloop.index }}" class="ah_c_tabs__link ah_js_tab">HTML</a>
-					</li><!-- end ah_c_tabs__item -->
+					<li class="c-tabs__item">
+						<a href="#html-{{ forloop.index }}" class="c-tabs__link js-tab">HTML</a>
+					</li><!-- end c-tabs__item -->
 
-					<li class="ah_c_tabs__item">
-						<a href="#jsx-{{ forloop.index }}" class="ah_c_tabs__link ah_js_tab">JSX</a>
-					</li><!-- end ah_c_tabs__item -->
+					<li class="c-tabs__item">
+						<a href="#jsx-{{ forloop.index }}" class="c-tabs__link js-tab">JSX</a>
+					</li><!-- end c-tabs__item -->
 
-					<li class="ah_c_tabs__item">
-						<a href="#twig-{{ forloop.index }}" class="ah_c_tabs__link ah_js_tab">Twig</a>
-					</li><!-- end ah_c_tabs__item -->
+					<li class="c-tabs__item">
+						<a href="#twig-{{ forloop.index }}" class="c-tabs__link js-tab">Twig</a>
+					</li><!-- end c-tabs__item -->
 
-				</ul><!-- end ah_c_tabs__list -->
+				</ul><!-- end c-tabs__list -->
 
-				<div class="ah_c_tabs__body ">
+				<div class="c-tabs__body ">
 
-					<div class="ah_c_tabs__panel ah_js_tabs-panel" id="html-{{ forloop.index }}">
+					<div class="c-tabs__panel js-tabs-panel" id="html-{{ forloop.index }}">
 
 						<div class="pattern-code">
-							<button class="ah_c_btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
 							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}"></code></pre>
 							<div class="show-more">
-								<button class="ah_c_btn ah_js_show-more-btn">Show all code</button>
+								<button class="c-btn js-show-more-btn">Show all code</button>
 							</div>
 						</div>
 
 					</div>
-					<!--end ah_c_tabs__panel-->
+					<!--end c-tabs__panel-->
 
 
-					<div class="ah_c_tabs__panel ah_js_tabs-panel" id="jsx-{{ forloop.index }}">
+					<div class="c-tabs__panel js-tabs-panel" id="jsx-{{ forloop.index }}">
 					JSX Code
 					</div>
-					<!--end ah_c_tabs__panel-->
+					<!--end c-tabs__panel-->
 
 
-					<div class="ah_c_tabs__panel ah_js_tabs-panel" id="twig-{{ forloop.index }}">
+					<div class="c-tabs__panel js-tabs-panel" id="twig-{{ forloop.index }}">
 					Twig Code
 					</div>
-					<!--end ah_c_tabs__panel-->
+					<!--end c-tabs__panel-->
 
-				</div><!-- end ah_c_tabs__body-->
+				</div><!-- end c-tabs__body-->
 
-			</div><!-- end ah_c_tabs -->
+			</div><!-- end c-tabs -->
 		</li>
 		{% endfor %}
 
@@ -100,15 +100,15 @@ layout: default
 
 </section>
 
-<section class="ah_c_section">
+<section class="c-section">
 
-	<div class="ah_c_section-header ">
+	<div class="c-section-header ">
 
-		<h1 class="ah_c_section-header__title">Usage</h1>
+		<h1 class="c-section-header__title">Usage</h1>
 
-	</div><!-- end ah_c_page-header -->
+	</div><!-- end c-page-header -->
 
-	<div class="ah_c_text-passage ah_l_linelength-container">
+	<div class="c-text-passage l-linelength-container">
 
 		<h3>When to use</h3>
 		<p>Use this pattern like this. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -130,57 +130,57 @@ layout: default
 
 	</div>
 
-	<table class="ah_c_table ">
+	<table class="c-table ">
 
-		<thead class="ah_c_table__header">
+		<thead class="c-table__header">
 
-			<tr class="ah_c_table__header-row">
-			<th scope="col" class="ah_c_table__header-cell ">Class Name</th>
-			<th scope="col" class="ah_c_table__header-cell ">Description</th>
-			</tr><!-- ah_c_table__header-row -->
+			<tr class="c-table__header-row">
+			<th scope="col" class="c-table__header-cell ">Class Name</th>
+			<th scope="col" class="c-table__header-cell ">Description</th>
+			</tr><!-- c-table__header-row -->
 
-		</thead><!-- end ah_c_table__header -->
+		</thead><!-- end c-table__header -->
 
-		<tbody class="ah_c_table__body ">
+		<tbody class="c-table__body ">
 
-			<tr class="ah_c_table__row ">
+			<tr class="c-table__row ">
 
-				<td class="ah_c_table__cell ">
-					.ah_c_table
+				<td class="c-table__cell ">
+					.c-table
 				</td>
 
-				<td class="ah_c_table__cell ">
+				<td class="c-table__cell ">
 					This is the default table style
 				</td>
 
-			</tr><!-- end ah_c_table__row -->
-			<tr class="ah_c_table__row ">
+			</tr><!-- end c-table__row -->
+			<tr class="c-table__row ">
 
-				<td class="ah_c_table__cell ">
-					.ah_c_table--compact
+				<td class="c-table__cell ">
+					.c-table--compact
 				</td>
 
-				<td class="ah_c_table__cell ">
+				<td class="c-table__cell ">
 					This is more compact version of the table
 				</td>
 
-			</tr><!-- end ah_c_table__row -->
+			</tr><!-- end c-table__row -->
 
-		</tbody><!-- end ah_c_table__body -->
+		</tbody><!-- end c-table__body -->
 
-	</table><!--end ah_c_table-->
+	</table><!--end c-table-->
 
 </section>
 
-<section class="ah_c_section">
+<section class="c-section">
 
-	<div class="ah_c_section-header ">
+	<div class="c-section-header ">
 
-		<h1 class="ah_c_section-header__title">Discussion</h1>
+		<h1 class="c-section-header__title">Discussion</h1>
 
-	</div><!-- end ah_c_page-header -->
+	</div><!-- end c-page-header -->
 
-	<div class="ah_c_text-passage ah_l_linelength-container">
+	<div class="c-text-passage l-linelength-container">
         <ul>
             <li><a href="#">Jira feature request lorem ipsum</a></li>
             <li><a href="#">Jira bug report lorem ipsum</a></li>
@@ -189,23 +189,23 @@ layout: default
         </ul>
 	</div>
 
-    <button class="ah_c_btn ">
-        <div class="ah_c_btn__inner">
+    <button class="c-btn ">
+        <div class="c-btn__inner">
             New Ticket
-        </div><!--end ah_c_btn__inner-->
-    </button><!-- end ah_c_btn -->
+        </div><!--end c-btn__inner-->
+    </button><!-- end c-btn -->
 
 </section>
 
-<section class="ah_c_section">
+<section class="c-section">
 
-	<div class="ah_c_section-header ">
+	<div class="c-section-header ">
 
-		<h1 class="ah_c_section-header__title">Fine print</h1>
+		<h1 class="c-section-header__title">Fine print</h1>
 
-	</div><!-- end ah_c_page-header -->
+	</div><!-- end c-page-header -->
 
-	<div class="ah_c_text-passage ah_l_linelength-container">
+	<div class="c-text-passage l-linelength-container">
         <ul>
             <li>Version: 0.3</li>
             <li>Last updated: April 27, 2017</li>

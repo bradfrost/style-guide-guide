@@ -55,18 +55,18 @@
  */
 .c-primary-nav__link {
 	display: block;
-	padding: 0.5rem 0;
+	padding: 0.5rem 1rem;
 	cursor: pointer;
 
 	/**
 	 * Primary navigation link within vertical header
 	 */
 	.c-header--vertical & {
-		padding: 0.5rem 0;
+		padding: 0.5rem 1rem;
 	}
 
 	@media all and (min-width: $bp-xl) {
-		padding: 0.5rem 0.3rem;
+		padding: 0.5rem 1rem;
 	}
 }
 
@@ -114,6 +114,10 @@
 	.c-primary-nav__subitem.is-active & {
 		display: block;
 	}
+}
+
+.c-primary-nav__sublist {
+	border-left: 2px solid $color-gray-50;
 }
 
 /**
@@ -181,8 +185,9 @@
  */
 .c-primary-nav__sublink {
 	display: flex;
+	color: red;
 	align-items: center;
-	padding: 0.5rem 0;
+	padding: 0.5rem 1rem;
 
 	@media all and (min-width: $bp-xl) {
 		color: $color-white;

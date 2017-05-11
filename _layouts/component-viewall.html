@@ -12,27 +12,27 @@ layout: default
 
         <li>
 
-    		<section class="ah_c_section ah_u_margin-bottom-none">
+    		<section class="c-section u-margin-bottom-none">
 
-    			<div class="ah_c_section__body">
+    			<div class="c-section__body">
 
-    				<div class="ah_c_pattern-example">
+    				<div class="c-pattern-example">
 
-                        <ul class="ah_c_lined-list">
+                        <ul class="c-lined-list">
 
                         	{% for variation in componentPage.variations %}
 
-                        	<li class="ah_c_lined-list__item">
+                        	<li class="c-lined-list__item">
 
-                        		<section class="ah_c_section ah_u_margin-bottom-none">
-                        			<header class="ah_c_section__header ah_c_section__header--bare">
-                        				<h5 class="ah_c_section__title">{{ variation.title }} <code class="ah_u_font-size-med">{{ variation.styleModifier }}</code></h5>
-                        				<p class="ah_u_margin-bottom">{{ variation.description }} </p>
+                        		<section class="c-section u-margin-bottom-none">
+                        			<header class="c-section__header c-section__header--bare">
+                        				<h5 class="c-section__title">{{ variation.title }} <code class="u-font-size-med">{{ variation.styleModifier }}</code></h5>
+                        				<p class="u-margin-bottom">{{ variation.description }} </p>
                         			</header>
 
-                        			<div class="ah_c_section__body">
+                        			<div class="c-section__body">
 
-                        				<div class="ah_c_pattern-example ah_u_margin-bottom-double">
+                        				<div class="c-pattern-example u-margin-bottom-double">
 
                         					{% if variation.includeClassification == 'atoms' %}
                         					{% assign atomicNumber = "00" %}
@@ -55,29 +55,29 @@ layout: default
 											</div><!--end iffframe-->
 
 
-                        				</div><!-- end ah_c_pattern-example -->
+                        				</div><!-- end c-pattern-example -->
 
-                        				<a href="{{ componentPage.permalink  | prepend: site.baseurl }}" class="ah_c_btn ah_c_btn--small ah_c_btn--primary">See code and usage</a>
+                        				<a href="{{ componentPage.permalink  | prepend: site.baseurl }}" class="c-btn c-btn--small c-btn--primary">See code and usage</a>
 
-                        			</div><!-- end ah_l_section__body -->
+                        			</div><!-- end l-section__body -->
 
                         		</section>
 
-                        	</li><!--end ah_c_lined-list__item -->
+                        	</li><!--end c-lined-list__item -->
 
                         	{% endfor %}
 
-                        </ul><!--end ah_c_lined-list-->
+                        </ul><!--end c-lined-list-->
 
 
-    				</div><!-- end ah_c_pattern-example -->
+    				</div><!-- end c-pattern-example -->
 
-                </div><!-- end ah_c_section__body -->
+                </div><!-- end c-section__body -->
 
-            </section><!-- end ah_c_section__body -->
+            </section><!-- end c-section__body -->
 
-    	</li><!--end ah_c_lined-list__item -->
+    	</li><!--end c-lined-list__item -->
 
     {% endfor %}
 
-</ul><!--end ah_c_lined-list-->
+</ul><!--end c-lined-list-->

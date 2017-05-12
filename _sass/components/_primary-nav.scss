@@ -71,6 +71,20 @@
 }
 
 /**
+ * Active primary navigation link
+ */
+.c-primary-nav__link.is-active {
+	font-weight: bold;
+}
+
+/**
+ * Current primary navigation link
+ */
+.c-primary-nav__link.is-current {
+	font-weight: bold;
+}
+
+/**
  * Primary navigation link with subnavigation
  */
 .c-primary-nav__link--has-children {
@@ -201,6 +215,20 @@
 			color: inherit;
 		}
 	}
+}
+
+/**
+ * Active primary navigation link
+ */
+.c-primary-nav__sublink.is-active {
+	font-weight: bold;
+}
+
+/**
+ * Current primary navigation link
+ */
+.c-primary-nav__sublink.is-current {
+	font-weight: bold;
 }
 
 /**

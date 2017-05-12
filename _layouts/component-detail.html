@@ -69,7 +69,7 @@ layout: default
 
 						<div class="pattern-code">
 							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">INSERT CODE HERE</code></pre>
+							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">INSERT HTML CODE HERE</code></pre>
 						</div>
 
 					</div>
@@ -77,13 +77,19 @@ layout: default
 
 
 					<div class="c-tabs__panel js-tabs-panel" id="jsx-{{ forloop.index }}">
-					JSX Code
+						<div class="pattern-code">
+							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">INSERT JSX CODE HERE</code></pre>
+						</div>
 					</div>
 					<!--end c-tabs__panel-->
 
 
 					<div class="c-tabs__panel js-tabs-panel" id="twig-{{ forloop.index }}">
-					Twig Code
+						<div class="pattern-code">
+							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">INSERT TWIG CODE HERE</code></pre>
+						</div>
 					</div>
 					<!--end c-tabs__panel-->
 

@@ -156,48 +156,161 @@
 		});
 	}
 
-	/**
-	 * Show more button
-	 * 1) Add class of is-expanded to the grandparent element to expand the contents inside
-	 * 2) On click of the show more button, remove this and its parent to get rid of the faded contents.
-	 */
-	var showMore = document.querySelectorAll('.js-show-more-btn');
-	for (i=0; i<showMore.length; i++) {
-		showMore[i].addEventListener('click', function (e) {
-			e.preventDefault();
-			var thisParent = this.parentNode;
-			var thisGrandparent = this.parentNode.parentNode;
-			thisGrandparent.classList.add('is-expanded');
-			thisGrandparent.removeChild(thisParent); /* 2 */
+})();
+
+/*------------------------------------*\
+    #TABS
+\*------------------------------------*/
+/**
+ * Tabs Activation
+ * 1) Add active class to the first tab and panel by default
+ * 2) Add active class to first js-tabs-list__item (used in code tabs in styleguide)
+ * 3) On click of tab, prevent page jumping and run openTab function
+ */
+
+(function(){
+
+	var tabContainer = document.querySelectorAll('.js-tabs');
+	var tabBtn = document.querySelectorAll('.js-tab');
+	var tabContent = document.querySelectorAll('.js-tabs-panel');
+	var tabsList = document.querySelectorAll('.js-tabs-list');
+
+	for (i=0; i<tabContainer.length; i++) {
+		var tabFirst = tabContainer[i].querySelector('.js-tab:first-child'); /* 1 */
+		var tabPanelFirst = tabContainer[i].querySelector('.js-tabs-panel:first-child'); /* 1 */
+		tabFirst.classList.add('is-active'); /* 1 */
+		tabPanelFirst.classList.add('is-active'); /* 1 */
+	}
+
+	for (i=0; i<tabsList.length; i++) {
+		var tabsListItem = tabsList[i].querySelector('.js-tabs-list-item:first-child'); /* 2 */
+		tabsListItem.classList.add('is-active'); /* 2 */
+	}
+
+	for (i=0; i<tabBtn.length; i++) {
+		tabBtn[i].addEventListener('click', function (e) { /* 3 */
+			e.preventDefault();/* 3 */
+			openTab(this);/* 3 */
 		});
 	}
-	var patternCode = document.querySelectorAll('.pattern-code-block');
-	for (i=0; i<patternCode.length; i++) {
-	function getTheStyle(){
-		var theCSSprop = window.getComputedStyle(patternCode[i],null).getPropertyValue("height");
-		//console.log(theCSSprop);
+
+	/**
+	 * Open Tab function
+	 * 1) Pass in clicked tab into function as el
+	 * 2) Get href of the clicked tab. Also get the data-code-tabs attribute.
+	 *    These are used to show and hide proper tab panel or tabs-list__items
+	 *    when the correlating variation is clicked on
+	 * 3) Remove active class from all tabs on click (click event above).
+	 *    Add active class to clicked tab.
+	 * 4) Select this tab's href and create new Href. If tab href exists on click,
+	 *    add active class to the tab.
+	 * 5) Select all tabs panels. On click remove all active classes from panels.
+	 *    Add class to panel associated with tab clicked on.
+	 * 6) For all tabs lists (list of code block tabs on styleguide), select all
+	 *    tab list items. If data-code-tabs matches between variation tab
+	 *    clicked and tabs list item, remove active classes from all tab list
+	 *    items and add active class to item with same data-code-tabs value.
+	 * 7) Add active class to tab whose href matches the correct tabs panel.
+	 */
+	function openTab(el) { /* 1 */
+		thisHref = el.getAttribute('href'); /* 2 */
+		thisData = el.getAttribute('data-code-tabs');/* 2 */
+
+		var tabParent = el.parentNode.parentNode.parentNode;
+		var tabBtns = tabParent.querySelectorAll('.js-tab');
+
+		for (j=0; j<tabBtns.length; j++) {
+			tabBtns[j].classList.remove('is-active'); /* 3 */
+		}
+
+		el.classList.add('is-active'); /* 3 */
+
+		var newHref = document.querySelector(thisHref); /* 4 */
+		var newerHref = newHref.querySelector('.js-tabs-panel');
+		var firstLink = newHref.querySelector('.js-tab'); /* 4 */
+		if (firstLink) {
+			firstLink.classList.add('is-active'); /* 4 */
+		}
+
+		var tabsPanel = tabParent.querySelectorAll('.js-tabs-panel');
+		for (j=0; j<tabsPanel.length; j++) {
+			tabsPanel[j].classList.remove('is-active'); /* 5 */
+			if (newerHref) {
+				newerHref.classList.add('is-active'); /* 5 */
+			}
+		}
+
+		var tabsList = document.querySelectorAll('.js-tabs-list');
+		for (k=0; k<tabsList.length; k++) { /* 6 */
+			var tabsListItem = tabsList[k].querySelectorAll('.js-tabs-list-item'); /* 6 */
+			for (l=0; l<tabsListItem.length; l++) {
+				if (el.getAttribute('data-code-tabs') == tabsListItem[l].getAttribute('data-code-tabs')) { /* 6 */
+					var tabsItems = tabsList[k].querySelectorAll('.js-tabs-list-item');
+					for (m=0; m<tabsItems.length; m++) {
+						tabsItems[m].classList.remove('is-active');/* 6 */
+					}
+					tabsListItem[l].classList.add('is-active');/* 6 */
+				}
+			}
+		}
+
+		document.querySelector(thisHref).classList.add('is-active'); /* 7 */
 	}
-		getTheStyle();
+
+})();
+
+/*------------------------------------*\
+    #PRIMARY NAVIGATION
+\*------------------------------------*/
+/**
+ * Toggles active class on the primary nav item
+ * 1) Select all nav dropdown triggers and cycle through them
+ * 2) On click, find the nav dropdown trigger parent
+ * 3) If the nav dropdown trigger parent already has active class, remove it.
+ * 4) If the nav dropdown trigger parent does not have an active class, add it.
+ */
+(function(){
+
+	var navLink = document.querySelectorAll('.js-nav-dropdown-trigger'); /* 1 */
+
+	for (i=0; i<navLink.length; i++) { /* 1 */
+
+		navLink[i].addEventListener('click',function(event){ /* 2 */
+	        event.preventDefault();
+	        var navLinkParent = this.parentNode; /* 2 */
+
+	        if (navLinkParent.classList.contains('is-active')) { /* 3 */
+	            navLinkParent.classList.remove('is-active');
+	        }
+	        else { /* 4 */
+	            navLinkParent.classList.add('is-active');
+	        }
+		});
 	}
 
 	/**
-	 * Show more button removal on short height elements
-	 * 1) After content is loaded, get client height of code block. Added after DOM content is
-	 *    loaded due to prism adding the styling (and the code block height) for the code blocks.
-	 * 2) Remove "show all code" button if height of block is less than 400px
-	 * 3) On click of variation tabs, target the parentNodes to select show-more div
-	 * 4) Once clicked on, remove the "show all code" button if the height of the code block is
-	 *    less than 400px
+	 * Toggles active class on the primary nav panel
+	 * 1) Select all nav triggers and cycle through them
+	 * 2) On click, find the nav panel within the header
+	 * 3) If the navPanel already has active class, remove it on click.
+	 * 4) If the navPanel does not have an active class, add it on click.
 	 */
+	var navToggle = document.querySelectorAll('.js-nav-trigger');/* 1 */
 
-	document.addEventListener('DOMContentLoaded', function() { /* 1 */
-			if (document.querySelector('.pattern-code')) {
-				var patternCode = document.querySelector('.pattern-code');
-				if (document.querySelector('.pattern-code').clientHeight <= 400 && patternCode.querySelector('.show-more')) {/* 2 */
-					var showMoreBtn = patternCode.querySelector('.show-more');
-					patternCode.removeChild(showMoreBtn); /* 2 */
-				}
-			}
-	}, false);
+	for (i=0; i<navToggle.length; i++) { /* 1 */
+
+		navToggle[i].addEventListener('click',function(event){ /* 2 */
+	        event.preventDefault();
+	        var navToggleParent = this.parentNode; /* 2 */
+	        var navPanel = navToggleParent.querySelector('.js-nav-panel'); /* 2 */
+
+	        if (navPanel.classList.contains('is-active')) { /* 3 */
+	            navPanel.classList.remove('is-active');
+	        }
+	        else { /* 4 */
+	            navPanel.classList.add('is-active');
+	        }
+		});
+	}
 
 })();

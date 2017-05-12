@@ -7,7 +7,7 @@ layout: default
 
 <section class="c-section">
 
-	<div class="c-tabs c-tabs--vertical js-tabs">
+	<div class="c-tabs js-tabs">
 
 		<ul class="c-tabs__list">
 			{% for variation in page.variations %}
@@ -69,10 +69,7 @@ layout: default
 
 						<div class="pattern-code">
 							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}"></code></pre>
-							<div class="show-more">
-								<button class="c-btn js-show-more-btn">Show all code</button>
-							</div>
+							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">INSERT CODE HERE</code></pre>
 						</div>
 
 					</div>

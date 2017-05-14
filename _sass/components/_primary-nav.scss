@@ -131,7 +131,7 @@
 }
 
 .c-primary-nav__sublist {
-	border-left: 2px solid $color-gray-50;
+	border-left: 1px solid $color-gray-27;
 }
 
 /**
@@ -199,13 +199,8 @@
  */
 .c-primary-nav__sublink {
 	display: flex;
-	color: red;
 	align-items: center;
 	padding: 0.5rem 1rem;
-
-	@media all and (min-width: $bp-xl) {
-		color: $color-white;
-	}
 
 	/**
 	 * Primary navigation sublink within vertical header

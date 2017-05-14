@@ -8,11 +8,13 @@
 .c-logo {
 	margin: 0 2rem 0 0.5rem;
 	width: 5rem;
+    height: 5rem;
 	max-width: 14rem;
 
 	@media all and (min-width: $bp-xl) {
 		margin: 0;
 		width: auto;
+        height: auto;
 	}
 
 	/**

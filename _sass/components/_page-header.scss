@@ -9,7 +9,7 @@
  * Page header title
  */
 .c-page-header__title {
-	margin-bottom: 1rem;
+	margin-bottom: 0;
 }
 
 /**
@@ -17,4 +17,7 @@
  */
 .c-page-header__desc {
     margin-bottom: 2rem;
+    font-size: $font-size-med-2;
+    color: $color-gray-50;
+    max-width: $l-max-width-narrow;
 }

@@ -1,5 +1,5 @@
 ---
-layout: detail
+layout: page
 type: detail
 title: Text
 group: guidelines

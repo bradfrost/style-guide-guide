@@ -1,5 +1,5 @@
 ---
-layout: detail-html
+layout: page-html
 type: detail
 title: Typography
 group: styles

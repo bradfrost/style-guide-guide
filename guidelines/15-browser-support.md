@@ -1,5 +1,5 @@
 ---
-layout: detail
+layout: page
 type: detail
 title: Browser support
 group: guidelines

@@ -1,5 +1,5 @@
 ---
-layout: detail-html
+layout: page-html
 title: Downloads
 permalink: /downloads/
 description: Downloads description

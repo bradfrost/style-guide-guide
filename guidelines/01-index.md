@@ -1,5 +1,5 @@
 ---
-layout: detail
+layout: page
 type: landing
 group: guidelines
 permalink: /guidelines/

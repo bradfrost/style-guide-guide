@@ -1,5 +1,5 @@
 ---
-layout: detail
+layout: page
 type: detail
 title: Design tokens
 group: styles

@@ -1,5 +1,5 @@
 ---
-layout: detail
+layout: page
 type: detail
 title: Voice and tone
 group: styles

@@ -1,11 +1,10 @@
 ---
-layout: detail
-type: detail
+layout: page
 title: Data entry
 group: guidelines
 permalink: /guidelines/data-entry.html
-description: Respect your users by keeping forms manageable
+description: High-level form guidelines
 
 ---
 
-Guidelines go here
+Form guidelines go here

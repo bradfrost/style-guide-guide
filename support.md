@@ -2,17 +2,26 @@
 layout: detail-html
 type: detail
 title: Support
-url: /support.html
-description: Support description goes here
+description: The support page provides information about getting help with using the design system
 ---
 
-## Support Title
-Cras at fringilla ipsum. Donec nec libero eget est blandit dignissim a eu ante. Morbi augue nulla, luctus eu sagittis vel, malesuada ut felis. Aliquam erat volutpat. Morbi malesuada augue ac massa hendrerit fermentum. Integer scelerisque lacus a dolor convallis lobortis. Curabitur mollis ante in massa ultricies dignissim.
+Talk about the importance of communication between [makers and users](http://atomicdesign.bradfrost.com/chapter-5/#design-system-makers-and-users) of the design system.
 
-### Support Title
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Support channels
+Where can people go for help with the design system? Where do people talk about the design system? Where should bugs be filed? Cross-link to the [contributing page](/contributing.html) as there's often overlap between this kinds of
 
-### Support Title
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Support opportunities
+Training and support can [take many forms](http://atomicdesign.bradfrost.com/chapter-5/#training-and-support), including:
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+- Pair sessions
+- Workshops
+- Webinars
+- Consulting sessions
+- Tutorials
+- Employee onboarding
+- Office hours
+- Chat tools
+- Issue trackers
+- Forums
+
+Take the time to present all support and training information; it helps give users confidence you have their backs when they get stuck.

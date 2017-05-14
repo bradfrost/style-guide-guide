@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Updates Test"
-date:   2016-05-24 02:00:00 -0400
-categories: jekyll update
----
-
-This is a test post for updates.

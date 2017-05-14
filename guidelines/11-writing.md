@@ -4,7 +4,7 @@ type: detail
 title: Writing
 group: guidelines
 permalink: /guidelines/writing.html
-description: Adopt the simple, direct language of Style Guide Guide apps
+description: Guidelines for writing best practices
 
 ---
 

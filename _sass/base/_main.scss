@@ -9,4 +9,8 @@
 	display: block;
 	flex: 1 0 auto;
 	padding: 1rem;
+
+    @media all and (min-width: $bp-xl) {
+        padding-top: 3rem;
+    }
 }

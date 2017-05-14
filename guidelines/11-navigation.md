@@ -4,7 +4,7 @@ type: detail
 title: Navigation
 group: guidelines
 permalink: /guidelines/navigation.html
-description: Getting around a Agora app or site
+description: Getting around a Style Guide Guide app or site
 
 ---
 

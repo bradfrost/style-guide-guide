@@ -4,7 +4,7 @@ type: detail
 title: Browser support
 group: guidelines
 permalink: /guidelines/browsers.html
-description: Agora markup supports all browsers and optimizes for a select few
+description: Style Guide Guide markup supports all browsers and optimizes for a select few
 
 
 ---

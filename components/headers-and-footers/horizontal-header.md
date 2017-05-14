@@ -77,7 +77,7 @@ classes:
   required: yes
   modifier: yes
   js: yes
-  description: Add to the `c-header__nav-btn` element to enable the toggle behavior. On click, Agora's JavaScript library changes the button icon and label, and adds/removes `is-active` for the button, `c-header` and `js-nav-panel` elements.
+  description: Add to the `c-header__nav-btn` element to enable the toggle behavior. On click, Style Guide Guide's JavaScript library changes the button icon and label, and adds/removes `is-active` for the button, `c-header` and `js-nav-panel` elements.
 - className: c-btn__icon
   required: yes
   description: Apply to the `<svg>` icon as you normally would for an [icon button](../buttons/button.html), but include two of these [icons](../icons-and-media/icons.html) instead of the usual single icon. The first icon should be the `#icon-menu` hamburger icon, and the second should be the `#icon-x` "close" icon. Include the following modifier classes to allow the button to properly toggle between states.
@@ -104,7 +104,7 @@ classes:
   description: Apply to the optional [search form](../form-controls/search.html). When you include search in the header, this should be the first child of the `c-header__nav-container` element. For accessibility, be sure to add the `role=search` attribute to the `<form>` element, too. See the [search component](../form-controls/search.html) for complete markup and class details.
 - className: js-header-search
   modifier: yes
-  description: Add to the `c-search-form` element. This helps Agora's JavaScript library to toggle the display of the search form on smaller viewports.
+  description: Add to the `c-search-form` element. This helps Style Guide Guide's JavaScript library to toggle the display of the search form on smaller viewports.
 - className: c-primary-nav
   required: yes
   description: Apply to the container for the application's primary navigation. The recommended element for this class is `<nav>`. The class controls the margin and high-level layout around the menu. The only child of this element should be the `<ul>` list of menu items.
@@ -129,7 +129,7 @@ classes:
 - className: js-nav-dropdown-trigger
   modifier: yes
   javascript: yes
-  description: Add to the `c-primary-nav__link` element for any navigation section that has its own subnavigation menu. Agora's JavaScript library uses this class to help hide/display the subnavigation menu on click. This class is required if you include a subnavigation menu for the item.
+  description: Add to the `c-primary-nav__link` element for any navigation section that has its own subnavigation menu. Style Guide Guide's JavaScript library uses this class to help hide/display the subnavigation menu on click. This class is required if you include a subnavigation menu for the item.
 - className: c-primary-nav__icon
   description: Apply to the optional `c-icon` [icon](../icons-and-media/icons.html) to include inside `c-primary-nav__link` for any primary navigation item with subnavigation. Use this to display a down-arrow icon (the `#icon-caret-down` icon variation) to indicate that a dropdown menu is available. See the [icon component](../icons-and-media/icons.html) for complete details.
 - className: c-badge
@@ -138,11 +138,11 @@ classes:
   js: yes
   description: Add to the `c-btn` button element of a search icon that toggles display of the optional search form when including search in the header. The recommended element for this class is `<button>`, and it typically uses the `c-btn--bare` modifier to display only the `#icon-search` icon. (See the [button component](../buttons/button.html) for details about displaying an icon-only button.) This button element replaces the typical `c-primary-nav__link` link element for a navigation item.
 - className: c-primary-nav__sublist
-  description: Apply to the optional `<ul>` list for a subnavigation menu. Agora's horizontal header supports two levels of navigation (primary navigation and subnavigation), so you may nest `c-primary-nav__sublist` elements inside `c-primary-nav__item` list elements only. Add this `<ul>` immediately after the navigation item's `c-primary-nav__link` link element. This class is required if you include a subnavigation menu.
+  description: Apply to the optional `<ul>` list for a subnavigation menu. Style Guide Guide's horizontal header supports two levels of navigation (primary navigation and subnavigation), so you may nest `c-primary-nav__sublist` elements inside `c-primary-nav__item` list elements only. Add this `<ul>` immediately after the navigation item's `c-primary-nav__link` link element. This class is required if you include a subnavigation menu.
 - className: js-nav-dropdown
   modifier: yes
   js: yes
-  description: Add to all `c-primary-nav__sublist` elements. This class help' Agora's JavaScript library to hide/display the subnavigation menu. This class is required if you include a subnavigation menu.
+  description: Add to all `c-primary-nav__sublist` elements. This class help' Style Guide Guide's JavaScript library to hide/display the subnavigation menu. This class is required if you include a subnavigation menu.
 - className: c-primary-nav__subitem
   description: Apply to each `<li>` menu item in a subnavigation menu. The only child of this element should be the item's `c-primary-nav__sublink` link. This class is required if you include a subnavigation menu.
 - className: c-primary-nav__sublink
@@ -167,7 +167,7 @@ classes:
 - className: js-nav-dropdown-trigger
   modifier: yes
   javascript: yes
-  description: Add to the `c-global-nav__link` element for any global-navigation item that has a subnavigation menu. Agora's JavaScript library uses this class to help hide/display the subnavigation menu on click. This class is required if you include a subnavigation menu for the item.
+  description: Add to the `c-global-nav__link` element for any global-navigation item that has a subnavigation menu. Style Guide Guide's JavaScript library uses this class to help hide/display the subnavigation menu on click. This class is required if you include a subnavigation menu for the item.
 - className: c-global-nav__icon
   description: Apply to the optional `c-icon` [icon](../icons-and-media/icons.html) to include inside `c-global-nav__link` for any global-navigation item with subnavigation. Use this to display a down-arrow icon (the `#icon-caret-down` icon variation) to indicate that a dropdown menu is available. See the [icon component](../icons-and-media/icons.html) for complete details.
 - className: c-global-nav__sublist
@@ -175,7 +175,7 @@ classes:
 - className: js-nav-dropdown
   modifier: yes
   js: yes
-  description: Add to all `c-global-nav__sublist` elements. This class help' Agora's JavaScript library to hide/display the subnavigation menu. This class is required if you include a subnavigation menu.
+  description: Add to all `c-global-nav__sublist` elements. This class help' Style Guide Guide's JavaScript library to hide/display the subnavigation menu. This class is required if you include a subnavigation menu.
 - className: c-global-nav__subitem
   description: Apply to each `<li>` menu item in a global-nav subnavigation menu. The only child of this element should be the item's `c-global-nav__sublink` link. This class is required if you include a subnavigation menu inside a global-navigation item.
 - className: c-global-nav__sublink

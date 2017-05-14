@@ -68,7 +68,7 @@ classes:
   required: yes
   modifier: yes
   js: yes
-  description: Add to the `c-header__nav-btn` element to enable the toggle behavior. On click, Agora's JavaScript library changes the button icon and label, and adds/removes `is-active` for the button, `c-header` and `js-nav-panel` elements.
+  description: Add to the `c-header__nav-btn` element to enable the toggle behavior. On click, Style Guide Guide's JavaScript library changes the button icon and label, and adds/removes `is-active` for the button, `c-header` and `js-nav-panel` elements.
 - className: c-btn__icon
   required: yes
   description: Apply to the `<svg>` icon as you normally would for an [icon button](../buttons/button.html), but include two of these [icons](../icons-and-media/icons.html) instead of the usual single icon. The first icon should be the `#icon-menu` hamburger icon, and the second should be the `#icon-x` "close" icon. Include the following modifier classes to allow the button to properly toggle between states.
@@ -99,7 +99,7 @@ classes:
 - className: js-header-search
   modifier: yes
   js: yes
-  description: Add to the `c-search-form` element. This helps Agora's JavaScript library to toggle the display of the search form on smaller viewports.
+  description: Add to the `c-search-form` element. This helps Style Guide Guide's JavaScript library to toggle the display of the search form on smaller viewports.
 - className: c-tree
   required: yes
   description: Apply to the container for the application's primary navigation. See [tree navigation](../navigation/tree.html) for complete details about the markup and styles for this component.

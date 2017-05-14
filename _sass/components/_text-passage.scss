@@ -14,8 +14,9 @@
 	/**
 	 * Link within the text passage
 	 */
-	a {
+	a:not(.c-btn) {
 		color: $color-gray-50;
+        text-decoration: underline;
 
 		&:hover, &:focus {
 			color: $color-gray-73;
@@ -43,7 +44,7 @@
 	 * Second-level heading within text passage
 	 */
 	h2 {
-		margin: 1rem 0 1rem;
+		margin: 2rem 0 0.5rem;
 		color: $color-gray-73;
 		font-weight: bold;
 	}

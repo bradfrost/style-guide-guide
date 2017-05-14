@@ -16,7 +16,6 @@
 .c-header__inner {
 	display: flex;
 	align-items: center;
-	padding: 1rem 0;
 
 	/**
 	 * Header inner within vertical header
@@ -26,6 +25,7 @@
 			flex-direction: column;
 			align-items: flex-start;
 			min-height: 100vh;
+            padding: 1rem 0;
 		}
 	}
 }

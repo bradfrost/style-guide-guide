@@ -3,15 +3,9 @@
 	<ul class="c-primary-nav__list c-primary-nav__list--flush js-nav-panel" role="tablist" aria-multiselectable="true">
 
 		<li class="c-primary-nav__item">
-
-			{% for my_page in site.pages %}
-				{% if my_page.url == "/getting-started.html" %}
-				<a href="{{ "/getting-started.html" | prepend: site.baseurl}}" class="c-primary-nav__link {% if page.url == '/getting-started.html' %}is-active is-current{% endif %}">
-					<span class="c-primary-nav__text">Getting started</span>
-				</a>
-				{% endif %}
-			{% endfor %}
-
+			<a href="{{ "/getting-started.html" | prepend: site.baseurl}}" class="c-primary-nav__link {% if page.url == '/getting-started.html' %}is-active is-current{% endif %}">
+				<span class="c-primary-nav__text">Getting started</span>
+			</a>
 		</li><!-- end c-nav__list__item -->
 
 		<li class="c-primary-nav__item">
@@ -53,7 +47,7 @@
 
 			<a href="{{ "/styles/index.html" | prepend: site.baseurl }}" class="c-primary-nav__link c-primary-nav__link--has-children js-nav-dropdown-trigger {% if page.url contains '/styles' %} is-active  is-current{% endif %}">
 
-				<span class="c-primary-nav__span">Styles and brand</span>
+				<span class="c-primary-nav__span">Styles</span>
 
 				<svg class="c-icon c-primary-nav__icon">
 					<use href="{{ "/icons.svg#chevron-right" | prepend: site.baseurl }}"></use>
@@ -68,41 +62,6 @@
 					<li class="c-primary-nav__item">
 						<a class="c-primary-nav__link {% if my_page.url == page.url %}is-active is-current{% endif %}" href="{{ my_page.url | prepend: site.baseurl }}">
                         {% if my_page.layout == "styles-landing" %}
-
-                        <span class="c-primary-nav__text">Overview</span>
-
-                        {% else %}
-
-                        {{ my_page.title }}
-
-                        {% endif %}
-						</a>
-					</li>
-					{% endif %}
-				{% endif %}
-			{% endfor %}
-			</ul>
-
-		</li><!-- end c-nav__list__item -->
-
-		<li class="c-primary-nav__item">
-
-			<a href="{{ "/layout/index.html" | prepend: site.baseurl }}" class="c-primary-nav__link c-primary-nav__link--has-children js-nav-dropdown-trigger {% if page.url contains '/layout' %} is-active  is-current{% endif %}">
-
-				<span class="c-primary-nav__span">Layouts</span>
-
-				<svg class="c-icon c-primary-nav__icon">
-					<use href="{{ "/icons.svg#chevron-right" | prepend: site.baseurl }}"></use>
-				</svg>
-			</a>
-
-			<ul class="c-primary-nav__sublist js-nav-dropdown {% if page.url contains '/layout' %} is-active{% endif %}">
-			{% for my_page in site.pages %}
-				{% if my_page.title %}
-					{% if my_page.group == "layout" %}
-					<li class="c-primary-nav__item">
-						<a class="c-primary-nav__link {% if my_page.url == page.url %}is-active is-current{% endif %}" href="{{ my_page.url | prepend: site.baseurl }}">
-                        {% if my_page.layout == "component-category" %}
 
                         <span class="c-primary-nav__text">Overview</span>
 
@@ -226,34 +185,13 @@
 			{% endfor %}
 
 		</li><!-- end c-nav__list__item -->
-		<li class="c-primary-nav__item">
 
-			{% for my_page in site.pages %}
-				{% if my_page.url == "/search.html" %}
-				<a href="{{ "/search.html" | prepend: site.baseurl }}" class="c-primary-nav__link {% if page.url == '/search.html' %}is-active is-current{% endif %}">
-					<span class="c-primary-nav__text">Search</span>
-				</a>
-				{% endif %}
-			{% endfor %}
-
-		</li><!-- end c-nav__list__item -->
 		<li class="c-primary-nav__item">
 
 			{% for my_page in site.pages %}
 				{% if my_page.url == "/downloads.html" %}
 				<a href="{{ "/downloads.html" | prepend: site.baseurl }}" class="c-primary-nav__link {% if page.url == '/downloads.html' %}is-active is-current{% endif %}">
 					<span class="c-primary-nav__text">Downloads</span>
-				</a>
-				{% endif %}
-			{% endfor %}
-
-		</li><!-- end c-nav__list__item -->
-		<li class="c-primary-nav__item">
-
-			{% for my_page in site.pages %}
-				{% if my_page.url == "/tutorials.html" %}
-				<a href="{{ "/tutorials.html" | prepend: site.baseurl }}" class="c-primary-nav__link {% if page.url == '/tutorials.html' %}is-active is-current{% endif %}">
-					<span class="c-primary-nav__text">Tutorials</span>
 				</a>
 				{% endif %}
 			{% endfor %}
@@ -271,6 +209,7 @@
 			{% endfor %}
 
 		</li><!-- end c-nav__list__item -->
+		
 		<li class="c-primary-nav__item">
 
 			{% for my_page in site.pages %}

@@ -8,7 +8,7 @@
 			</a>
 		</li><!-- end c-nav__list__item -->
 
-		<li class="c-primary-nav__item">
+		<li class="c-primary-nav__item {% if page.url contains '/guidelines' %}is-active{% endif %}">
 			<a class="c-primary-nav__link c-primary-nav__link--has-children js-nav-dropdown-trigger {% if page.url contains '/guidelines' %} is-active is-current{% endif %}" href="{{ "/guidelines/" | prepend: site.baseurl }}">
 
 				<span class="c-primary-nav__text">Guidelines</span>
@@ -43,7 +43,7 @@
 		</li>
 
 
-		<li class="c-primary-nav__item">
+		<li class="c-primary-nav__item {% if page.url contains '/styles' %}is-active{% endif %}">
 
 			<a href="{{ "/styles/index.html" | prepend: site.baseurl }}" class="c-primary-nav__link c-primary-nav__link--has-children js-nav-dropdown-trigger {% if page.url contains '/styles' %} is-active  is-current{% endif %}">
 
@@ -79,7 +79,7 @@
 
 		</li><!-- end c-nav__list__item -->
 
-		<li class="c-primary-nav__item">
+		<li class="c-primary-nav__item {% if page.url contains '/components' %}is-active{% endif %}">
 			<a class="c-primary-nav__link c-primary-nav__link--has-children js-nav-dropdown-trigger {% if page.url contains '/components' %} is-active  is-current{% endif %}" href="{{ "/components/" | prepend: site.baseurl }}">
 
 				<span class="c-primary-nav__text">Components</span>
@@ -119,7 +119,7 @@
 			</ul>
 		</li>
 
-		<li class="c-primary-nav__item">
+		<li class="c-primary-nav__item {% if page.url contains '/workflows' %}is-active{% endif %}">
 
 			{% for my_page in site.pages %}
 				{% if my_page.url == "/workflows.html" %}
@@ -131,7 +131,7 @@
 
 		</li><!-- end c-nav__list__item -->
 
-        <li class="c-primary-nav__item">
+        <li class="c-primary-nav__item {% if page.url contains '/utilities' %}is-active{% endif %}">
 
 			<a href="{{ "/utilities/index.html" | prepend: site.baseurl }}" class="c-primary-nav__link c-primary-nav__link--has-children js-nav-dropdown-trigger {% if page.url contains '/utilities' %} is-active  is-current{% endif %}">
 

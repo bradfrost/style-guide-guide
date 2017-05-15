@@ -4,7 +4,7 @@
 
 		{% if my_subpage.subgroup == include.subgroup and my_subpage.layout == "component-category" %}
 
-			<li class="c-primary-nav__subitem">
+			<li class="c-primary-nav__subitem {% if page.subgroup == include.subgroup %}is-active{% endif %}">
 
                 <a class="c-primary-nav__sublink {% if my_subpage.url == page.url %}is-active is-current{% endif %}" href="{{ my_subpage.permalink | prepend: site.baseurl }}">
 				    Overview
@@ -20,7 +20,7 @@
 
 		{% if my_subpage.subgroup == include.subgroup and my_subpage.layout != "component-category" and my_subpage.status != "Planned" %}
 
-			<li class="c-primary-nav__subitem">
+			<li class="c-primary-nav__subitem {% if page.subgroup == include.subgroup %}is-active{% endif %}">
 
                 <a class="c-primary-nav__sublink {% if my_subpage.url == page.url %}is-active is-current{% endif %}" href="{{ my_subpage.url | prepend: site.baseurl }}">
 			    	{{ my_subpage.title }}

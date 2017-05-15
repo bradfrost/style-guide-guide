@@ -179,29 +179,21 @@ layout: default
 		</thead><!-- end c-table__header -->
 
 		<tbody class="c-table__body ">
+			{% for class in page.classes %}
 
 			<tr class="c-table__row ">
 
 				<td class="c-table__cell ">
-					.c-table
+					{{ class.className }}
 				</td>
 
 				<td class="c-table__cell ">
-					This is the default table style
+					{% capture desc %}{{ class.description }}{% endcapture %}
+					{% if class.description %}{{ desc | markdownify }}{% endif %}
 				</td>
 
 			</tr><!-- end c-table__row -->
-			<tr class="c-table__row ">
-
-				<td class="c-table__cell ">
-					.c-table--compact
-				</td>
-
-				<td class="c-table__cell ">
-					This is more compact version of the table
-				</td>
-
-			</tr><!-- end c-table__row -->
+			{% endfor %}
 
 		</tbody><!-- end c-table__body -->
 

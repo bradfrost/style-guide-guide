@@ -1,5 +1,5 @@
 ---
-layout: styles-landing
+layout: landing
 title: Styles
 group: styles
 permalink: /styles/

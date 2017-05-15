@@ -4,4 +4,20 @@ layout: default
 
 {% include page-header.html %}
 
-{{ content }}
+<div class="c-text-passage">
+	{{ content | markdownify }}
+</div><!--end c-text-passage-->
+
+<ul class="c-card-list l-grid l-grid--3up ">
+
+	{% assign the_group = page.group %}
+
+	{% for my_page in site.pages %}
+		{% if my_page.group == the_group and my_page.layout != "landing" %}
+		<li class="c-card-list__item l-grid__item">
+			{% include card.html %}
+		</li>
+		{% endif %}
+	{% endfor %}
+
+</ul><!--end c-card-list-->

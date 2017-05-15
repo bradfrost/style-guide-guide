@@ -30,7 +30,7 @@
 					</div><!--end iffframe-->
 
 					<div class="pattern-code">
-						<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+						<button class="c-btn c-btn--small pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
 						<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">{% highlight liquid %}{% include {{ markupOnlyPath }} %}{% endhighlight %}</code></pre>
 						<div class="show-more">
 							<button class="c-btn js-show-more-btn">Show all code</button>

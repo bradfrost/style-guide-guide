@@ -72,10 +72,6 @@ $bp-xl-3: $l-max-width;
     width: 100%;
     overflow: auto;
     overflow-x: auto !important;
-
-	@media all and (max-width: 769px) {
-		width: calc(100vw - 2rem);
-	}
 }
 
 /**

@@ -1,0 +1,33 @@
+<a href="{{ url }}" class="c-card {{ styleModifier }}">
+
+	{{# cardHeader }}
+	<div class="c-card__header">
+		{{{ htmlText }}}
+	</div>
+	{{/ cardHeader }}
+
+	{{# cardBody }}
+	<div class="c-card__body">
+
+		<h2 class="c-card__title">
+			<span class="c-card__title-text">{{ heading }}</span>
+			{{# iconAfter }}
+			<svg class="c-icon c-card__icon">
+				<use href="{{ iconPath }}#{{ iconAfter }}"></use>
+			</svg>
+			{{/ iconAfter }}
+		</h2><!-- end c-card__title -->
+
+		{{# excerpt }}<p class="c-card__desc">{{ excerpt }}</p>{{/ excerpt }}
+
+	</div><!-- end c-card__body -->
+	{{/ cardBody }}
+
+	{{# cardFooter }}
+	<div class="c-card__footer">
+		{{{ htmlText }}}
+	</div><!-- end c-card__footer -->
+	{{/ cardFooter }}
+
+</a>
+<!-- end c-card -->

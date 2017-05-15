@@ -29,6 +29,17 @@ layout: default
 						{% if variation.description %}<div>{{ variation.description | markdownify }} </div>{% endif %}
 					</header>
 
+					{% if variation.includeClassification == 'atoms' %}
+					{% assign atomicNumber = "00" %}
+					{% elsif variation.includeClassification == 'molecules' %}
+					{% assign atomicNumber = "01" %}
+					{% elsif variation.includeClassification == 'organisms' %}
+					{% assign atomicNumber = "02" %}
+					{% endif %}
+
+					{% capture componentString %}{{ atomicNumber }}-{{ variation.includeClassification }}-{{ variation.includeCategory }}-{{ variation.includeName }}{% endcapture %}
+
+					{% capture path %}/patterns/{{ componentString }}/{{ componentString }}.rendered.html{% endcapture %}
 					<div class="iffframe">
 
 						<iframe class="iffframe__iframe" frameBorder="0" width="100%" height="100%" src="{{ path | prepend: site.baseurl }}"></iframe>
@@ -45,6 +56,19 @@ layout: default
 
 		<ul class="c-tabs-list js-tabs-list">
 		{% for variation in page.variations %}
+
+			{% if variation.includeClassification == 'atoms' %}
+			{% assign atomicNumber = "00" %}
+			{% elsif variation.includeClassification == 'molecules' %}
+			{% assign atomicNumber = "01" %}
+			{% elsif variation.includeClassification == 'organisms' %}
+			{% assign atomicNumber = "02" %}
+			{% endif %}
+
+			{% capture componentString %}{{ atomicNumber }}-{{ variation.includeClassification }}-{{ variation.includeCategory }}-{{ variation.includeName }}{% endcapture %}
+
+			{% capture path %}/patterns/{{ componentString }}/{{ componentString }}.rendered.html{% endcapture %}
+
 			<li class="c-tabs-list__item js-tabs-list-item" data-code-tabs="tab-{{ variation.title | downcase | replace: ' ', '-' }}">
 			<div class="c-tabs test-tabs  js-tabs">
 
@@ -55,11 +79,11 @@ layout: default
 					</li><!-- end c-tabs__item -->
 
 					<li class="c-tabs__item">
-						<a href="#jsx-{{ forloop.index }}" class="c-tabs__link js-tab">JSX</a>
+						<a href="#angular-{{ forloop.index }}" class="c-tabs__link js-tab">Angular</a>
 					</li><!-- end c-tabs__item -->
 
 					<li class="c-tabs__item">
-						<a href="#twig-{{ forloop.index }}" class="c-tabs__link js-tab">Twig</a>
+						<a href="#react-{{ forloop.index }}" class="c-tabs__link js-tab">React</a>
 					</li><!-- end c-tabs__item -->
 
 				</ul><!-- end c-tabs__list -->
@@ -68,28 +92,30 @@ layout: default
 
 					<div class="c-tabs__panel js-tabs-panel" id="html-{{ forloop.index }}">
 
+						{% capture markupOnlyPath %}/patterns/{{ componentString }}/{{ componentString }}.markup-only.html{% endcapture %}
+
 						<div class="pattern-code">
-							<button class="c-btn c-btn--small pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">INSERT HTML CODE HERE</code></pre>
+							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">{% highlight liquid %}{% include {{ markupOnlyPath }} %}{% endhighlight %}</code></pre>
 						</div>
 
 					</div>
 					<!--end c-tabs__panel-->
 
 
-					<div class="c-tabs__panel js-tabs-panel" id="jsx-{{ forloop.index }}">
+					<div class="c-tabs__panel js-tabs-panel" id="angular-{{ forloop.index }}">
 						<div class="pattern-code">
-							<button class="c-btn c-btn--small pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">INSERT JSX CODE HERE</code></pre>
+							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">THIS IS ANGULAR CODE</code></pre>
 						</div>
 					</div>
 					<!--end c-tabs__panel-->
 
 
-					<div class="c-tabs__panel js-tabs-panel" id="twig-{{ forloop.index }}">
+					<div class="c-tabs__panel js-tabs-panel" id="react-{{ forloop.index }}">
 						<div class="pattern-code">
-							<button class="c-btn c-btn--small pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">INSERT TWIG CODE HERE</code></pre>
+							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">THIS IS REACT CODE</code></pre>
 						</div>
 					</div>
 					<!--end c-tabs__panel-->
@@ -108,9 +134,9 @@ layout: default
 
 	<div class="c-section-header ">
 
-		<h2 class="c-section-header__title">Usage</h1>
+		<h1 class="c-section-header__title">Usage</h1>
 
-	</div><!-- end c-section-header -->
+	</div><!-- end c-page-header -->
 
 	<div class="c-text-passage l-linelength-container">
 
@@ -134,17 +160,7 @@ layout: default
 
 	</div>
 
-</section>
-
-<section class="c-section">
-
-	<div class="c-section-header ">
-
-		<h2 class="c-section-header__title">Classes</h1>
-
-	</div><!-- end c-section-header -->
-
-	<table class="c-table">
+	<table class="c-table ">
 
 		<thead class="c-table__header">
 
@@ -184,7 +200,7 @@ layout: default
 
 	</table><!--end c-table-->
 
-</section><!--end c-section-->
+</section>
 
 <section class="c-section">
 

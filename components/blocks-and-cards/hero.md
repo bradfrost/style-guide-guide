@@ -11,7 +11,7 @@ description: Large-format unit to promote content with a high-impact image
 variations:
 - title: Default hero
   description: Default hero that has no gradient overlay
-  styleModifier: c-hero c-hero--blue-tint
+  styleModifier: c-hero
   includeClassification: molecules
   includeCategory: 02-blocks
   includeName: hero

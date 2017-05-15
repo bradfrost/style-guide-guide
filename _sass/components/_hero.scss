@@ -33,6 +33,20 @@
  .c-hero__body {
     padding: 2rem 1rem;
 
+	/**
+	 * Blue tinted hero
+	 */
+	.c-hero--blue-tint & {
+		background: rgba(0, 0, 100, 0.4);
+	}
+
+	/**
+	 * Red tinted hero
+	 */
+	.c-hero--red-tint & {
+		background: rgba(100, 0, 0, 0.4);
+	}
+
     @media all and (min-width: $bp-med) {
  		padding: 4rem 2rem;
  	}

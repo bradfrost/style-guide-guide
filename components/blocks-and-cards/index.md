@@ -1,7 +1,7 @@
 ---
 layout: component-category
 group: components
-subgroup: buttons
+subgroup: blocks-and-cards
 permalink: /components/blocks-and-cards/
 
 title: Blocks and Cards

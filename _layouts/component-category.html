@@ -7,96 +7,42 @@ layout: default
 <section class="c-section">
 	<ul class="c-card-list l-grid l-grid--3up ">
 
-		<li class="c-card-list__item l-grid__item">
-			<a href="#" class="c-card ">
+		{% for componentPage in site.pages %}
+    		{% if componentPage.group == page.group %}
+        		{% if componentPage.subgroup == page.subgroup %}
+            		{% if componentPage.layout != "component-category" and componentPage.layout != "component-category2" and componentPage.status != "Planned" %}
 
-				<div class="c-card__header">
-					Blocks
-				</div>
+					<li class="c-card-list__item l-grid__item">
+						<a href="{{ componentPage.permalink | prepend: site.baseurl }}" class="c-card ">
 
-				<div class="c-card__body">
+							<div class="c-card__header">
+								{{ componentPage.subgroup | replace: '-', ' ' | capitalize }}
+							</div>
 
-					<h2 class="c-card__title">
-						<span class="c-card__title-text">Cards, Tiles, Heroes</span>
-						<svg class="c-icon c-card__icon">
-							<use href="..&#x2F;..&#x2F;icons.svg#chevron-right"></use>
-						</svg>
-					</h2><!-- end c-card__title -->
+							<div class="c-card__body">
 
-					<p class="c-card__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+								<h2 class="c-card__title">
+									<span class="c-card__title-text">{{ componentPage.title }}</span>
+									<svg class="c-icon c-card__icon">
+										<use href="..&#x2F;..&#x2F;icons.svg#chevron-right"></use>
+									</svg>
+								</h2><!-- end c-card__title -->
 
-				</div><!-- end c-card__body -->
+								<p class="c-card__desc">{{ componentPage.description }}</p>
 
-
-			</a><!-- end c-card -->
-		</li>
-		<li class="c-card-list__item l-grid__item">
-			<a href="#" class="c-card ">
-
-				<div class="c-card__header">
-				Lists
-				</div>
-
-				<div class="c-card__body">
-
-					<h2 class="c-card__title">
-						<span class="c-card__title-text">Link List, Card List</span>
-						<svg class="c-icon c-card__icon">
-							<use href="..&#x2F;..&#x2F;icons.svg#chevron-right"></use>
-						</svg>
-					</h2><!-- end c-card__title -->
-
-					<p class="c-card__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-
-				</div><!-- end c-card__body -->
-
-			</a><!-- end c-card -->
-		</li>
-		<li class="c-card-list__item l-grid__item">
-			<a href="#" class="c-card ">
-
-				<div class="c-card__header">
-					Navigation
-				</div>
-
-				<div class="c-card__body">
-
-					<h2 class="c-card__title">
-						<span class="c-card__title-text">Primary Navigation, Footer Navigation</span>
-						<svg class="c-icon c-card__icon">
-							<use href="..&#x2F;..&#x2F;icons.svg#chevron-right"></use>
-						</svg>
-					</h2><!-- end c-card__title -->
-
-					<p class="c-card__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-
-				</div><!-- end c-card__body -->
+							</div><!-- end c-card__body -->
 
 
-			</a><!-- end c-card -->
-		</li>
-		<li class="c-card-list__item l-grid__item">
-			<a href="#" class="c-card ">
+						</a><!-- end c-card -->
+					</li>
 
-				<div class="c-card__header">
-					Interactive
-				</div>
+					{% endif %}
 
-				<div class="c-card__body">
+				{% endif %}
 
-					<h2 class="c-card__title">
-						<span class="c-card__title-text">Tabs, Accordion</span>
-						<svg class="c-icon c-card__icon">
-							<use href="..&#x2F;..&#x2F;icons.svg#chevron-right"></use>
-						</svg>
-					</h2><!-- end c-card__title -->
+			{% endif %}
 
-					<p class="c-card__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-
-				</div><!-- end c-card__body -->
-
-			</a><!-- end c-card -->
-		</li>
+		{% endfor %}
 
 	</ul><!-- end c-card-list -->
 

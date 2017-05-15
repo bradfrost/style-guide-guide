@@ -15,6 +15,7 @@ The tool can consume and display components from anywhere, but in my own workflo
 From here, obviously the point is to customize the style guide for your needs and populate it with your content and components.
 
 ## Importing components and assets from Pattern Lab
+Coming soon!
 
 ## Feedback and Questions
 If you have questions or issues with Style Guide Guide, please feel free to [open an issue](https://github.com/bradfrost/style-guide-guide/issues). If your organization is creating a design system and style guide and would like some help taking it to the next level, feel free to [get in touch!](http://bradfrost.com/contact/)

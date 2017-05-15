@@ -1,0 +1,15 @@
+{{# hero }}
+<div class="c-hero {{ styleModifier }}" style="background-image: url({{ imgLandscape16x9 }});">
+
+  <div class="c-hero__body">
+
+    {{# headline }}
+    <h1 class="c-hero__title">{{ headline }}</h1>{{/ headline }} {{# excerpt }}
+    <p class="c-hero__desc">{{{ excerpt }}}</p>{{/ excerpt }} {{> molecules-button }}
+
+  </div>
+  <!-- end c-hero__body -->
+
+</div>
+<!-- end c-hero -->
+{{/ hero }}

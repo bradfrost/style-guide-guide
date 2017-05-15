@@ -92,37 +92,9 @@
 
 			<ul class="c-primary-nav__sublist js-nav-dropdown {% assign post_index = '0' %}{% for my_page in site.pages %}{% if my_page.group == 'components' %}{% capture post_index %}{{ post_index | plus: '1' }}{% endcapture %}{% endif %}{% endfor %}{% if page.url contains '/components' %} is-active{% endif %}">
 
-				{% include primary-nav-item.html label='Overview' path='/components/' %}
-
 				{% include primary-nav-item.html label='Blocks and cards' subgroup='blocks-and-cards' %}
 
-				{% include primary-nav-item.html label='Buttons' subgroup='buttons' %}
-
-				{% include primary-nav-item.html label='Charts and graphs' subgroup='charts-and-graphs' %}
-
                 {% include primary-nav-item.html label='Form controls' subgroup='form-controls' %}
-
-				{% include primary-nav-item.html label='Headers and footers' subgroup='headers-and-footers' %}
-
-                {% include primary-nav-item.html label='Icons' subgroup='icons' %}
-
-                {% include primary-nav-item.html label='Interactive panels' subgroup='interactive' %}
-
-                {% include primary-nav-item.html label='Lists and collections' subgroup='lists-and-collections' %}
-
-                {% include primary-nav-item.html label='Media' subgroup='media' %}
-
-                {% include primary-nav-item.html label='Messaging' subgroup='messaging' %}
-
-                {% include primary-nav-item.html label='Navigation' subgroup='navigation' %}
-
-				{% include primary-nav-item.html label='Sections' subgroup='sections' %}
-
-                {% include primary-nav-item.html label='Tables' subgroup='tables' %}
-
-                {% include primary-nav-item.html label='Text' subgroup='text' %}
-
-                {% include primary-nav-item.html label='Toolbars' subgroup='toolbars' %}
 
 			</ul>
 		</li>
@@ -209,7 +181,7 @@
 			{% endfor %}
 
 		</li><!-- end c-nav__list__item -->
-		
+
 		<li class="c-primary-nav__item">
 
 			{% for my_page in site.pages %}

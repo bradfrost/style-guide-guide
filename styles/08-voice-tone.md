@@ -8,4 +8,4 @@ description: Capturing the personality and authority of the brand in words
 
 ---
 
-Text goes here
+For inspiration, check out MailChimp's fantastic [Voice and Tone](http://voiceandtone.com/) website.

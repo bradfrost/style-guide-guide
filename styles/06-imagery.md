@@ -4,8 +4,8 @@ type: detail
 title: Imagery
 group: styles
 permalink: /styles/imagery.html
-description: Treating pictures and graphics
+description: Styles for treating pictures and graphics
 
 ---
 
-Text goes here
+Image style guidelines go here

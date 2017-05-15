@@ -3,8 +3,17 @@
 \*------------------------------------*/
 
 /**
- * Primary navigation existing in the header and maybe the footer
+ * Primary navigation most likely existing in the header
  */
+.c-primary-nav {
+	/**
+	 * Primary navigation list within a vertical header
+	 */
+	.c-header--vertical & {
+		margin-left: -1rem;
+		margin-right: -1rem;
+	}
+}
 
 /**
  * Primary navigation list
@@ -55,17 +64,13 @@
  */
 .c-primary-nav__link {
 	display: block;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 0;
 	cursor: pointer;
 
 	/**
 	 * Primary navigation link within vertical header
 	 */
 	.c-header--vertical & {
-		padding: 0.5rem 1rem;
-	}
-
-	@media all and (min-width: $bp-xl) {
 		padding: 0.5rem 1rem;
 	}
 }

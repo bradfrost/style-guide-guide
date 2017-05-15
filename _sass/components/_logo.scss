@@ -6,15 +6,9 @@
  * Branding image or text of the site
  */
 .c-logo {
-	margin: 0 2rem 0 0.5rem;
-	width: 5rem;
-    height: 5rem;
-	max-width: 14rem;
 
 	@media all and (min-width: $bp-xl) {
 		margin: 0;
-		width: auto;
-        height: auto;
 	}
 
 	/**
@@ -22,7 +16,7 @@
 	 */
 	.c-header--vertical & {
 		@media all and (min-width: $bp-xl) {
-			margin: 0 0 1rem 0.5rem;
+			margin: 1rem 0;
 		}
 	}
 }
@@ -32,4 +26,23 @@
  */
 .c-logo__link {
 	display: block;
+}
+
+
+/**
+ * Logo img
+ */
+.c-logo__img {
+	display: block;
+	max-width: 13rem;
+	height: auto;
+
+	/**
+	 * Logo within vertical header
+	 */
+	.c-header--vertical & {
+		@media all and (min-width: $bp-xl) {
+			max-width: 15.75rem;
+		}
+	}
 }

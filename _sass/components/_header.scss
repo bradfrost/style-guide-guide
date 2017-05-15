@@ -16,6 +16,7 @@
 .c-header__inner {
 	display: flex;
 	align-items: center;
+    padding: 1rem;
 
 	/**
 	 * Header inner within vertical header
@@ -25,7 +26,6 @@
 			flex-direction: column;
 			align-items: flex-start;
 			min-height: 100vh;
-            padding: 1rem 0;
 		}
 	}
 }
@@ -36,7 +36,6 @@
  */
 .c-header__nav-btn {
 	margin-left: auto;
-	margin-right: 1rem;
 
 	@media all and (min-width: $bp-xl) {
 		display: none;

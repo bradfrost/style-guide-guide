@@ -2,28 +2,7 @@
 
     <div class="c-header__inner">
 
-    	<h3 class="c-logo">
-
-	        <a href="{{ "/" | prepend: site.baseurl }}" class="c-logo__link" rel="home">
-
-                <svg class="c-logo" width="122px" height="116px" viewBox="2421 474 122 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>{{ site.title }}</title>
-                    <g id="Group-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(2421.000000, 474.000000)" font-family="AvenirNext-Heavy, Avenir Next" font-weight="600">
-                        <text id="STYLE" font-size="40.4662755" letter-spacing="-3.0999999" fill="#5E5E5E">
-                            <tspan x="0.847222222" y="40">STYLE</tspan>
-                        </text>
-                        <text id="GUIDE" font-size="37.9371332" letter-spacing="-2.90625" fill="#5E5E5E">
-                            <tspan x="0" y="70.6960784">GUIDE</tspan>
-                        </text>
-                        <text id="GUIDE" font-size="37.9371332" letter-spacing="-2.90625" fill="#5E5E5E">
-                            <tspan x="0" y="101.137255">GUIDE</tspan>
-                        </text>
-                    </g>
-                </svg><!--end .c-header__logo-->
-
-	        </a><!--end c-logo__link-->
-
-    	</h3><!--end c-logo-->
+        {% include logo.html %}
 
     	<button class="c-btn c-btn--small c-header__nav-btn js-nav-trigger">Menu</button>
 

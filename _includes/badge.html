@@ -6,6 +6,6 @@
 {% assign badge = "caution" %}
 {% endif %}
 
-{% if page.status and page.status != 'Complete' %}
+{% if page.status %}
 <span class="c-badge c-badge--{{ badge }}">{{ page.status }}</span>
 {% endif %}

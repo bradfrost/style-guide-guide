@@ -21,8 +21,10 @@ layout: default
 		</ul><!-- end c-tabs__list -->
 
 		<div class="c-tabs__body">
+
 			{% for variation in page.variations %}
 			<div class="c-tabs__panel js-tabs-panel" id="tab-{{ variation.title | downcase | replace: ' ', '-' }}">
+
 				<section class="c-section">
 					<header class="c-section__header">
 						{% if variation.title %}<h5 class="c-section__title">{{ variation.title }} {% if variation.styleModifier %}<code class="u-font-size-med">{{ variation.styleModifier }}</code>{% endif %}</h5>{% endif %}
@@ -49,12 +51,15 @@ layout: default
 					</div><!--end iffframe-->
 
 				</section><!--end section-->
+
 			</div><!--end c-tabs__panel-->
 			{% endfor %}
+
 		</div><!--end c-tabs__body-->
+
 	</div><!--end c-tabs-->
 
-		<ul class="c-tabs-list js-tabs-list">
+	<ul class="c-tabs-list js-tabs-list">
 		{% for variation in page.variations %}
 
 			{% if variation.includeClassification == 'atoms' %}
@@ -70,65 +75,67 @@ layout: default
 			{% capture path %}/patterns/{{ componentString }}/{{ componentString }}.rendered.html{% endcapture %}
 
 			<li class="c-tabs-list__item js-tabs-list-item" data-code-tabs="tab-{{ variation.title | downcase | replace: ' ', '-' }}">
-			<div class="c-tabs test-tabs  js-tabs">
 
-				<ul class="c-tabs__list">
+				<div class="c-tabs test-tabs  js-tabs">
 
-					<li class="c-tabs__item">
-						<a href="#html-{{ forloop.index }}" class="c-tabs__link js-tab">HTML</a>
-					</li><!-- end c-tabs__item -->
+					<ul class="c-tabs__list">
 
-					<li class="c-tabs__item">
-						<a href="#angular-{{ forloop.index }}" class="c-tabs__link js-tab">Angular</a>
-					</li><!-- end c-tabs__item -->
+						<li class="c-tabs__item">
+							<a href="#html-{{ forloop.index }}" class="c-tabs__link js-tab">HTML</a>
+						</li><!-- end c-tabs__item -->
 
-					<li class="c-tabs__item">
-						<a href="#react-{{ forloop.index }}" class="c-tabs__link js-tab">React</a>
-					</li><!-- end c-tabs__item -->
+						<li class="c-tabs__item">
+							<a href="#angular-{{ forloop.index }}" class="c-tabs__link js-tab">Angular</a>
+						</li><!-- end c-tabs__item -->
 
-				</ul><!-- end c-tabs__list -->
+						<li class="c-tabs__item">
+							<a href="#react-{{ forloop.index }}" class="c-tabs__link js-tab">React</a>
+						</li><!-- end c-tabs__item -->
 
-				<div class="c-tabs__body ">
+					</ul><!-- end c-tabs__list -->
 
-					<div class="c-tabs__panel js-tabs-panel" id="html-{{ forloop.index }}">
+					<div class="c-tabs__body ">
 
-						{% capture markupOnlyPath %}/patterns/{{ componentString }}/{{ componentString }}.markup-only.html{% endcapture %}
+						<div class="c-tabs__panel js-tabs-panel" id="html-{{ forloop.index }}">
 
-						<div class="pattern-code">
-							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">{% highlight liquid %}{% include {{ markupOnlyPath }} %}{% endhighlight %}</code></pre>
-						</div>
+							{% capture markupOnlyPath %}/patterns/{{ componentString }}/{{ componentString }}.markup-only.html{% endcapture %}
 
-					</div>
-					<!--end c-tabs__panel-->
+							<div class="pattern-code">
+								<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+								<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">{% highlight liquid %}{% include {{ markupOnlyPath }} %}{% endhighlight %}</code></pre>
+							</div>
 
-
-					<div class="c-tabs__panel js-tabs-panel" id="angular-{{ forloop.index }}">
-						<div class="pattern-code">
-							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">THIS IS ANGULAR CODE</code></pre>
-						</div>
-					</div>
-					<!--end c-tabs__panel-->
+						</div><!--end c-tabs__panel-->
 
 
-					<div class="c-tabs__panel js-tabs-panel" id="react-{{ forloop.index }}">
-						<div class="pattern-code">
-							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">THIS IS REACT CODE</code></pre>
-						</div>
-					</div>
-					<!--end c-tabs__panel-->
+						<div class="c-tabs__panel js-tabs-panel" id="angular-{{ forloop.index }}">
 
-				</div><!-- end c-tabs__body-->
+							<div class="pattern-code">
+								<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+								<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">THIS IS ANGULAR CODE</code></pre>
+							</div>
 
-			</div><!-- end c-tabs -->
-		</li>
+						</div><!--end c-tabs__panel-->
+
+						<div class="c-tabs__panel js-tabs-panel" id="react-{{ forloop.index }}">
+
+							<div class="pattern-code">
+								<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+								<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">THIS IS REACT CODE</code></pre>
+							</div>
+
+						</div><!--end c-tabs__panel-->
+
+					</div><!-- end c-tabs__body-->
+
+				</div><!-- end c-tabs -->
+
+			</li><!-- end c-tabs-list__item -->
 		{% endfor %}
 
-	</ul>
+	</ul><!-- end c-tabs-list -->
 
-</section>
+</section><!-- end c-section -->
 
 <section class="c-section">
 
@@ -136,7 +143,7 @@ layout: default
 
 		<h1 class="c-section-header__title">Usage</h1>
 
-	</div><!-- end c-page-header -->
+	</div><!-- end c-section-header -->
 
 	<div class="c-text-passage l-linelength-container">
 
@@ -158,7 +165,7 @@ layout: default
 		    <li><a href="#">Resource link #2</a></li>
 		</ul>
 
-	</div>
+	</div><!-- end c-text-passage -->
 
 	<table class="c-table ">
 
@@ -200,7 +207,7 @@ layout: default
 
 	</table><!--end c-table-->
 
-</section>
+</section><!-- end c-section -->
 
 <section class="c-section">
 
@@ -208,7 +215,7 @@ layout: default
 
 		<h1 class="c-section-header__title">Fine print</h1>
 
-	</div><!-- end c-page-header -->
+	</div><!-- end c-section-header -->
 
 	<div class="c-text-passage l-linelength-container">
         <ul>
@@ -217,8 +224,8 @@ layout: default
             <li>Owner: <a href="#">Jane Doe</a></li>
             <li><a href="#">Change history</a></li>
         </ul>
-	</div>
+	</div><!-- end c-text-passage -->
 
 	<a href="#" class="c-btn">Discuss this component</a><!-- end c-btn -->
 
-</section>
+</section><!-- end c-section -->

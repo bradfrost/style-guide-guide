@@ -360,5 +360,17 @@
 	        }
 		});
 	}
+	
+	/**
+	 * Sets aria-current to the current navigation link
+	 * 1) Select all items denoted as current
+	 * 2) Add the aria-current attribute
+	 */
+	 
+	 	var navLink = document.querySelectorAll('.is-current'); /* 1 */
+	 
+	 	for (i=0; i<navLink.length; i++) { /* 1 */
+			navLink[i].setAttribute('aria-current', 'page'); /* 2 */
+		}
 
 })();

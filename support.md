@@ -7,7 +7,7 @@ description: The support page provides information about getting help with using
 Talk about the importance of communication between [makers and users](http://atomicdesign.bradfrost.com/chapter-5/#design-system-makers-and-users) of the design system.
 
 ## Support channels
-Where can people go for help with the design system? Where do people talk about the design system? Where should bugs be filed? Cross-link to the [contributing page](/contributing.html) as there's often overlap between this kind of information.
+Where can people go for help with the design system? Where do people talk about the design system? Where should bugs be filed? Cross-link to the <a href="{{ "/contribute.html" | prepend: site.baseurl }}">contributing page</a> as there's often overlap between this kind of information.
 
 ## Support opportunities
 Training and support can [take many forms](http://atomicdesign.bradfrost.com/chapter-5/#training-and-support), including:

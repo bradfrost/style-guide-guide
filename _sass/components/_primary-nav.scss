@@ -67,6 +67,10 @@
 	padding: 0.5rem 0;
 	cursor: pointer;
 
+    &:focus {
+        outline: 1px dotted $color-gray-60;
+    }
+
 	/**
 	 * Primary navigation link within vertical header
 	 */
@@ -209,6 +213,10 @@
 	display: flex;
 	align-items: center;
 	padding: 0.5rem 1rem;
+
+    &:focus {
+        outline: 1px dotted $color-gray-60;
+    }
 
 	/**
 	 * Primary navigation sublink within vertical header

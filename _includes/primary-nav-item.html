@@ -5,7 +5,7 @@
 		<span class="c-primary-nav__text">{{ include.label }}</span>
 
 		{% if include.subgroup %}
-		<svg class="c-icon c-primary-nav__subicon">
+		<svg class="c-icon c-primary-nav__subicon" aria-hidden="true">
 			<use href="{{ "/icons.svg#chevron-right" | prepend: site.baseurl }}"></use>
 		</svg>
 		{% endif %}

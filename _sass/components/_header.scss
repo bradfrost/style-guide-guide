@@ -70,14 +70,14 @@
  * Active header nav container
  */
 .c-header__nav-container.is-active {
-	display: block;
-	position: absolute;
-	background: $color-gray-07;
-	top: 100%;
-	left: 0;
+  display: block;
+  position: absolute;
+  background: $color-gray-07;
+  top: 100%;
+  left: 0;
   padding: 0 1rem;
-	width: 100%;
-	z-index: 5;
+  width: 100%;
+  z-index: 5;
 
 	@media all and (min-width: $bp-xl) {
 		display: block;

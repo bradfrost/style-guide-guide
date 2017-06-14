@@ -26,6 +26,7 @@
 			flex-direction: column;
 			align-items: flex-start;
 			min-height: 100vh;
+			height: auto;
 		}
 	}
 }
@@ -74,7 +75,7 @@
 	background: $color-gray-07;
 	top: 100%;
 	left: 0;
-    padding: 0 1rem;
+  padding: 0 1rem;
 	width: 100%;
 	z-index: 5;
 
@@ -89,7 +90,7 @@
 	/**
 	 * Active header nav container within vertical header
 	 */
-	.c-header--vertical &{
+	.c-header--vertical & {
 		@media all and (min-width: $bp-xl) {
 			margin-left: 0;
 			width: 100%;

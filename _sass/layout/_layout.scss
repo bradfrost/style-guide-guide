@@ -59,6 +59,7 @@
 
         @media all and (min-width: $bp-xl) {
             margin-left: 18rem; /* 1 */
+            transition: all 0.4s ease-out;
         }
     }
 }
@@ -79,16 +80,36 @@
     .l-page-layout--two-column-fixed > & {
         @media all and (min-width: $bp-xl) {
             position: fixed;
-    	    z-index: 2;
+            z-index: 2;
             overflow: auto;
-			width: 18rem;
+            width: 18rem;
             height: 100vh;
         }
     }
 }
 
+// Overrides for sidebar toggle
+.c-header__inner-collapsed {
 
+  @media all and (min-width: $bp-xl) {
+    overflow: hidden;
+  }
+}
 
+.c-header__inner-collapsed + .l-page-layout__main {
+
+  @media all and (min-width: $bp-xl) {
+    margin-left: 0;
+
+    main {
+      padding-left: 4rem;
+    }
+
+    .c-footer {
+      margin-left: 3rem;
+    }
+  }
+}
 
 
 /*------------------------------------*\

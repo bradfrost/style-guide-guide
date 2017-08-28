@@ -2,6 +2,8 @@
 
 Style Guide Guide is a boilerplate for creating a custom style guide for your organization's design system. It provides just enough IA and hooks to get you going. As a bonus, I've provided links to helpful resources and inspiration to help you as you create your own custom style guide.
 
+[See the demo here](http://bradfrost.github.io/style-guide-guide/)
+
 ## How it works
 Style Guide Guide is built using [Jekyll](https://jekyllrb.com/), a static site generator which works quite well for managing the content of a style guide.
 

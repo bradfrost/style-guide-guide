@@ -227,7 +227,29 @@ code[class*="language-"], pre[class*="language-"] {
 }
 
 
+/*------------------------------------*\
+  #BADGES
+\*------------------------------------*/
+.c-badge {
+	border-radius: 4px;
+  color: $color-white;
+	font-size: .65rem;
+	margin-left: 4px;
+  padding: 4px;
+  vertical-align: middle;
+}
 
+.c-badge--negative {
+  background-color: $color-app-red;
+}
+
+.c-badge--positive {
+  background-color: $color-app-green;
+}
+
+.c-badge--caution {
+	background-color: $color-app-blue;
+}
 
 
 /*------------------------------------*\

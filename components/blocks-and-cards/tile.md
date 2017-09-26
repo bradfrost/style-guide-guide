@@ -5,6 +5,7 @@ subgroup: blocks-and-cards
 permalink: /components/blocks-and-cards/tile.html
 
 title: Tile
+status: Deprecated
 description: Tile description
 
 variations:

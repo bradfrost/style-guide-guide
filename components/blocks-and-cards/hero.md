@@ -5,7 +5,9 @@ subgroup: blocks-and-cards
 permalink: /components/blocks-and-cards/hero.html
 
 title: Hero
+status: In Progress
 description: Large-format unit to promote content with a high-impact image
+
 
 
 variations:

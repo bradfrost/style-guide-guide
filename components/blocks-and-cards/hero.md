@@ -8,8 +8,6 @@ title: Hero
 status: In Progress
 description: Large-format unit to promote content with a high-impact image
 
-
-
 variations:
 - title: Default hero
   description: Default hero that has no gradient overlay

@@ -23,6 +23,9 @@ layout: default
 
 								<h2 class="c-card__title">
 									<span class="c-card__title-text">{{ componentPage.title }}</span>
+									{% if componentPage.status %}
+									{% include badge.html %}
+									{% endif %}
 									<svg class="c-icon c-card__icon">
 										<use href="{{ "/icons.svg#chevron-right" | prepend: site.baseurl }}"></use>
 									</svg>

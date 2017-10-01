@@ -42,9 +42,9 @@ $bp-xl-3: $l-max-width;
  * 1) This is an overide to have more text breathing room on home
  */
 @media all and (min-width: 62em) {
-	.c-section--home {
-		padding: 0 3rem;
-	}
+  .c-section--home {
+    padding: 0 3rem;
+  }
 }
 
 /*------------------------------------*\
@@ -65,7 +65,7 @@ $bp-xl-3: $l-max-width;
     height: auto;
     background-color: $color-white;
     margin-bottom: 2rem;
-	//transition: width 0.6s $anim-base-easing;
+  //transition: width 0.6s $anim-base-easing;
 }
 
 .iffframe__iframe {
@@ -79,7 +79,7 @@ $bp-xl-3: $l-max-width;
  * 1) Hide resize handle for small screens
  */
 .iffframe__handle {
-	display: none; /* 1 */
+  display: none; /* 1 */
     width: 0.7rem;
     height: 100%;
     position: absolute;
@@ -103,17 +103,17 @@ $bp-xl-3: $l-max-width;
         margin-left: -1px;
     }
 
-	&:hover {
-		background: #e5e5e5;
-	}
+  &:hover {
+    background: #e5e5e5;
+  }
 
-	&:active {
-		background: #cccccd;
-	}
+  &:active {
+    background: #cccccd;
+  }
 
-	@media all and (min-width: 40em) {
-		display: block;
-	}
+  @media all and (min-width: 40em) {
+    display: block;
+  }
 }
 
 // Failed attempt to get the icon grid looking better
@@ -140,12 +140,12 @@ $bp-xl-3: $l-max-width;
  * 4) Update the code color to have Exxon colors
  */
 code[class*="language-"], pre[class*="language-"] {
-	tab-size: 2;
+  tab-size: 2;
 }
 
 .pattern-code {
-	position: relative;
-	margin-top: 2rem;
+  position: relative;
+  margin-top: 2rem;
 }
 
 /**
@@ -154,49 +154,49 @@ code[class*="language-"], pre[class*="language-"] {
 .pattern-code-block {
     margin-top: 0;
     max-height: 25rem;
-	overflow-y: hidden;
+  overflow-y: hidden;
 
     .is-expanded & {
-		max-height: none;
-	}
+    max-height: none;
+  }
 }
 
 .pattern-code-copy-btn {
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 /* 3 */
 pre[class*="language-"] {
-	background-color: $color-gray-04;
+  background-color: $color-gray-04;
 }
 
 code[class*="language-"], pre[class*="language-"] {
-	text-shadow: none;
+  text-shadow: none;
 }
 
 /**
  * Push the button up to be closer to the code-block in the show-more block
  */
 .c-btn {
-	.show-more & {
-		position: relative;
-		bottom: 2rem;
-		z-index: 1;
-	}
+  .show-more & {
+    position: relative;
+    bottom: 2rem;
+    z-index: 1;
+  }
 }
 
 /**
  * Force last paragraph of page header description to be inline so markdown flows into "Jump To Usage Guidelines Link"
  */
 .c-page-header__desc {
-	p {
-		&:last-of-type {
-			display: inline;
-		}
-	}
+  p {
+    &:last-of-type {
+      display: inline;
+    }
+  }
 }
 
 /**
@@ -206,10 +206,10 @@ code[class*="language-"], pre[class*="language-"] {
  */
 .c-page-header__icon {
 
-	.c-page-header__desc & {
-		height: 1rem; /* 1 */
-		width: 1rem; /* 1 */
-	}
+  .c-page-header__desc & {
+    height: 1rem; /* 1 */
+    width: 1rem; /* 1 */
+  }
 }
 
 /**
@@ -219,15 +219,37 @@ code[class*="language-"], pre[class*="language-"] {
  * 3) Remove shadows for overflow
  */
 .c-tabs__list {
-	@media all and (min-width: $bp-large) {
-		flex-wrap: wrap; /* 1 */
-		overflow-x: inherit; /* 2 */
-		overflow-y: inherit; /* 2 */
-	}
+  @media all and (min-width: $bp-large) {
+    flex-wrap: wrap; /* 1 */
+    overflow-x: inherit; /* 2 */
+    overflow-y: inherit; /* 2 */
+  }
 }
 
 
+/*------------------------------------*\
+  #BADGES
+\*------------------------------------*/
+.c-badge {
+  border-radius: 4px;
+  color: $color-white;
+  font-size: .65rem;
+  margin-left: 4px;
+  padding: 4px;
+  vertical-align: middle;
+}
 
+.c-badge--negative {
+  background-color: $color-app-red;
+}
+
+.c-badge--positive {
+  background-color: $color-app-green;
+}
+
+.c-badge--caution {
+  background-color: $color-app-blue;
+}
 
 
 /*------------------------------------*\
@@ -235,17 +257,17 @@ code[class*="language-"], pre[class*="language-"] {
 \*------------------------------------*/
 
 .push-right {
-	padding-left: 0.5rem;
+  padding-left: 0.5rem;
 
-	@media all and (min-width: 40em) {
-		padding-left: 8rem;
-	}
+  @media all and (min-width: 40em) {
+    padding-left: 8rem;
+  }
 }
 
 .c-tabs-list__item {
-	display: none;
+  display: none;
 
-	&.is-active {
-		display: block;
-	}
+  &.is-active {
+    display: block;
+  }
 }

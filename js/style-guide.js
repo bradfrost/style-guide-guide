@@ -183,8 +183,10 @@
 	}
 
 	for (i=0; i<tabsList.length; i++) {
-		var tabsListItem = tabsList[i].querySelector('.js-tabs-list-item:first-child'); /* 2 */
-		tabsListItem.classList.add('is-active'); /* 2 */
+		if (tabsList[i].querySelectorAll('.js-tabs-list-item').length > 0) {
+			var tabsListItem = tabsList[i].querySelector('.js-tabs-list-item:first-child'); /* 2 */
+			tabsListItem.classList.add('is-active'); /* 2 */
+		}
 	}
 
 	for (i=0; i<tabBtn.length; i++) {
@@ -242,14 +244,16 @@
 
 		var tabsList = document.querySelectorAll('.js-tabs-list');
 		for (k=0; k<tabsList.length; k++) { /* 6 */
-			var tabsListItem = tabsList[k].querySelectorAll('.js-tabs-list-item'); /* 6 */
-			for (l=0; l<tabsListItem.length; l++) {
-				if (el.getAttribute('data-code-tabs') == tabsListItem[l].getAttribute('data-code-tabs')) { /* 6 */
-					var tabsItems = tabsList[k].querySelectorAll('.js-tabs-list-item');
-					for (m=0; m<tabsItems.length; m++) {
-						tabsItems[m].classList.remove('is-active');/* 6 */
+			if (tabsList[k].querySelectorAll('.js-tabs-list-item').length > 0) {
+				var tabsListItem = tabsList[k].querySelectorAll('.js-tabs-list-item'); /* 6 */
+				for (l=0; l<tabsListItem.length; l++) {
+					if (el.getAttribute('data-code-tabs') == tabsListItem[l].getAttribute('data-code-tabs')) { /* 6 */
+						var tabsItems = tabsList[k].querySelectorAll('.js-tabs-list-item');
+						for (m=0; m<tabsItems.length; m++) {
+							tabsItems[m].classList.remove('is-active');/* 6 */
+						}
+						tabsListItem[l].classList.add('is-active');/* 6 */
 					}
-					tabsListItem[l].classList.add('is-active');/* 6 */
 				}
 			}
 		}
@@ -281,7 +285,7 @@
 		if (navLink[i].nodeName != 'BUTTON') { /* 2 */
 			  navLink[i].setAttribute('role','button');
 				navLink[i].setAttribute('tabindex','0');
-				
+
 				navLink[i].addEventListener('keypress',function(event){ /* 3 */
 							if (event.keyCode == 32) {
 									event.preventDefault();
@@ -289,7 +293,7 @@
 							}
 				});
 		}
-		
+
 		if (navLink[i].parentNode.classList.contains('is-active')) {  /* 4 */
 				navLink[i].setAttribute('aria-expanded','true');
 		}
@@ -329,7 +333,7 @@
 		if (navToggle[i].nodeName != 'BUTTON') { /* 2 */
 			  navToggle[i].setAttribute('role','button');
 				navToggle[i].setAttribute('tabindex','0');
-				
+
 				navToggle[i].addEventListener('keypress',function(event){ /* 3 */
 							if (event.keyCode == 32) {
 									event.preventDefault();
@@ -337,14 +341,14 @@
 							}
 				});
 		}
-		
+
 		if (navToggle[i].parentNode.classList.contains('is-active')) {  /* 4 */
 				navToggle[i].setAttribute('aria-expanded','true');
 		}
 		else {
 				navToggle[i].setAttribute('aria-expanded','false');
 		}
-		
+
 		navToggle[i].addEventListener('click',function(event){ /* 5 */
 	        event.preventDefault();
 	        var navToggleParent = this.parentNode; /* 5 */
@@ -360,15 +364,15 @@
 	        }
 		});
 	}
-	
+
 	/**
 	 * Sets aria-current to the current navigation link
 	 * 1) Select all items denoted as current
 	 * 2) Add the aria-current attribute
 	 */
-	 
+
 	 	var navLink = document.querySelectorAll('.is-current'); /* 1 */
-	 
+
 	 	for (i=0; i<navLink.length; i++) { /* 1 */
 			navLink[i].setAttribute('aria-current', 'page'); /* 2 */
 		}

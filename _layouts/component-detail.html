@@ -31,6 +31,10 @@ layout: default
 						{% if variation.description %}<div>{{ variation.description | markdownify }} </div>{% endif %}
 					</header>
 
+					{% if variation.codepen %}{{ variation.codepen }}{% endif %}
+
+					{% if variation.includeClassification and variation.includeCategory and variation.includeName %}
+
 					{% if variation.includeClassification == 'atoms' %}
 					{% assign atomicNumber = "00" %}
 					{% elsif variation.includeClassification == 'molecules' %}
@@ -42,6 +46,7 @@ layout: default
 					{% capture componentString %}{{ atomicNumber }}-{{ variation.includeClassification }}-{{ variation.includeCategory }}-{{ variation.includeName }}{% endcapture %}
 
 					{% capture path %}/patterns/{{ componentString }}/{{ componentString }}.rendered.html{% endcapture %}
+
 					<div class="iffframe">
 
 						<iframe class="iffframe__iframe" frameBorder="0" width="100%" height="100%" src="{{ path | prepend: site.baseurl }}"></iframe>
@@ -49,6 +54,7 @@ layout: default
 						<div class="iffframe__handle"></div>
 
 					</div><!--end iffframe-->
+					{% endif %}
 
 				</section><!--end section-->
 
@@ -62,6 +68,8 @@ layout: default
 	<ul class="c-tabs-list js-tabs-list">
 		{% for variation in page.variations %}
 
+		{% if variation.includeClassification and variation.includeCategory and variation.includeName %}
+
 			{% if variation.includeClassification == 'atoms' %}
 			{% assign atomicNumber = "00" %}
 			{% elsif variation.includeClassification == 'molecules' %}
@@ -74,63 +82,67 @@ layout: default
 
 			{% capture path %}/patterns/{{ componentString }}/{{ componentString }}.rendered.html{% endcapture %}
 
-			<li class="c-tabs-list__item js-tabs-list-item" data-code-tabs="tab-{{ variation.title | downcase | replace: ' ', '-' }}">
+		{% endif %}
+		<li class="c-tabs-list__item js-tabs-list-item" data-code-tabs="tab-{{ variation.title | downcase | replace: ' ', '-' }}">
 
-				<div class="c-tabs test-tabs  js-tabs">
+			{% if variation.includeClassification and variation.includeCategory and variation.includeName %}
+			<div class="c-tabs test-tabs  js-tabs">
 
-					<ul class="c-tabs__list">
+				<ul class="c-tabs__list">
 
-						<li class="c-tabs__item">
-							<a href="#html-{{ forloop.index }}" class="c-tabs__link js-tab">HTML</a>
-						</li><!-- end c-tabs__item -->
+					<li class="c-tabs__item">
+						<a href="#html-{{ forloop.index }}" class="c-tabs__link js-tab">HTML</a>
+					</li><!-- end c-tabs__item -->
 
-						<li class="c-tabs__item">
-							<a href="#angular-{{ forloop.index }}" class="c-tabs__link js-tab">Angular</a>
-						</li><!-- end c-tabs__item -->
+					<li class="c-tabs__item">
+						<a href="#angular-{{ forloop.index }}" class="c-tabs__link js-tab">Angular</a>
+					</li><!-- end c-tabs__item -->
 
-						<li class="c-tabs__item">
-							<a href="#react-{{ forloop.index }}" class="c-tabs__link js-tab">React</a>
-						</li><!-- end c-tabs__item -->
+					<li class="c-tabs__item">
+						<a href="#react-{{ forloop.index }}" class="c-tabs__link js-tab">React</a>
+					</li><!-- end c-tabs__item -->
 
-					</ul><!-- end c-tabs__list -->
+				</ul><!-- end c-tabs__list -->
 
-					<div class="c-tabs__body ">
+				<div class="c-tabs__body ">
 
-						<div class="c-tabs__panel js-tabs-panel" id="html-{{ forloop.index }}">
+					<div class="c-tabs__panel js-tabs-panel" id="html-{{ forloop.index }}">
 
-							{% capture markupOnlyPath %}/patterns/{{ componentString }}/{{ componentString }}.markup-only.html{% endcapture %}
+						{% capture markupOnlyPath %}/patterns/{{ componentString }}/{{ componentString }}.markup-only.html{% endcapture %}
 
-							<div class="pattern-code">
-								<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-								<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">{% highlight liquid %}{% include {{ markupOnlyPath }} %}{% endhighlight %}</code></pre>
-							</div>
+						<div class="pattern-code">
+							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">{% highlight liquid %}{% include {{ markupOnlyPath }} %}{% endhighlight %}</code></pre>
+						</div>
 
-						</div><!--end c-tabs__panel-->
+					</div><!--end c-tabs__panel-->
 
 
-						<div class="c-tabs__panel js-tabs-panel" id="angular-{{ forloop.index }}">
+					<div class="c-tabs__panel js-tabs-panel" id="angular-{{ forloop.index }}">
 
-							<div class="pattern-code">
-								<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-								<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">THIS IS ANGULAR CODE</code></pre>
-							</div>
+						<div class="pattern-code">
+							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">THIS IS ANGULAR CODE</code></pre>
+						</div>
 
-						</div><!--end c-tabs__panel-->
+					</div><!--end c-tabs__panel-->
 
-						<div class="c-tabs__panel js-tabs-panel" id="react-{{ forloop.index }}">
+					<div class="c-tabs__panel js-tabs-panel" id="react-{{ forloop.index }}">
 
-							<div class="pattern-code">
-								<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
-								<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">THIS IS REACT CODE</code></pre>
-							</div>
+						<div class="pattern-code">
+							<button class="c-btn pattern-code-copy-btn" data-clipboard-target="#pattern-code-{{ forloop.index }}">Copy</button>
+							<pre class="highlight pattern-code-block"><code class="language-html" id="pattern-code-{{ forloop.index }}">THIS IS REACT CODE</code></pre>
+						</div>
 
-						</div><!--end c-tabs__panel-->
+					</div><!--end c-tabs__panel-->
 
-					</div><!-- end c-tabs__body-->
+				</div><!-- end c-tabs__body-->
 
-				</div><!-- end c-tabs -->
+			</div><!-- end c-tabs -->
+			{% endif %}
 
 			</li><!-- end c-tabs-list__item -->
+
 		{% endfor %}
 
 	</ul><!-- end c-tabs-list -->
@@ -151,37 +163,41 @@ layout: default
 
 	</div><!-- end c-text-passage -->
 
-	<table class="c-table ">
+	<div class="c-table-container">
+		
+		<table class="c-table ">
 
-		<thead class="c-table__header">
+			<thead class="c-table__header">
 
-			<tr class="c-table__header-row">
-			<th scope="col" class="c-table__header-cell ">Class Name</th>
-			<th scope="col" class="c-table__header-cell ">Description</th>
-			</tr><!-- c-table__header-row -->
+				<tr class="c-table__header-row">
+				<th scope="col" class="c-table__header-cell ">Class Name</th>
+				<th scope="col" class="c-table__header-cell ">Description</th>
+				</tr><!-- c-table__header-row -->
 
-		</thead><!-- end c-table__header -->
+			</thead><!-- end c-table__header -->
 
-		<tbody class="c-table__body ">
-			{% for class in page.classes %}
+			<tbody class="c-table__body ">
+				{% for class in page.classes %}
 
-			<tr class="c-table__row ">
+				<tr class="c-table__row ">
 
-				<td class="c-table__cell ">
-					{{ class.className }}
-				</td>
+					<td class="c-table__cell ">
+						{{ class.className }}
+					</td>
 
-				<td class="c-table__cell ">
-					{% capture desc %}{{ class.description }}{% endcapture %}
-					{% if class.description %}{{ desc | markdownify }}{% endif %}
-				</td>
+					<td class="c-table__cell ">
+						{% capture desc %}{{ class.description }}{% endcapture %}
+						{% if class.description %}{{ desc | markdownify }}{% endif %}
+					</td>
 
-			</tr><!-- end c-table__row -->
-			{% endfor %}
+				</tr><!-- end c-table__row -->
+				{% endfor %}
 
-		</tbody><!-- end c-table__body -->
+			</tbody><!-- end c-table__body -->
 
-	</table><!--end c-table-->
+		</table><!--end c-table-->
+
+	</div><!--end c-table-container-->
 
 </section><!-- end c-section -->
 

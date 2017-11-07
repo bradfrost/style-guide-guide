@@ -13,7 +13,7 @@ variations:
   styleModifier: c-text-passage
   includeClassification: molecules
   includeCategory: 02-blocks
-  includeName: card
+  includeName: card  
 
 usage:
 - title: When to use

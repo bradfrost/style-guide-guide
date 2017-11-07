@@ -252,6 +252,30 @@ code[class*="language-"], pre[class*="language-"] {
 }
 
 
+
+
+
+/*------------------------------------*\
+  #BADGES
+\*------------------------------------*/
+.c-table-container {
+    width: 100%;
+    overflow-x: auto;
+	overflow-y: hidden;
+	background:
+	  linear-gradient(to right, white 30%, hsla(0,0%,100%,0)),
+	  linear-gradient(to right, hsla(0,0%,100%,0), white 70%) right,
+	  linear-gradient(to right, rgba(0,0,0,0.2) 0%, transparent 70%),
+	  linear-gradient(to left, rgba(0,0,0,0.2) 0%, transparent 70%) right;
+	background-repeat: no-repeat;
+	background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+	background-attachment: local, local, scroll, scroll;
+}
+
+
+
+
+
 /*------------------------------------*\
     #LAYOUT TWEAKS
 \*------------------------------------*/

@@ -194,12 +194,13 @@ layout: default
 	</div><!-- end c-section-header -->
 
 	<div class="c-text-passage l-linelength-container">
+		{% for print in page.fine-print %}
         <ul>
-            <li>Version: 0.3</li>
-            <li>Last updated: April 27, 2017</li>
-            <li>Owner: <a href="#">Jane Doe</a></li>
-            <li><a href="#">Change history</a></li>
+            <li>Version: {{ print.version }}</li>
+            <li>Last Updated: {{ print.update }}</li>
+            <li>Owner: <a href="#">{{ print.owner }}</a></li>
         </ul>
+		{% endfor %}
 	</div><!-- end c-text-passage -->
 
 	<a href="#" class="c-btn">Discuss this component</a><!-- end c-btn -->

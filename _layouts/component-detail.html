@@ -31,7 +31,10 @@ layout: default
 						{% if variation.description %}<div>{{ variation.description | markdownify }} </div>{% endif %}
 					</header>
 
-					{% if variation.codepen %}{{ variation.codepen }}{% endif %}
+					{% if variation.codepenUser and variation.codepenID %}
+					<p data-height="265" data-theme-id="0" data-slug-hash="{{ variation.codepenID }}" data-default-tab="js,result" data-user="{{ variation.codepenUser }}" data-embed-version="2" data-pen-title="{{ variation.codepenID }}" class="codepen">See the Pen <a href="https://codepen.io/{{ variation.codepenUser }}/pen/EbgJYG/">{{ variation.codepenID }}</a> (<a href="https://codepen.io/{{ variation.codepenUser }}">@{{ variation.codepenID }}</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+					<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+					{% endif %}
 
 					{% if variation.includeClassification and variation.includeCategory and variation.includeName %}
 
@@ -164,7 +167,7 @@ layout: default
 	</div><!-- end c-text-passage -->
 
 	<div class="c-table-container">
-		
+
 		<table class="c-table ">
 
 			<thead class="c-table__header">

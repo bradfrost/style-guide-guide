@@ -19,7 +19,8 @@ variations:
 - title: Codepen block
   description: Codepen block description
   styleModifier: c-card
-  codepen: <p data-height="265" data-theme-id="0" data-slug-hash="EbgJYG" data-default-tab="js,result" data-user="frostyweather" data-embed-version="2" data-pen-title="EbgJYG" class="codepen">See the Pen <a href="https://codepen.io/frostyweather/pen/EbgJYG/">EbgJYG</a> by Ian Frost (<a href="https://codepen.io/frostyweather">@frostyweather</a>) on <a href="https://codepen.io">CodePen</a>.</p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  codepenUser: frostyweather
+  codepenID: EbgJYG
 
 usage:
 - title: When to use

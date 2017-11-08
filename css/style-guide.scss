@@ -272,7 +272,9 @@ code[class*="language-"], pre[class*="language-"] {
 	background-attachment: local, local, scroll, scroll;
 }
 
-
+.c-table__cell:first-child {
+    white-space: nowrap;
+}
 
 
 
